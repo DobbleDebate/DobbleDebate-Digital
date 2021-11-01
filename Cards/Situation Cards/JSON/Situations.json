@@ -1,0 +1,25 @@
+{
+    "Base": [
+        {
+            "id": "001",
+            "name": "Pirate Ship",
+            "description1": "a water vessel run by a crew consisting of pirates",
+            "description2": "there are various roles on the ship sich as the captain, lookouts, mats, and swabbies",
+            "description3": "the area of the ship that should be avoided most is the plank"
+        },
+        {
+            "id": "002",
+            "name": "Public Washroom",
+            "description1": "a washroom that is accessed by the general public, or specifically in some places, by customers",
+            "description2": "public washrooms often have more than one stall",
+            "description3": "people do their... business there, as well as wash their hands, refresh their appearance and take care of their children's needs"
+        },
+        {
+            "id": "003",
+            "name": "Babysitting",
+            "description1": "a job which involves the care and supervision of a child",
+            "description2": "the tasks of a baby sitter can include meal preparation, feeding, teaching, driving, and supervision",
+            "description3": "there are no 'barriers to entry' to qualify for the job of babysitter"
+        }
+    ]
+}

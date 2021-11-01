@@ -1,0 +1,12 @@
+.svg-container { 
+	display: inline-block;
+	position: relative;
+	width: 100%;
+	padding-bottom: 100%; 
+	vertical-align: middle; 
+	overflow: hidden; 
+}
+
+.name {font: bold 14px sans-serif;}
+.description {font: 10px sans-serif;}
+.collection {font: 4px sans-serif;}

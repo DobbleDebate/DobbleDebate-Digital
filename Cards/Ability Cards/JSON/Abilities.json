@@ -1,0 +1,25 @@
+{
+    "Base": [
+        {
+            "id": "001",
+            "name": "ADD/ADHD",
+            "description1": "a chronic difference that includes difficulty maintaining attention, hyperactivity, and impulsive behaviour",
+            "description2": "people with ADD/ADHD may experience difficulties following through on instructions and orgainizing tasks or activities",
+            "description3": "those with ADD/ADHD are often more creative and spontaneous"
+        },
+        {
+            "id": "002",
+            "name": "Dyslexia",
+            "description1": "signs of dyslexia include trouble reading, writing, and spelling",
+            "description2": "people with dyslexia may have difficulty learning a foreign language and/or have poor handwriting",
+            "description3": "people who have dyslexia are often more spatially aware and creative"
+        },
+        {
+            "id": "003",
+            "name": "Dyscalculia",
+            "description1": "this difference in learning makes it difficult to understand arithmetic",
+            "description2": "people with dyscalculia may have trouble reading analog clocks, working with budgets and timelines, performing basic math skills and differentiating between numbers and values",
+            "description3": "struggling with matricies in algebra or flunking calculus doesn't usually mean you have dyscalculia; it affects more basic arithmetic facts such as simple addition"
+        }
+    ]
+}
