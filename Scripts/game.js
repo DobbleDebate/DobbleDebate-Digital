@@ -19,22 +19,23 @@ function AddCards(data, str) {
 
 function BuildDeck(d, str) {
     let index
-    if(str == 'Ability'){
+    if (str == 'Ability') {
         index = 0
-    }else if(str == 'Situation'){
+    } else if (str == 'Situation') {
         index = 1
     }
     decks[index] = new Deck(d, str)
     decks[index].Shuffle()
+    console.log(decks[index].cards)
     DrawCards(true)
 }
 
-function DrawCards(isFirstCard){
-    for(let i = 0; i < decks.length; i++){
-        if(!isFirstCard){
-            if(decks[i].CardsInDeck > 1){
+function DrawCards(isFirstCard) {
+    for (let i = 0; i < decks.length; i++) {
+        if (!isFirstCard) {
+            if (decks[i].CardsInDeck > 1) {
                 decks[i].Discard()
-            }else{
+            } else {
                 console.log("Last Card, move to endgame")
             }
         }
@@ -46,7 +47,7 @@ function BreakString(str) {
     let characterArray = Array.from(str)
     let lastKnownSpace = 0
     let breakSpace = 0
-    let endStrings = ["", "", ""]
+    let endStrings = [str, "", ""]
     for (let i = 0; i < characterArray.length; i++) {
         if (characterArray[i] == " ") {
             lastKnownSpace = i
@@ -123,7 +124,7 @@ class Deck {
         this.cardNameElement = document.querySelector(this.queryPrefix + "name")
     }
 
-    AssignCardQuotation(){
+    AssignCardQuotation() {
         this.cardQuotationElement = document.querySelector(this.queryPrefix + "quotation")
         this.cardQuotationAuthorElement = document.querySelector(this.queryPrefix + "author")
     }
@@ -138,7 +139,7 @@ class Deck {
             } else if (i >= 3) {
                 brokenString = BreakString(this.cards[0].description2)
             }
-            this.cardDescriptionElements[i].textContent = brokenString[i%3]
+            this.cardDescriptionElements[i].textContent = brokenString[i % 3]
         }
 
         /*if(this.name == 'Situation'){
@@ -146,7 +147,7 @@ class Deck {
             this.cardQuotationAuthorElement.textContent = this.cards[0].author
         }*/
 
-        for(let i = 0; i < this.cardBulletElements.length; i++){
+        for (let i = 0; i < this.cardBulletElements.length; i++) {
             this.cardBulletElements[i].style.visibility = 'visible'
         }
     }
