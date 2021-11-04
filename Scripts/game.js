@@ -1,12 +1,14 @@
 var decks = []
+var abilCard = null;
 function StartGame() {
+    document.querySelector("#drawCard").disabled = false
+    abilCard = document.querySelector('.card__inner')
     fetch('./Cards/Ability Cards/JSON/Abilities.json')
         .then(response => response.json())
         .then(data => AddCards(data, 'Ability'))
     fetch('./Cards/Situation Cards/JSON/Situations.json')
         .then(response => response.json())
         .then(data => AddCards(data, 'Situation'))
-    document.querySelector("#drawCard").disabled = false
 }
 
 function AddCards(data, str) {
@@ -27,7 +29,9 @@ function BuildDeck(d, str) {
     decks[index] = new Deck(d, str)
     decks[index].Shuffle()
     console.log(decks[index].cards)
-    DrawCards(true)
+    if(str == 'Situation'){
+        DrawCards(true)
+    }
 }
 
 function DrawCards(isFirstCard) {
@@ -41,6 +45,16 @@ function DrawCards(isFirstCard) {
         }
         decks[i].RenderCard()
     }
+    Animate(isFirstCard)
+}
+
+function Animate(isFirstCard){
+    if(!isFirstCard){
+
+    }else{ 
+        abilCard.classList.toggle('is-flipped-first')
+    }
+
 }
 
 function BreakString(str) {

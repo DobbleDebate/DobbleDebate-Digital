@@ -1,12 +1,32 @@
-.svg-container { 
-	display: inline-block;
-	position: relative;
-	width: 100%;
-	padding-bottom: 100%; 
-	vertical-align: middle; 
-	overflow: hidden; 
-}
-
 .name {font: bold 14px sans-serif;}
 .description {font: 10px sans-serif;}
 .collection {font: 4px sans-serif;}
+
+.card{
+	background:transparent;
+	perspective: 1000px;
+}
+
+.card__inner{
+	width:100%;
+	height:100%;
+	transition: transform 1s;
+	transform-style: preserve-3d;
+	position:relative;
+}
+
+.card__inner.is-flipped-first{
+	transform:rotateY(180deg);
+}
+
+.card__face{
+	position:absolute;
+	width:100%;
+	height:100%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.card__face--front{
+	transform: rotateY(180deg);
+}
