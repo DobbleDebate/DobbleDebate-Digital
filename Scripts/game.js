@@ -88,6 +88,7 @@ class Deck {
         this.AssignCardName()
         this.AssignCardDescription()
         this.AssignCardBullets()
+        //if(this.name == 'Situation') this.AssignCardQuotation()
     }
 
     AssignQueryPrefix() {
@@ -122,6 +123,11 @@ class Deck {
         this.cardNameElement = document.querySelector(this.queryPrefix + "name")
     }
 
+    AssignCardQuotation(){
+        this.cardQuotationElement = document.querySelector(this.queryPrefix + "quotation")
+        this.cardQuotationAuthorElement = document.querySelector(this.queryPrefix + "author")
+    }
+
     RenderCard() {
         this.cardNameElement.textContent = this.cards[0].name
 
@@ -134,6 +140,11 @@ class Deck {
             }
             this.cardDescriptionElements[i].textContent = brokenString[i%3]
         }
+
+        /*if(this.name == 'Situation'){
+            this.cardQuotationElement.textContent = this.cards[0].quotation
+            this.cardQuotationAuthorElement.textContent = this.cards[0].author
+        }*/
 
         for(let i = 0; i < this.cardBulletElements.length; i++){
             this.cardBulletElements[i].style.visibility = 'visible'

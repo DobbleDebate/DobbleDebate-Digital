@@ -23,6 +23,7 @@
 
     <!--Name Text-->
     <text x="30" y="160" class="name" id="sit-name">Undefined Name</text>
+    <!--<text x="50" y="170" class="quotation" id="sit-quotation">TESTING</text>-->
 
     <!--Bullets-->
     <text x="40" y="175" class="description" id="sit-bullet-1" visibility="hidden">•</text>

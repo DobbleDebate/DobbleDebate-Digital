@@ -20,6 +20,125 @@
             "description1": "a job which involves the care and supervision of a child",
             "description2": "the tasks of a baby sitter can include meal preparation, feeding, teaching, driving, and supervision",
             "description3": "there are no 'barriers to entry' to qualify for the job of babysitter"
+        },
+        {
+            "id": "004",
+            "name": "Jungle Adventure",
+            "description1": "you are in a place that is densely covered by trees and shrubbery",
+            "description2": "the warm and humid climate creates perfect growing conditions for fruits and vegetables",
+            "description3": "jungles have lots of wildlife living within their eco-systems"
+        },
+        {
+            "id": "005",
+            "name": "Zombie Apocalypse",
+            "description1": "zombies are slow in movement, but without human limits",
+            "description2": "they are physically strong until their bodies rot away",
+            "description3": "they stink"
+        },
+        {
+            "id": "006",
+            "name": "Fantasy Role Play",
+            "description1": "this is a game—or it’s real, depending on your level of flakiness—that requires you to dress up in fancy costumes",
+            "description2": "you and a group of friends act out scenarios, as player characters, improvising your actions and speech as the plot moves along",
+            "description3": "there may be a game-master present to guide the settings and events that occur"
+        },
+        {
+            "id": "007",
+            "name": "Go-kart Track ",
+            "description1": "drivers pay to race friends and strangers in small cars around and around a circuit",
+            "description2": "both adults and children can participate",
+            "description3": "the main objective of this activity is to survive in one piece"
+        },
+        {
+            "id": "008",
+            "name": "Laboratory",
+            "description1": "a facility that provides controlled conditions in which scientific research, experiments, and measurement may be performed",
+            "description2": "labs can be found in schools and universities, industry, government, or military facilities, and even aboard ships and spacecraft",
+            "description3": "lab hazards vary, and might include: poisons, infectious agents, flammable, explosive, or radioactive materials, moving machinery, extreme temperatures, lasers, strong magnetic fields, or high voltage"
+        },
+        {
+            "id": "009",
+            "name": "Theatre Production",
+            "description1": "a live performance of a story or experience by actors for an audience as a form of fine art",
+            "description2": "the performers dress up in costumes and use props and sets to deliver their characters",
+            "description3": "the crew helps behind-the-scenes with lighting, sound, set changes, costumes and makeup"
+        },
+        {
+            "id": "010",
+            "name": "Giant’s Castle",
+            "description1": "a castle located in the sky that is accessible via a giant beanstalk",
+            "description2": "there are treasures located within the castle, including golden eggs and a singing harp",
+            "description3": "the owners of these castles reportedly grind your bones to make their bread—especially if you steal from them!"
+        },
+        {
+            "id": "011",
+            "name": "Spacecraft",
+            "description1": "a vehicle or machine designed to fly into outer space",
+            "description2": "a spacecraft can be used for communication, meteorology, space colonization, exploration and transportation of humans and cargo",
+            "description3": "you need to be a fully-trained astronaut to fly in one of these!"
+        },
+        {
+            "id": "012",
+            "name": "Desert Island",
+            "description1": "an uninhabited piece of land surrounded by water",
+            "description2": "one generally arrives there by shipwreck",
+            "description3": "there is often limited potable water on the island, but plenty of falling coconuts"
+        },
+        {
+            "id": "013",
+            "name": "Fast Food Drive-thru",
+            "description1": "a way for customers to order and receive food without having to leave their cars",
+            "description2": "this is a convenient way for customers to get food and drinks quickly if they are in a rush, or if they do not intend to dine inside",
+            "description3": "the fast food drive-thru was invented by North Americans"
+        },
+        {
+            "id": "014",
+            "name": "Shark Tank",
+            "description1": "a giant water-filled space containing sharks",
+            "description2": "tanks are usually found in aquariums and are constructed of thick walls and glass panes",
+            "description3": "people and sharks can view each other in close proximity while protected by walls"
+        },
+        {
+            "id": "015",
+            "name": "Noisy Neighbours",
+            "description1": "people in your building or neighbourhood who make disruptive levels of noise, often at inappropriate times",
+            "description2": "some example of noisy neighbours include: blaring music, barking dogs, couples fighting and the use of loud machinery",
+            "description3": "PLACEHOLDER"
+        },
+        {
+            "id": "016",
+            "name": "Haunted Mansion",
+            "description1": "a large, old, spooky house rumoured to be occupied by restless spirits",
+            "description2": "the house is decrepit with broken floorboards and fixtures one can find ominous messages left for trespassers",
+            "description3": "PLACEHOLDER"
+        },
+        {
+            "id": "017",
+            "name": "Submarine",
+            "description1": "a watercraft which is capable of operating independently while submerged below the surface of a body of water",
+            "description2": "submarines were developed primarily for military purposes, but there are some that facilitate science exploration, tourism and art",
+            "description3": "in 2011, the British Defence Secretary announced that the UK's ban on women in submarines was to be lifted in 2013"
+        },
+        {
+            "id": "018",
+            "name": "Tattoo Studio",
+            "description1": "a place where people get images and text permanently applied to their skin",
+            "description2": "tattoo artists use black, white and coloured inks to create their designs",
+            "description3": "sometimes people wake up not remembering that they visited a tattoo studio the previous night"
+        },
+        {
+            "id": "019",
+            "name": "Reality TV Show",
+            "description1": "you’re on a reality TV show with a group of others, all living in the same house for the next several weeks",
+            "description2": "each week, one person will be evicted from the house, and the last remaining person will receive a cash prize",
+            "description3": "PLACEHOLDER"
+        },
+        {
+            "id": "020",
+            "name": "Time Traveling",
+            "description1": "you’re in a device that allows you to safely travel as far as you want into the past or the future!",
+            "description2": "time travel has been in use for millenniums",
+            "description3": "time travel machines have a habit of malfunctioning"
         }
     ]
 }

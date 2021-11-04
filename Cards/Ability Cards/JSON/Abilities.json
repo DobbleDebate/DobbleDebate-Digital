@@ -20,6 +20,139 @@
             "description1": "this difference in learning makes it difficult to understand arithmetic",
             "description2": "people with dyscalculia may have trouble reading analog clocks, working with budgets and timelines, performing basic math skills and differentiating between numbers and values",
             "description3": "struggling with matricies in algebra or flunking calculus doesn't usually mean you have dyscalculia; it affects more basic arithmetic facts such as simple addition"
+        },
+        {
+            "id": "004",
+            "name": "Dysgraphia",
+            "description1": "a learning disability that affects children and adults, and interferes with practically all aspects of the writing process, including spelling, legibility, word spacing and sizing, and expression ",
+            "description2": "people have trouble forming letters shapes and a tight, awkward, or painful grip on a pencil",
+            "description3": "dysgraphia symptoms typically change over time"
+        },
+        {
+            "id": "005",
+            "name": "Disassociative Disorder",
+            "description1": "his disorder generates feelings of unreality, as if one is detached from their own mind, body, self, and/or surroundings",
+            "description2": "during episodes, one is aware what one is experiencing is abnormal",
+            "description3": "the disorder can result in long-term memory gaps, forgetting personal information, or past events"
+        },
+        {
+            "id": "006",
+            "name": "Tourette’s Syndrome",
+            "description1": "a disorder of the nervous system that causes the individual to make involuntary sounds and movements called ‘tics’",
+            "description2": "Tourette’s is characterized by multiple motor tics and at least one vocal (phonic) tic",
+            "description3": "some people with Tourette’s have a gift for hyper-focusing on a task"
+        },
+        {
+            "id": "007",
+            "name": "Sleep Apnea",
+            "description1": "this condition causes pauses in the breath or shallow breathing during sleep ",
+            "description2": "this is a common and often chronic condition that disrupts deep sleep causing people to be tired during the day",
+            "description3": "people who experience sleep apnea snore loudly"
+        },
+        {
+            "id": "008",
+            "name": "Amputee",
+            "description1": "an amputee is someone who has partially or entirely lost a limb",
+            "description2": "reasons for an amputation can include severe injuries, cancerous tumors, acute infections and thickening of nerve tissue or frostbite",
+            "description3": "amputees can use artificial limbs and assistive devices to compensate for their missing limb(s)"
+        },
+        {
+            "id": "009",
+            "name": "Hypertheymesia",
+            "description1": "the condition of possessing an extremely detailed autobiographical memory and remembering a vast number of life experiences",
+            "description2": "people with hyperthymesia spend excessive amounts of time thinking about their past",
+            "description3": "they can recall almost every day of their lives in near perfect detail"
+        },
+        {
+            "id": "010",
+            "name": "Eidetic Memory",
+            "description1": "the ability to vividly recall images from memory after only a few instances of exposure without using a mnemonic device",
+            "description2": "it is sometimes erroneously called photographic memory",
+            "description3": "eidetic memory is reported to occur in a small number of children, not usually in adults"
+        },
+        {
+            "id": "011",
+            "name": "Down Syndrome",
+            "description1": "Down syndrome is a congenital difference",
+            "description2": "this difference includes lower intellectual and physical variations including short stature and broad facial profile",
+            "description3": "people with Down syndrome are often more nurturing and have greater well-being"
+        },
+        {
+            "id": "012",
+            "name": "Dwarfism",
+            "description1": "a condition that causes slow growth, affecting the height of an individual and results in short stature",
+            "description2": "people with dwarfism often struggle with social prejudice due to their height, as well as difficulties in day-to-day tasks such as driving",
+            "description3": "the terms 'dwarf', 'little person', 'LP', and 'person of short stature' are now generally considered acceptable by most people affected by these disorders"
+        },
+        {
+            "id": "013",
+            "name": "Arthritis",
+            "description1": "painful inflammation and stiffness of the joints",
+            "description2": "arthritis can decrease one’s range of motion, making it difficult to complete daily tasks",
+            "description3": "the disease becomes more common with age"
+        },
+        {
+            "id": "014",
+            "name": "Narcolepsy",
+            "description1": "people with this difference experience excessive daytime fatigue, and disturbed routine sleep",
+            "description2": "people with narcolepsy may feel drowsy or fall asleep at undesirable times of the day",
+            "description3": "PLACEHOLDER"
+        },
+        {
+            "id": "015",
+            "name": "Epilepsy",
+            "description1": "epilepsy is abnormal activity of the brain cells",
+            "description2": "it results in unprovoked seizures ",
+            "description3": "epilepsy symptoms include temporary confusion, staring spells, uncontrollable jerking movements and loss of consciousness or awareness"
+        },
+        {
+            "id": "016",
+            "name": "Blindness",
+            "description1": "condition of poor visual perception or complete loss of vision",
+            "description2": "people with this difference may experience their other senses overcompensate and become stronger",
+            "description3": "people with this difference may use different tools to help them with their daily life; these can include guide dogs or canes"
+        },
+        {
+            "id": "017",
+            "name": "Depression",
+            "description1": "depression disrupts a person’s daily functional abilities",
+            "description2": "depression can induce people to be over critical and they may seem like they are unable to have fun",
+            "description3": "people can feel hopeless, sad, irritable or have a lack of energy and self-esteem"
+        },
+        {
+            "id": "018",
+            "name": "Amnesia",
+            "description1": "amnesia is a loss of whole or partial memory",
+            "description2": "loss ranges from particular facts of information to an inability to transfer information into long term memory",
+            "description3": "people with this difference can learn new information, but may not remember the act of learning new information"
+        },
+        {
+            "id": "019",
+            "name": "Anosmia",
+            "description1": "anosmia is the complete absence of the sense of smell",
+            "description2": "can be a temporary or permanent condition",
+            "description3": "can affect loss of appetite, smell memory and libido"
+        },
+        {
+            "id": "020",
+            "name": "Autism",
+            "description1": "people with autism have a range of intelligence",
+            "description2": "people with autism often have a particularly keen interest in specific items or information",
+            "description3": "they can sometimes have a strong reaction to stimuli"
+        },
+        {
+            "id": "021",
+            "name": "Ageusia",
+            "description1": "ageusia is the inability to detect tastes, such as sweetness, sourness, bitterness, saltiness and umami",
+            "description2": "this loss of east can be caused by neurological damage, problems with the endocrine system, tobacco use and aging",
+            "description3": "the tongue can only sense texture and tastes, most of what is perceived as the sense of taste is derived from smell"
+        },
+        {
+            "id": "022",
+            "name": "Synesthesia",
+            "description1": "a crossing of neurological pathways where stimuli that usually affect one sense can involuntarily trigger another",
+            "description2": "a common form of synesthesia causes the individual to perceive numbers and letters as intrinsically coloured",
+            "description3": "PLACEHOLDER"
         }
     ]
 }
