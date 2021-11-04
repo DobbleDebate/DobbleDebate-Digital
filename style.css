@@ -15,8 +15,16 @@
 	position:relative;
 }
 
-.card__inner.is-flipped-first{
+.card__inner.is-flipped{
 	transform:rotateY(180deg);
+}
+
+.card__inner.is-rotated{
+	transform: rotateZ(-20deg)
+}
+
+.card__face--front{
+	transform: rotateY(180deg);
 }
 
 .card__face{
@@ -25,8 +33,4 @@
 	height:100%;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
-}
-
-.card__face--front{
-	transform: rotateY(180deg);
 }

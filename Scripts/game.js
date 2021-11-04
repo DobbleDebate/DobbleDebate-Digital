@@ -50,11 +50,10 @@ function DrawCards(isFirstCard) {
 
 function Animate(isFirstCard){
     if(!isFirstCard){
-
+        
     }else{ 
-        abilCard.classList.toggle('is-flipped-first')
+        abilCard.classList.add('first-flip')
     }
-
 }
 
 function BreakString(str) {
