@@ -1,8 +1,9 @@
 var decks = []
-var abilCard = null;
+var animCard = null;
 function StartGame() {
     document.querySelector("#drawCard").disabled = false
-    abilCard = document.querySelector('.card__inner')
+    animCardNL = document.querySelectorAll('.card__inner')
+    animCard = Array.prototype.slice.call(animCardNL)
     fetch('./Cards/Ability Cards/JSON/Abilities.json')
         .then(response => response.json())
         .then(data => AddCards(data, 'Ability'))
@@ -48,19 +49,20 @@ function DrawCards(isFirstCard) {
 }
 
 function Animate(isFirstCard){
-    let doneAnimating = false;
-    if(!isFirstCard){
-        abilCard.classList.add('discard')
-        abilCard.classList.remove('first-flip')
-        setTimeout(function(){
-            abilCard.classList.add('first-flip')
-            abilCard.classList.remove('discard')
+    for(let i = 0; i < animCard.length; i++){
+        if(!isFirstCard){
+            animCard[i].classList.add('discard')
+            animCard[i].classList.remove('first-flip')
+            setTimeout(function(){
+                animCard[i].classList.add('first-flip')
+                animCard[i].classList.remove('discard')
+            }, 1500)
+        }else{ 
+            animCard[i].classList.add('first-flip')
             DrawCards(isFirstCard)
-        }, 1500)
-    }else{ 
-        abilCard.classList.add('first-flip')
-        DrawCards(isFirstCard)
+        }
     }
+    setTimeout(function(){DrawCards(isFirstCard)},1000)
 }
 
 function BreakString(str) {

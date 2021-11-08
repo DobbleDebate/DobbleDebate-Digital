@@ -1,0 +1,6 @@
+<svg viewBox="0 0 250 350" preserveAspectRatio="xMinYMin meet" class="svg-content" xmlns="http://www.w3.org/2000/svg">
+    
+    <!--Card Shapes-->
+    <rect rx="25" ry="25" width="250" height="350"
+    style="fill:rgb(7,147,208);"/>
+</svg>
