@@ -15,12 +15,12 @@
 	position:relative;
 }
 
-.card__inner.is-flipped{
+.card__inner.first-flip{
 	transform:rotateY(180deg);
 }
 
-.card__inner.is-rotated{
-	transform: rotateZ(-20deg)
+.card__inner.discard{
+	animation: discard 1s;
 }
 
 .card__face--front{
@@ -33,4 +33,19 @@
 	height:100%;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
+}
+
+@keyframes discard{
+	0%{
+		transform: rotateZ(-1deg) rotateY(180deg);
+	}
+	10%{
+		transform: rotateZ(-5deg) rotateY(180deg);
+	}
+	50%{
+		transform: rotateZ(-5deg) translateX(-20%) rotateY(180deg);
+	}
+	100%{
+		transform: rotateZ(-5deg) translateX(-200%) rotateY(180deg);
+	}
 }

@@ -30,7 +30,7 @@ function BuildDeck(d, str) {
     decks[index].Shuffle()
     console.log(decks[index].cards)
     if(str == 'Situation'){
-        DrawCards(true)
+        Animate(true)
     }
 }
 
@@ -45,14 +45,21 @@ function DrawCards(isFirstCard) {
         }
         decks[i].RenderCard()
     }
-    Animate(isFirstCard)
 }
 
 function Animate(isFirstCard){
+    let doneAnimating = false;
     if(!isFirstCard){
-        
+        abilCard.classList.add('discard')
+        abilCard.classList.remove('first-flip')
+        setTimeout(function(){
+            abilCard.classList.add('first-flip')
+            abilCard.classList.remove('discard')
+            DrawCards(isFirstCard)
+        }, 1500)
     }else{ 
         abilCard.classList.add('first-flip')
+        DrawCards(isFirstCard)
     }
 }
 
