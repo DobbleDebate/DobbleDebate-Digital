@@ -3,7 +3,9 @@ var animCard = null;
 function StartGame() {
     document.querySelector("#drawCard").disabled = false
     animCardNL = document.querySelectorAll('.card__inner')
+    bottomCardNL = document.querySelectorAll('.card__below')
     animCard = Array.prototype.slice.call(animCardNL)
+    bottomCard = Array.prototype.slice.call(bottomCardNL)
     fetch('./Cards/Ability Cards/JSON/Abilities.json')
         .then(response => response.json())
         .then(data => AddCards(data, 'Ability'))
@@ -41,10 +43,16 @@ function DrawCards(isFirstCard) {
             if (decks[i].CardsInDeck > 1) {
                 decks[i].Discard()
             } else {
-                console.log("Last Card, move to endgame")
+                LastCard()
             }
         }
         decks[i].RenderCard()
+    }
+}
+
+function LastCard(){
+    for(let j = 0; j < bottomCard.length; j++){
+        bottomCard[j].style.visibility = "hidden"
     }
 }
 
@@ -84,7 +92,7 @@ function BreakString(str) {
                 return endStrings
             }
 
-        } else if (i == 80) {
+        }else if (i == 80) {
             endStrings[1] = str.substring(breakSpace, lastKnownSpace + 1)
             endStrings[2] = str.substring(lastKnownSpace + 1)
             return endStrings
