@@ -6,10 +6,10 @@ function StartGame() {
     bottomCardNL = document.querySelectorAll('.card__below')
     animCard = Array.prototype.slice.call(animCardNL)
     bottomCard = Array.prototype.slice.call(bottomCardNL)
-    fetch('./Cards/Ability Cards/JSON/Abilities.json')
+    fetch('/Cards/Ability Cards/JSON/Abilities.json')
         .then(response => response.json())
         .then(data => AddCards(data, 'Ability'))
-    fetch('./Cards/Situation Cards/JSON/Situations.json')
+    fetch('/Cards/Situation Cards/JSON/Situations.json')
         .then(response => response.json())
         .then(data => AddCards(data, 'Situation'))
 }
@@ -38,6 +38,7 @@ function BuildDeck(d, str) {
 }
 
 function DrawCards(isFirstCard) {
+    NewCardDisabled(false)
     for (let i = 0; i < decks.length; i++) {
         if (!isFirstCard) {
             if (decks[i].CardsInDeck > 1) {
@@ -51,12 +52,14 @@ function DrawCards(isFirstCard) {
 }
 
 function LastCard(){
+    NewCardDisabled(true)
     for(let j = 0; j < bottomCard.length; j++){
         bottomCard[j].style.visibility = "hidden"
     }
 }
 
 function Animate(isFirstCard){
+    NewCardDisabled(true)
     for(let i = 0; i < animCard.length; i++){
         if(!isFirstCard){
             animCard[i].classList.add('discard')
@@ -100,6 +103,10 @@ function BreakString(str) {
     }
 
     return endStrings
+}
+
+function NewCardDisabled(b){
+    document.getElementById("drawCard").disabled = b
 }
 
 class Deck {
@@ -197,5 +204,20 @@ class Deck {
             this.cards[newIndex] = this.cards[i]
             this.cards[i] = oldCard
         }
+    }
+}
+
+class Player{
+    constructor(n, a){
+        this.name = n
+        this.avatar = a
+        this.dobbles = 0
+    }
+
+    GiveDobbles(val){
+        this.dobbles += val
+    }
+
+    SetRole(){
     }
 }
