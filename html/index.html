@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,77 +8,112 @@
     <script src="/Scripts/svg-inject.js"></script>
     <script>
         SVGInject.setOptions({
-          makeIdsUnique: false
+            makeIdsUnique: false
         });
     </script>
     <script src="/Scripts/game.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="/style.css">
     <title>Dobble Debate</title>
 </head>
+
 <body>
+    <div id="container" class="container-fluid">
+        <div class="row position-relative">
+            <div id="game-container">
+                <div class="row">
+                    <div class="btn-toolbar" role="toolbar">
+                        <div class="btn-group" role="group">
+                            <button class="btn btn-primary" onclick="StartGame()">Start!</button>
+                            <button class="btn btn-primary" id="assignDobbles" onclick="AssignDobblesScreen()" disabled>Assign
+                                Dobbles</button>
+                            <button class="btn btn-primary" id="drawCard" onclick="Animate(false)" disabled>Draw New
+                                Cards</button>
+                        </div>
+                        <div class="btn-group offset-md-9" role="group">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#howToPlay">How-to Play?</button>
+                        </div>
+                    </div>
+                </div>
 
-    <div class="row">
-        
-        <div class="btn-toolbar" role="toolbar">
-            <div class="btn-group" role="group">
-                <button class="btn btn-primary" onclick="StartGame()">Start!</button>
-                <button class="btn btn-primary" id="drawCard" onclick="Animate(false)" disabled>Draw New Cards</button>
-                <button class="btn btn-primary" id="assignDobbles" disabled>Assign Dobbles</button>
-            </div>
-            <div class="btn-group offset-md-9" role="group">
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#howToPlay">How-to Play?</button>
-            </div>
-        </div>
-    </div>
+                <div class="modal" id="howToPlay" role="dialog" tabindex="-1" aria-labelledby="howToPlay"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">How-To Play</h5>
+                                <button class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                        </div>
+                        <div class="modal-body">
+                            ...
+                        </div>
+                    </div>
+                </div>
 
-    <div class="modal" id="howToPlay" role="dialog" tabindex="-1" aria-labelledby="howToPlay" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">How-To Play</h5>
-                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                <div class="row">
+                    <div class="col-sm-4 offset-md-2 h-50 card">
+                        <div class="card__inner">
+                            <div class="card__face card__face--front">
+                                <img src="/Cards/Ability Cards/SVG/cardTemplate.svg" onload="SVGInject(this)" />
+                            </div>
+                            <div class="card__face card__face--back">
+                                <img src="/Cards/Ability Cards/SVG/cardBackFinished.svg" onload="SVGInject(this)" />
+                            </div>
+                        </div>
+                        <div class="card__below">
+                            <img src="/Cards/Ability Cards/SVG/cardBackFinished.svg" onload="SVGInject(this)" />
+                        </div>
+                    </div>
+                    <div class="col-sm-4 card">
+                        <div class="card__inner">
+                            <div class="card__face card__face--front">
+                                <img src="/Cards/Situation Cards/SVG/cardTemplate.svg" onload="SVGInject(this)" />
+                            </div>
+                            <div class="card__face card__face--back">
+                                <img src="/Cards/Situation Cards/SVG/cardTemplateBack.svg" onload="SVGInject(this)" />
+                            </div>
+                        </div>
+                        <div class="card__below">
+                            <img src="/Cards/Situation Cards/SVG/cardTemplateBack.svg" onload="SVGInject(this)" />
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="modal-body">
-                ...
+            <div id="dobble-container" class="hidden-container row position-absolute" hidden="true">
+                <div id="player-identification" class="row">
+                </div>
+                <div id="dobble-cards" class="row">
+                    <div id="dobble-card-minus" class="col col-sm-12 dobble-card text-center">
+                        <img src="/Cards/Dobble Cards/PNGs/minus.png" class="img-fluid"/>
+                        <button class="btn btn-primary" onclick="AssignDobbles(0, -1)">Assign</button>
+                    </div>
+                    <div id="dobble-card-zero" class="col col-sm-12 dobble-card text-center">
+                        <img src="/Cards/Dobble Cards/PNGs/zero.png" class="img-fluid"/>
+                        <button class="btn btn-primary" onclick="AssignDobbles(0, 0)">Assign</button>
+                    </div>
+                    <div id="dobble-card-one" class="col col-sm-12 dobble-card text-center">
+                        <img src="/Cards/Dobble Cards/PNGs/one.png" class="img-fluid"/>
+                        <button class="btn btn-primary" onclick="AssignDobbles(0, 1)">Assign</button>
+                    </div>
+                    <div id="dobble-card-two" class="col col-sm-12 dobble-card text-center">
+                        <img src="/Cards/Dobble Cards/PNGs/two.png" class="img-fluid"/>
+                        <button class="btn btn-primary" onclick="AssignDobbles(0, 2)">Assign</button>
+                    </div>
+                    <div id="dobble-card-three" class="col col-sm-12 dobble-card text-center">
+                        <img src="/Cards/Dobble Cards/PNGs/three.png" class="img-fluid"/>
+                        <button class="btn btn-primary" onclick="AssignDobbles(0, 3)">Assign</button>
+                    </div>
+                </div>
+                <div class="row"></div>
             </div>
         </div>
     </div>
-
-    <div class="row">
-        <div class="col-sm-4 offset-md-2 h-50 card">
-            <div class="card__inner">
-                <div class="card__face card__face--front">
-                    <img src="/Cards/Ability Cards/SVG/cardTemplate.svg" onload="SVGInject(this)"/>
-                </div>
-                <div class="card__face card__face--back">
-                    <img src="/Cards/Ability Cards/SVG/cardBackFinished.svg" onload="SVGInject(this)"/>
-                </div>
-            </div>
-            <div class="card__below">
-                <img src="/Cards/Ability Cards/SVG/cardBackFinished.svg" onload="SVGInject(this)"/>
-            </div>
-        </div>
-        <div class="col-sm-4 card">
-            <div class="card__inner">
-                <div class="card__face card__face--front">
-                    <img src="/Cards/Situation Cards/SVG/cardTemplate.svg" onload="SVGInject(this)"/>
-                </div>
-                <div class="card__face card__face--back">
-                    <img src="/Cards/Situation Cards/SVG/cardTemplateBack.svg" onload="SVGInject(this)"/>
-                </div>
-            </div>
-            <div class="card__below">
-                <img src="/Cards/Situation Cards/SVG/cardTemplateBack.svg" onload="SVGInject(this)"/>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="btn-group-vertical" role="group">
-        </div>
-    </div>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

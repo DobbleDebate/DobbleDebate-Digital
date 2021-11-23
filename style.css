@@ -37,6 +37,22 @@
 	backface-visibility: hidden;
 }
 
+.hidden-container{
+	z-index: 1;
+
+}
+
+.blur{
+	filter: blur(10px);
+	-webkit-filter: blur(10px);
+}
+
+.dobble-card{
+	width: 20%;
+	height: 50%;
+	padding-left: 3%;
+}
+
 @keyframes discard{
 	0%{
 		transform: rotateZ(-1deg) rotateY(180deg);

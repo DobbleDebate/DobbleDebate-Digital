@@ -38,7 +38,7 @@ function BuildDeck(d, str) {
 }
 
 function DrawCards(isFirstCard) {
-    NewCardDisabled(false)
+    ToggleButtonDisable(true)
     for (let i = 0; i < decks.length; i++) {
         if (!isFirstCard) {
             if (decks[i].CardsInDeck > 1) {
@@ -51,15 +51,38 @@ function DrawCards(isFirstCard) {
     }
 }
 
+function AssignDobblesScreen(){
+    ToggleButtonDisable(false)
+    BlurContainer(true)
+    ShowDobbleContainer(true)
+}
+
+function BlurContainer(b){
+    let container = document.getElementById("game-container")
+    if(b)
+        container.classList.add("blur")
+    else
+        container.classList.remove("blur")
+}
+
+function ShowDobbleContainer(b){
+    let container = document.getElementById("dobble-container")
+    container.hidden = !b
+}
+
+function AssignDobbles(){
+    BlurContainer(false)
+    ShowDobbleContainer(false)
+}
+
 function LastCard(){
-    NewCardDisabled(true)
+    ToggleButtonDisable(true)
     for(let j = 0; j < bottomCard.length; j++){
         bottomCard[j].style.visibility = "hidden"
     }
 }
 
 function Animate(isFirstCard){
-    NewCardDisabled(true)
     for(let i = 0; i < animCard.length; i++){
         if(!isFirstCard){
             animCard[i].classList.add('discard')
@@ -105,8 +128,9 @@ function BreakString(str) {
     return endStrings
 }
 
-function NewCardDisabled(b){
+function ToggleButtonDisable(b){
     document.getElementById("drawCard").disabled = b
+    document.getElementById("assignDobbles").disabled = !b
 }
 
 class Deck {
