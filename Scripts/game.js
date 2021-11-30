@@ -1,37 +1,12 @@
 var decks = []
 var animCard = null;
-var avatars = []
 var players = []
+var storage = window.sessionStorage
 
 const pro = 0
 const con = 1
 const judge = 3
 const audience = 4
-
-function AddCharacter(name){
-    let btn = document.getElementById(name + "-btn")
-    avatars.push(name)
-    btn.classList.add("btn-success")
-    btn.classList.remove("btn-danger")
-    btn.onclick = function() {RemoveCharacter(name)}
-}
-
-function RemoveCharacter(name){
-    let btn = document.getElementById(name + "-btn")
-    let index = avatars.indexOf(name)
-    avatars.splice(index,1)
-    btn.classList.add("btn-danger")
-    btn.classList.remove("btn-success")
-    btn.onclick = function() {AddCharacter(name)}
-}
-
-function AssignCharacters(){
-    for(let i=0; i < avatars.length; i++){
-        players.push(new Player(avatars[i]))
-        players[i].SetRole(i)
-    }
-    console.log(players)
-}
 
 function StartGame() {
     document.querySelector("#drawCard").disabled = false
@@ -264,27 +239,11 @@ class Deck {
     }
 }
 
-class Player{
-    constructor(n){
-        this.name = n
-        //this.avatar = FILE BASED ON NAME
-        this.dobbles = 0
-    }
+function Load(){
+    players = JSON.parse(storage.getItem("players"))
+}
 
-    GiveDobbles(val){
-        this.dobbles += val
-    }
-
-    SetRole(r){
-        this.role = r
-    }
-
-    Animate(){
-
-        this.PlaySound()
-    }
-
-    PlaySound(){
-
-    }
+function Save(){
+    storage.setItem("players", players)
+    storage.setItem("decks", decks)
 }
