@@ -93,18 +93,25 @@ function LastCard(){
 function Animate(isFirstCard){
     for(let i = 0; i < animCard.length; i++){
         if(!isFirstCard){
-            animCard[i].classList.add('discard')
-            animCard[i].classList.remove('first-flip')
-            setTimeout(function(){
-                animCard[i].classList.add('first-flip')
-                animCard[i].classList.remove('discard')
-            }, 1500)
+            AnimateDiscard()
         }else{ 
-            animCard[i].classList.add('first-flip')
-            DrawCards(isFirstCard)
+            AnimateFlip(0)
         }
     }
     setTimeout(function(){DrawCards(isFirstCard)},1000)
+}
+
+function AnimateDiscard(){
+    for(let i = 0; i < animCard.length; i++){
+        animCard[i].classList.add('discard')
+        animCard[i].classList.remove('first-flip')
+    }
+    setTimeout(function(){AnimateFlip(0)}, 1500)
+}
+
+function AnimateFlip(card){
+    animCard[card].classList.add('first-flip')
+    animCard[card].classList.remove('discard')
 }
 
 function BreakString(str) {
