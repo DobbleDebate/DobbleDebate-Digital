@@ -1,5 +1,38 @@
 var decks = []
 var animCard = null;
+var avatars = []
+var players = []
+
+const pro = 0
+const con = 1
+const judge = 3
+const audience = 4
+
+function AddCharacter(name){
+    let btn = document.getElementById(name + "-btn")
+    avatars.push(name)
+    btn.classList.add("btn-success")
+    btn.classList.remove("btn-danger")
+    btn.onclick = function() {RemoveCharacter(name)}
+}
+
+function RemoveCharacter(name){
+    let btn = document.getElementById(name + "-btn")
+    let index = avatars.indexOf(name)
+    avatars.splice(index,1)
+    btn.classList.add("btn-danger")
+    btn.classList.remove("btn-success")
+    btn.onclick = function() {AddCharacter(name)}
+}
+
+function AssignCharacters(){
+    for(let i=0; i < avatars.length; i++){
+        players.push(new Player(avatars[i]))
+        players[i].SetRole(i)
+    }
+    console.log(players)
+}
+
 function StartGame() {
     document.querySelector("#drawCard").disabled = false
     animCardNL = document.querySelectorAll('.card__inner')
@@ -70,7 +103,7 @@ function ShowDobbleContainer(b){
     container.hidden = !b
 }
 
-function AssignDobbles(){
+function AssignDobbles(playerId, points){
     BlurContainer(false)
     ShowDobbleContainer(false)
 }
@@ -232,9 +265,9 @@ class Deck {
 }
 
 class Player{
-    constructor(n, a){
+    constructor(n){
         this.name = n
-        this.avatar = a
+        //this.avatar = FILE BASED ON NAME
         this.dobbles = 0
     }
 
@@ -242,6 +275,16 @@ class Player{
         this.dobbles += val
     }
 
-    SetRole(){
+    SetRole(r){
+        this.role = r
+    }
+
+    Animate(){
+
+        this.PlaySound()
+    }
+
+    PlaySound(){
+
     }
 }
