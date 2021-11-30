@@ -18,14 +18,14 @@
     <title>Dobble Debate</title>
 </head>
 
-<body>
+<body onload="StartGame()">
     <div id="container" class="container-fluid">
         <div class="row position-relative">
             <div id="game-container">
                 <div class="row">
                     <div class="btn-toolbar" role="toolbar">
                         <div class="btn-group" role="group">
-                            <button class="btn btn-primary" onclick="StartGame()">Start!</button>
+                            <button class="btn btn-primary" onclick="AnimateFlip(1)">Draw Second Card</button>
                             <button class="btn btn-primary" id="assignDobbles" onclick="AssignDobblesScreen()" disabled>Assign
                                 Dobbles</button>
                             <button class="btn btn-primary" id="drawCard" onclick="Animate(false)" disabled>Draw New

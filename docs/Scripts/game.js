@@ -91,14 +91,12 @@ function LastCard(){
 }
 
 function Animate(isFirstCard){
-    for(let i = 0; i < animCard.length; i++){
-        if(!isFirstCard){
-            AnimateDiscard()
-        }else{ 
-            AnimateFlip(0)
-        }
+    if(!isFirstCard){
+        AnimateDiscard()
+    }else{ 
+        DrawCards(isFirstCard)
+        AnimateFlip(0)
     }
-    setTimeout(function(){DrawCards(isFirstCard)},1000)
 }
 
 function AnimateDiscard(){
@@ -106,7 +104,10 @@ function AnimateDiscard(){
         animCard[i].classList.add('discard')
         animCard[i].classList.remove('first-flip')
     }
-    setTimeout(function(){AnimateFlip(0)}, 1500)
+    setTimeout(function(){
+        DrawCards(false)
+        AnimateFlip(0)
+        }, 1500)
 }
 
 function AnimateFlip(card){
