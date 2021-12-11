@@ -7,6 +7,7 @@ function AddCharacter(name){
     avatars.push(name)
     btn.classList.add("btn-success")
     btn.classList.remove("btn-danger")
+    btn.ariaPressed = "true"
     btn.onclick = function() {RemoveCharacter(name)}
 }
 
@@ -16,6 +17,7 @@ function RemoveCharacter(name){
     avatars.splice(index,1)
     btn.classList.add("btn-danger")
     btn.classList.remove("btn-success")
+    btn.ariaPressed = "false"
     btn.onclick = function() {AddCharacter(name)}
 }
 

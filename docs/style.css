@@ -53,6 +53,12 @@
 	padding-left: 3%;
 }
 
+.section-header{
+	border-radius: 10px;
+	background-color: rgb(7,147,208);
+	height: 100px;
+}
+
 @keyframes discard{
 	0%{
 		transform: rotateZ(-1deg) rotateY(180deg);
