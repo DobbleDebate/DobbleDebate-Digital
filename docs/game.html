@@ -11,6 +11,7 @@
             makeIdsUnique: false
         });
     </script>
+    <script src="Scripts/deck.js"></script>
     <script src="/Scripts/game.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -30,6 +31,7 @@
                                 Dobbles</button>
                             <button class="btn btn-primary" id="drawCard" onclick="Animate(false)" disabled>Draw New
                                 Cards</button>
+                            <button class="btn btn-primary" id="showPositions" onclick="PositionScreen()" hidden="true">Show Positions</button>
                         </div>
                         <div class="btn-group offset-md-9" role="group">
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal"
@@ -58,6 +60,17 @@
                         <div class="card__inner">
                             <div class="card__face card__face--front">
                                 <img src="/Cards/Ability Cards/SVG/cardTemplate.svg" onload="SVGInject(this)" />
+                                <!--<div class="ability-card card-container" style="border-radius: 25px">
+                                    <div class="card-graphic">
+
+                                    </div>
+                                    <div class="card-content">
+                                        <h1 id="abil-name">Default</h1>
+                                        <ul id="abil-desc-1" class="abil-ul">Default</ul>
+                                        <ul id="abil-desc-2" class="abil-ul">Default</ul>
+                                        <ul id="abil-desc-3" class="abil-ul">Default</ul>
+                                    </div>
+                                </div>-->
                             </div>
                             <div class="card__face card__face--back">
                                 <img src="/Cards/Ability Cards/SVG/cardBackFinished.svg" onload="SVGInject(this)" />
@@ -71,6 +84,17 @@
                         <div class="card__inner">
                             <div class="card__face card__face--front">
                                 <img src="/Cards/Situation Cards/SVG/cardTemplate.svg" onload="SVGInject(this)" />
+                                <!--<div class="card__front--container" style="border-radius: 25px">
+                                    <div class="card-graphic">
+
+                                    </div>
+                                    <div class="card-content">
+                                        <h1 id="sit-name">Default</h1>
+                                        <ul id="sit-desc-1">Default</ul>
+                                        <ul id="sit-desc-2">Default</ul>
+                                        <ul id="sit-desc-3">Default</ul>
+                                    </div>
+                                </div>-->
                             </div>
                             <div class="card__face card__face--back">
                                 <img src="/Cards/Situation Cards/SVG/cardTemplateBack.svg" onload="SVGInject(this)" />
@@ -82,6 +106,20 @@
                     </div>
                 </div>
             </div>
+            <div id="positions-container" class="hidden-container row position-absolute" hidden="true">
+                <div id="player-positions" class="row">
+                    <div id="pro-player" class="col offset-md-2">
+                        <img src="Assets/Characters/BUBBLEGUM.svg">
+                    </div>
+                    <div id="con-player" class="col offset-md-2">
+                        <img src="Assets/Characters/GRASS.svg">
+                    </div>
+                </div>
+                <div id="ref-position" class="row">
+                    <img src="Assets/Characters/COFFEE.svg">
+                </div>
+            </div>
+
             <div id="dobble-container" class="hidden-container row position-absolute" hidden="true">
                 <div id="player-identification" class="row">
                 </div>

@@ -1,4 +1,4 @@
-export default class Deck {
+class Deck {
 
     constructor(c, n) {
         this.cards = c

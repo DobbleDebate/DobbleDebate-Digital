@@ -25,9 +25,9 @@
     <text x="30" y="160" class="name" id="abil-name">Undefined Name</text>
 
     <!--Bullets-->
-    <text x="40" y="175" class="description" id="abil-bullet-1" visibility="hidden">•</text>
-    <text x="40" y="225" class="description" id="abil-bullet-2" visibility="hidden">•</text>
-    <text x="40" y="275" class="description" id="abil-bullet-3" visibility="hidden">•</text>
+    <text x="30" y="175" class="description" id="abil-bullet-1" visibility="hidden">•</text>
+    <text x="30" y="225" class="description" id="abil-bullet-2" visibility="hidden">•</text>
+    <text x="30" y="275" class="description" id="abil-bullet-3" visibility="hidden">•</text>
 
     <!--Description Text-->
     <text x="45" y="175" class="description" id="abil-desc-1a"></text>
