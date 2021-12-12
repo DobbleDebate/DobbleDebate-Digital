@@ -57,6 +57,7 @@ class Deck {
 
     RenderCard() {
         this.cardNameElement.textContent = this.cards[0].name
+        this.cardNameElement.ariaLabel = this.cards[0].name + "."
 
         let brokenString = BreakString(this.cards[0].description1)
         for (let i = 0; i < this.cardDescriptionElements.length; i++) {
@@ -66,6 +67,12 @@ class Deck {
                 brokenString = BreakString(this.cards[0].description2)
             }
             this.cardDescriptionElements[i].textContent = brokenString[i % 3]
+            if(i % 3 == 2){
+                this.cardDescriptionElements[i].ariaLabel = brokenString[i % 3] + "."
+            }else{
+                this.cardDescriptionElements[i].ariaLabel = brokenString[i % 3]
+            }
+
         }
 
         /*if(this.name == 'Situation'){

@@ -163,6 +163,9 @@ function AnimateDiscard(){
 function AnimateFlip(card){
     animCard[card].classList.add('first-flip')
     animCard[card].classList.remove('discard')
+    if(card == 1){
+        
+    }
 }
 
 function BreakString(str) {

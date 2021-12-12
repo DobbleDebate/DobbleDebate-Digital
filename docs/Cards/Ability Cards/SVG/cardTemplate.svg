@@ -40,8 +40,4 @@
     <text x="45" y="285" class="description" id="abil-desc-3b"></text>
     <text x="45" y="295" class="description" id="abil-desc-3c"></text>
 
-    <!--Collection ID Location-->
-    <text x="210" y="335" class="collection" id="abil-id"></text>
-
-
 </svg>
