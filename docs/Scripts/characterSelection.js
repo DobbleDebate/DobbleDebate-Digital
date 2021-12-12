@@ -22,15 +22,34 @@ function RemoveCharacter(name){
 }
 
 function AssignCharacters(){
+    if(avatars.length < 3){
+        alert("This game needs at least 3 teams/players")
+        return
+    }
+
     for(let i=0; i < avatars.length; i++){
         players.push(new Player(avatars[i]))
-        players[i].SetRole(i)
+        if(i<=3){
+            players[i].SetRole(i)
+        }else{
+            players[i].SetRole(4)
+        }
     }
-    Save()
+
+    SaveCharacters()
+    LoadGameState()
 }
 
-function Save(){
+function ClearSaveData(){
+    sessionStorage.clear();
+}
+
+function SaveCharacters(){
     let strPlayers = JSON.stringify(players)
     sessionStorage.setItem("players", strPlayers)
     console.log(storage.getItem("players"))
+}
+
+function LoadGameState(){
+    window.location.href = "game.html"
 }

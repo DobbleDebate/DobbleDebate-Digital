@@ -54,10 +54,14 @@
 }
 
 .section-header{
-	border-radius: 10px;
+	border-radius: 25px;
 	background-color: rgb(7,147,208);
 	height: 100px;
+	margin-left: 50px;
+	margin-right: 50px;
 }
+
+
 
 @keyframes discard{
 	0%{

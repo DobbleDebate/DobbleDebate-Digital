@@ -5,10 +5,25 @@ var storage = window.sessionStorage
 
 const pro = 0
 const con = 1
-const judge = 3
-const audience = 4
+const ref = 2
+const aud = 3
+
+
+//Game Progression
+
+//1: Show Positions
+//2: Reveal First card
+//3: Let players reveal second card
+//4: Pro starts debate
+//5: Con starts debate
+//6: Rebuttal time
+//7: Assigning Points
+//8: Next turn
 
 function StartGame() {
+    Load()
+    VerifyPlayers()
+    PreparePositions()
     document.querySelector("#drawCard").disabled = false
     animCardNL = document.querySelectorAll('.card__inner')
     bottomCardNL = document.querySelectorAll('.card__below')
@@ -20,6 +35,7 @@ function StartGame() {
     fetch('/Cards/Situation Cards/JSON/Situations.json')
         .then(response => response.json())
         .then(data => AddCards(data, 'Situation'))
+    PositionScreen()
 }
 
 function AddCards(data, str) {
@@ -40,9 +56,6 @@ function BuildDeck(d, str) {
     decks[index] = new Deck(d, str)
     decks[index].Shuffle()
     console.log(decks[index].cards)
-    if(str == 'Situation'){
-        Animate(true)
-    }
 }
 
 function DrawCards(isFirstCard) {
@@ -65,10 +78,36 @@ function AssignDobblesScreen(){
     ShowDobbleContainer(true)
 }
 
+function AssignDobbles(playerId, points){
+    BlurContainer(false)
+    ShowDobbleContainer(false)
+}
+
+function PreparePositions(){
+    let proImage = document.getElementById("pro-player")
+    let conImage = document.getElementById("con-player")
+    let refImage = document.getElementById("ref-player")
+    for(let i = 0; i < players.length; i++){
+        if(players[i].role == pro){
+            proImage.src = players[i].proFilepath
+        }else if(players[i].role == con){
+            conImage.src = players[i].conFilepath
+        }else if(players[i].role == ref){
+            refImage.src = players[i].refFilepath
+        }
+    }
+}
+
 function PositionScreen(){
     BlurContainer(true)
     ShowPositionsContainer(true)
 }
+
+function AfterPositionScreen(){
+    BlurContainer(false)
+    ShowPositionsContainer(false)
+}
+
 
 function BlurContainer(b){
     let container = document.getElementById("game-container")
@@ -88,10 +127,6 @@ function ShowPositionsContainer(b){
     container.hidden = !b
 }
 
-function AssignDobbles(playerId, points){
-    BlurContainer(false)
-    ShowDobbleContainer(false)
-}
 
 function LastCard(){
     ToggleButtonDisable(true)
@@ -166,4 +201,11 @@ function Load(){
 function Save(){
     storage.setItem("players", players)
     storage.setItem("decks", decks)
+}
+
+function VerifyPlayers(){
+    console.log(players)
+    if(players == null || players.length < 3){
+        window.location.href = "character-creation.html"
+    }
 }
