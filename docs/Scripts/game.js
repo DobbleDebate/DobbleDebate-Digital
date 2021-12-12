@@ -1,7 +1,8 @@
 var decks = []
-var animCard = null;
+var animCard = null
 var players = []
 var storage = window.sessionStorage
+var isFirstCard = true
 
 const pro = 0
 const con = 1
@@ -106,6 +107,10 @@ function PositionScreen(){
 function AfterPositionScreen(){
     BlurContainer(false)
     ShowPositionsContainer(false)
+    Animate()
+    if(isFirstCard){
+        isFirstCard = false
+    }
 }
 
 
@@ -135,7 +140,7 @@ function LastCard(){
     }
 }
 
-function Animate(isFirstCard){
+function Animate(){
     if(!isFirstCard){
         AnimateDiscard()
     }else{ 
