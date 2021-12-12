@@ -77,11 +77,15 @@ function AssignDobblesScreen(){
     ToggleButtonDisable(false)
     BlurContainer(true)
     ShowDobbleContainer(true)
+    MainTabIndexesEnabled(false)
+    IsSecondCardTabIndexed(false)
 }
 
 function AssignDobbles(playerId, points){
     BlurContainer(false)
     ShowDobbleContainer(false)
+    MainTabIndexesEnabled(true)
+    IsSecondCardTabIndexed(true)
 }
 
 function PreparePositions(){
@@ -101,12 +105,25 @@ function PreparePositions(){
 
 function PositionScreen(){
     BlurContainer(true)
+    MainTabIndexesEnabled(false)
     ShowPositionsContainer(true)
+}
+
+function MainTabIndexesEnabled(b){
+    let tabItems = document.getElementsByClassName("disable-tab-on-blur")
+    for (let i = 0; i < tabItems.length; i++){
+        if(b){
+            tabItems[i].tabIndex = 0
+        }else{
+            tabItems[i].tabIndex = -1
+        }
+    }
 }
 
 function AfterPositionScreen(){
     BlurContainer(false)
     ShowPositionsContainer(false)
+    MainTabIndexesEnabled(true)
     Animate()
     if(isFirstCard){
         isFirstCard = false
@@ -154,17 +171,27 @@ function AnimateDiscard(){
         animCard[i].classList.add('discard')
         animCard[i].classList.remove('first-flip')
     }
+    IsSecondCardTabIndexed(false)
     setTimeout(function(){
         DrawCards(false)
         AnimateFlip(0)
         }, 1500)
 }
 
+function IsSecondCardTabIndexed(b){
+    let card = document.getElementById("situation-card")
+    if(b){
+        card.tabIndex = 0
+    }else{
+        card.tabIndex = -1
+    }
+}
+
 function AnimateFlip(card){
     animCard[card].classList.add('first-flip')
     animCard[card].classList.remove('discard')
     if(card == 1){
-        
+        IsSecondCardTabIndexed(true)
     }
 }
 
