@@ -3,11 +3,12 @@ var animCard = null
 var players = []
 var storage = window.sessionStorage
 var isFirstCard = true
+var phase = 0
+var isFirstJudge = true
 
 const pro = 0
 const con = 1
 const ref = 2
-const aud = 3
 
 
 //Game Progression
@@ -60,7 +61,6 @@ function BuildDeck(d, str) {
 }
 
 function DrawCards(isFirstCard) {
-    ToggleButtonDisable(true)
     for (let i = 0; i < decks.length; i++) {
         if (!isFirstCard) {
             if (decks[i].CardsInDeck > 1) {
@@ -74,18 +74,72 @@ function DrawCards(isFirstCard) {
 }
 
 function AssignDobblesScreen(){
-    ToggleButtonDisable(false)
+    EnableButton()
+    let proPlayer = FindProPlayer()
+    let imageDisplay = document.getElementById("judged-player")
+    imageDisplay.src = proPlayer.proFilepath
     BlurContainer(true)
     ShowDobbleContainer(true)
     MainTabIndexesEnabled(false)
     IsSecondCardTabIndexed(false)
 }
 
-function AssignDobbles(playerId, points){
-    BlurContainer(false)
-    ShowDobbleContainer(false)
-    MainTabIndexesEnabled(true)
-    IsSecondCardTabIndexed(true)
+function FindProPlayer(){
+    for(let i = 0; i < players.length; i++){
+        if (players[i].role == pro){
+            return players[i]
+        }
+    }
+}
+
+function AssignDobbles(){
+    let pointDisplay = document.getElementById("dobble-results")
+    let val = parseInt(pointDisplay.textContent)
+    let nextPlayer
+    let roleId = pro
+    
+    if(!isFirstJudge)
+        roleId = con
+    
+    for(let i = 0; i < players.length; i++){
+        if(players[i].role == roleId){
+            players[i].GiveDobbles(val)
+        }else if(players[i].role == roleId + 1){
+            nextPlayer = players[i]
+        }
+    }
+    
+    if(roleId == pro){
+        let imageDisplay = document.getElementById("judged-player")
+        imageDisplay.src = nextPlayer.conFilepath
+        isFirstJudge = false
+        pointDisplay.innerHTML = "0"
+    }else{
+        BlurContainer(false)
+        ShowDobbleContainer(false)
+        MainTabIndexesEnabled(true)
+        IsSecondCardTabIndexed(true)
+        isFirstJudge = true
+    }
+}
+
+function ChangeDobbles(v){
+    let pointDisplay = document.getElementById("dobble-results")
+    let currentVal = parseInt(pointDisplay.textContent)
+    let newVal = currentVal + v
+
+    pointDisplay.textContent = newVal
+}
+
+function SetNewPoistions(){
+    for(let i = 0; i < players.length; i++){
+        players[i].role++
+        if(players[i].role == players.length){
+            players[i].role = 0;
+        }
+   }
+   console.log(players)
+   PreparePositions()
 }
 
 function PreparePositions(){
@@ -124,8 +178,8 @@ function AfterPositionScreen(){
     BlurContainer(false)
     ShowPositionsContainer(false)
     MainTabIndexesEnabled(true)
-    Animate()
     if(isFirstCard){
+        Animate()
         isFirstCard = false
     }
 }
@@ -151,7 +205,7 @@ function ShowPositionsContainer(b){
 
 
 function LastCard(){
-    ToggleButtonDisable(true)
+    EnableButton()
     for(let j = 0; j < bottomCard.length; j++){
         bottomCard[j].style.visibility = "hidden"
     }
@@ -172,6 +226,8 @@ function AnimateDiscard(){
         animCard[i].classList.remove('first-flip')
     }
     IsSecondCardTabIndexed(false)
+    SetNewPoistions()
+    PositionScreen()
     setTimeout(function(){
         DrawCards(false)
         AnimateFlip(0)
@@ -193,6 +249,7 @@ function AnimateFlip(card){
     if(card == 1){
         IsSecondCardTabIndexed(true)
     }
+    EnableButton()
 }
 
 function BreakString(str) {
@@ -224,13 +281,30 @@ function BreakString(str) {
     return endStrings
 }
 
-function ToggleButtonDisable(b){
-    document.getElementById("drawCard").disabled = b
-    document.getElementById("assignDobbles").disabled = !b
+function EnableButton(){
+    let sideButtons = [document.getElementById("drawSecondCard"), 
+    document.getElementById("assignDobbles"),
+    document.getElementById("drawCard")]
+    
+    for(i = 0; i < sideButtons.length; i++){
+        if(i == phase)
+            sideButtons[i].disabled = false
+        else
+            sideButtons[i].disabled = true
+    }
+
+    phase++
+    if(phase == 3){
+        phase = 0;
+    }
 }
 
 function Load(){
-    players = JSON.parse(storage.getItem("players"))
+    let tmpPlayers = JSON.parse(storage.getItem("players"))
+    for(i = 0; i < tmpPlayers.length; i++){
+        tmpPlayers[i] = Object.assign(new Player(), tmpPlayers[i])
+    }
+    players = tmpPlayers
 }
 
 function Save(){

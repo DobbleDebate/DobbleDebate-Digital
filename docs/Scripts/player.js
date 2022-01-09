@@ -9,7 +9,7 @@ class Player{
         this.conFilepath = "Assets/Characters/"+ n + ".svg"
         this.refFilepath = "Assets/Characters/"+ n + ".svg"
     }
-
+    
     GiveDobbles(val){
         this.dobbles += val
     }

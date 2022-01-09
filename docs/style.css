@@ -61,7 +61,13 @@
 	margin-right: 50px;
 }
 
+.bgv{
+	margin-top: 100%;
+}
 
+#dobble-results{
+	text-align: center;
+}
 
 @keyframes discard{
 	0%{

@@ -29,11 +29,7 @@ function AssignCharacters(){
 
     for(let i=0; i < avatars.length; i++){
         players.push(new Player(avatars[i]))
-        if(i<=3){
-            players[i].SetRole(i)
-        }else{
-            players[i].SetRole(4)
-        }
+        players[i].SetRole(i)
     }
 
     SaveCharacters()
