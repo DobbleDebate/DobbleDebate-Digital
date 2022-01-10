@@ -299,6 +299,12 @@ function EnableButton(){
     }
 }
 
+function Leaderboard(){
+    for(let i = 0; i < players.length; i++){
+        console.log(players[i].name + ":" + players[i].dobbles + " Dobbles")
+    }
+}
+
 function Load(){
     let tmpPlayers = JSON.parse(storage.getItem("players"))
     for(i = 0; i < tmpPlayers.length; i++){
