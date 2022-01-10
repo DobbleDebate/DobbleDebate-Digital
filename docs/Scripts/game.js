@@ -127,8 +127,10 @@ function ChangeDobbles(v){
     let pointDisplay = document.getElementById("dobble-results")
     let currentVal = parseInt(pointDisplay.textContent)
     let newVal = currentVal + v
-
-    pointDisplay.textContent = newVal
+    
+    if(newVal <= 3 && newVal >= -1){
+        pointDisplay.textContent = newVal
+    }
 }
 
 function SetNewPoistions(){
