@@ -5,11 +5,11 @@ class Player{
         this.role = 0
         this.dobbles = 0
         this.filepath = "Assets/Characters/"+ n + ".svg"
-        this.proFilepath = "Assets/Characters/"+ n + ".svg"
-        this.conFilepath = "Assets/Characters/"+ n + ".svg"
-        this.refFilepath = "Assets/Characters/"+ n + ".svg"
+        this.proFilepath = "Assets/Character Pro/"+ n + ".svg"
+        this.conFilepath = "Assets/Character Con/"+ n + ".svg"
+        this.refFilepath = "Assets/Character Ref/"+ n + ".svg"
     }
-    
+
     GiveDobbles(val){
         this.dobbles += val
     }
@@ -19,7 +19,6 @@ class Player{
     }
 
     Animate(){
-
         this.PlaySound()
     }
 
