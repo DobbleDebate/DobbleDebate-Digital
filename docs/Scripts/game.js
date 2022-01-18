@@ -22,6 +22,14 @@ const ref = 2
 //7: Assigning Points
 //8: Next turn
 
+
+//Comments from 10th meeting
+//Try to show the Kibitzer roles
+//Add rule/guidance to call on Kibitzer role
+//Showcase some cards for loading screen
+//Possibly type player name
+
+
 function StartGame() {
     Load()
     VerifyPlayers()
@@ -229,10 +237,10 @@ function AnimateDiscard(){
     }
     IsSecondCardTabIndexed(false)
     SetNewPoistions()
-    PositionScreen()
     setTimeout(function(){
         DrawCards(false)
         AnimateFlip(0)
+        PositionScreen()
         }, 1500)
 }
 

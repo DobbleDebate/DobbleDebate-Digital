@@ -4,7 +4,7 @@
 
 .card{
 	position: relative;
-	background:transparent;
+	background: transparent;
 	perspective: 1000px;
 }
 
@@ -83,3 +83,7 @@
 		transform: rotateZ(-5deg) translateX(-300%) rotateY(180deg);
 	}
 }
+
+
+
+
