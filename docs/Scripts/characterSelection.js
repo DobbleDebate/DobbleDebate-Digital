@@ -1,10 +1,12 @@
 var players = []
 var avatars = []
+var alts = []
 var storage = window.sessionStorage
 
-function AddCharacter(name){
+function AddCharacter(name, altText){
     let btn = document.getElementById(name + "-btn")
     avatars.push(name)
+    alts.push(altText)
     btn.classList.add("btn-success")
     btn.classList.remove("btn-danger")
     btn.ariaPressed = "true"
@@ -28,7 +30,7 @@ function AssignCharacters(){
     }
 
     for(let i=0; i < avatars.length; i++){
-        players.push(new Player(avatars[i]))
+        players.push(new Player(avatars[i], alts[i]))
         players[i].SetRole(i)
     }
 

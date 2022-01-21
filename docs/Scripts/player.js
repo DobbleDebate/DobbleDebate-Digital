@@ -1,5 +1,5 @@
 class Player{
-    constructor(n){
+    constructor(n, alt){
         this.name = n
         //this.avatar = FILE BASED ON NAME
         this.role = 0
@@ -8,6 +8,7 @@ class Player{
         this.proFilepath = "Assets/Character Pro/"+ n + ".svg"
         this.conFilepath = "Assets/Character Con/"+ n + ".svg"
         this.refFilepath = "Assets/Character Ref/"+ n + ".svg"
+        this.altText = alt
     }
 
     GiveDobbles(val){

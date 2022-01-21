@@ -5,6 +5,8 @@ var storage = window.sessionStorage
 var isFirstCard = true
 var phase = 0
 var isFirstJudge = true
+var tmpPoints = -2
+var firstPlayerTurnDone = false
 
 const pro = 0
 const con = 1
@@ -48,6 +50,254 @@ function StartGame() {
     PositionScreen()
 }
 
+
+//Dobbles Control
+function AssignDobbles(){
+    let pointDisplay = document.getElementById("dobble-results")
+    let val = parseInt(pointDisplay.textContent)
+    let nextPlayer
+    let roleId = pro
+    
+    if(!isFirstJudge)
+        roleId = con
+    
+    for(let i = 0; i < players.length; i++){
+        if(players[i].role == roleId){
+            players[i].GiveDobbles(val)
+            if(tmpPoints < val){
+                tmpPoints = val
+                leadingPlayer = players[i]
+            }
+        }else if(players[i].role == roleId + 1){
+            nextPlayer = players[i]
+        }
+    }
+    let imageDisplay = document.getElementById("judged-player")
+    if(roleId == pro){
+        imageDisplay.src = nextPlayer.conFilepath
+        imageDisplay.alt = "arguing con - " + nextPlayer.altText
+        isFirstJudge = false
+    }else{
+        ShowDobbleContainer(false)
+        imageDisplay.tabIndex = -1
+        AssignWinner()
+        ShowWinnerContainer(true)
+        isFirstJudge = true
+    }
+
+    pointDisplay.innerHTML = "0"
+}
+
+function ChangeDobbles(v){
+    let pointDisplay = document.getElementById("dobble-results")
+    let currentVal = parseInt(pointDisplay.textContent)
+    let newVal = currentVal + v
+    
+    if(newVal <= 3 && newVal >= -1){
+        pointDisplay.textContent = newVal
+    }
+}
+
+function FindProPlayer(){
+    for(let i = 0; i < players.length; i++){
+        if (players[i].role == pro){
+            return players[i]
+        }
+    }
+}
+
+function SetNewPoistions(){
+    for(let i = 0; i < players.length; i++){
+        players[i].role++
+        if(players[i].role == players.length){
+            players[i].role = 0;
+        }
+   }
+   console.log(players)
+   PreparePositions()
+}
+
+function PreparePositions(){
+    let proImage = document.getElementById("pro-player")
+    let conImage = document.getElementById("con-player")
+    let refImage = document.getElementById("ref-player")
+    for(let i = 0; i < players.length; i++){
+        if(players[i].role == pro){
+            proImage.src = players[i].proFilepath
+            proImage.alt = "arguing pro - " + players[i].altText
+            proImage.tabIndex = 0
+        }else if(players[i].role == con){
+            conImage.src = players[i].conFilepath
+            conImage.alt = "arguing con - " + players[i].altText
+            conImage.tabIndex = 0
+        }else if(players[i].role == ref){
+            refImage.src = players[i].refFilepath
+            refImage.alt = "referee - " + players[i].altText
+            refImage.tabIndex = 0
+        }
+    }
+}
+
+//Winners
+function AssignWinner(){
+    let winnerDisplay = document.getElementById("winner")
+    winnerDisplay.src = leadingPlayer.filepath
+    winnerDisplay.alt = leadingPlayer.altText
+    winnerDisplay.tabIndex = 0
+    tmpPoints = -2
+}
+
+function GameWinner(){
+    let winnerDisplay = document.getElementById("winner")
+    let currentLeader
+    let currentLeaderPoints = -5
+
+    for(let i = 0; i < players.length; i++){
+        if(players[i].dobbles > currentLeaderPoints){
+            currentLeader = players[i]
+        }
+    }
+    winnerDisplay.src = currentLeader.filepath
+    ShowWinnerContainer(true)
+}
+
+//Containers and container control
+function BlurContainer(b){
+    let container = document.getElementById("game-container")
+    if(b)
+        container.classList.add("blur")
+    else
+        container.classList.remove("blur")
+}
+
+function AssignDobblesScreen(){
+    EnableButton()
+    let proPlayer = FindProPlayer()
+    let imageDisplay = document.getElementById("judged-player")
+    imageDisplay.src = proPlayer.proFilepath
+    imageDisplay.tabIndex = 0;
+    imageDisplay.alt = "arguing pro - " + proPlayer.altText
+    BlurContainer(true)
+    ShowDobbleContainer(true)
+    MainTabIndexesEnabled(false)
+    IsSecondCardTabIndexed(false)
+}
+
+function ShowDobbleContainer(b){
+    let container = document.getElementById("dobble-container")
+    container.hidden = !b
+}
+
+function ShowPositionsContainer(b){
+    let container = document.getElementById("positions-container")
+    container.hidden = !b
+}
+
+function ShowWinnerContainer(b){
+    let container = document.getElementById("winner-container")
+    container.hidden = !b
+}
+
+function AfterWinnerContainer(){
+    BlurContainer(false)
+    ShowWinnerContainer(false)
+    MainTabIndexesEnabled(true)
+    let winnerDisplay = document.getElementById("winner")
+    winnerDisplay.tabIndex = -1
+}
+
+function PositionScreen(){
+    BlurContainer(true)
+    MainTabIndexesEnabled(false)
+    ShowPositionsContainer(true)
+}
+
+function AfterPositionScreen(){
+    BlurContainer(false)
+    ShowPositionsContainer(false)
+    MainTabIndexesEnabled(true)
+    let proImage = document.getElementById("pro-player")
+    let conImage = document.getElementById("con-player")
+    let refImage = document.getElementById("ref-player")
+    proImage.tabIndex = 0
+    conImage.tabIndex = 0
+    refImage.tabIndex = 0
+    if(isFirstCard){
+        Animate()
+        isFirstCard = false
+    }
+}
+
+function Leaderboard(){
+    for(let i = 0; i < players.length; i++){
+        console.log(players[i].name + ":" + players[i].dobbles + " Dobbles")
+    }
+}
+
+//Tab Indexing
+function MainTabIndexesEnabled(b){
+    let tabItems = document.getElementsByClassName("disable-tab-on-blur")
+    for (let i = 0; i < tabItems.length; i++){
+        if(b){
+            tabItems[i].tabIndex = 0
+        }else{
+            tabItems[i].tabIndex = -1
+        }
+    }
+}
+
+function IsSecondCardTabIndexed(b){
+    let card = document.getElementById("situation-card")
+    if(b){
+        card.tabIndex = 0
+    }else{
+        card.tabIndex = -1
+    }
+}
+
+//Animation Control
+function Animate(){
+    if(!isFirstCard){
+        AnimateDiscard()
+    }else{ 
+        DrawCards(isFirstCard)
+        AnimateFlip(0)
+    }
+}
+
+function AnimateFlip(card){
+    animCard[card].classList.add('first-flip')
+    animCard[card].classList.remove('discard')
+    if(card == 1){
+        IsSecondCardTabIndexed(true)
+    }
+    EnableButton()
+}
+
+function AnimateDiscard(){
+    for(let i = 0; i < animCard.length; i++){
+        animCard[i].classList.add('discard')
+        animCard[i].classList.remove('first-flip')
+    }
+    IsSecondCardTabIndexed(false)
+    SetNewPoistions()
+    setTimeout(function(){
+        DrawCards(false)
+        AnimateFlip(0)
+        if(firstPlayerTurnDone && players[0].role == pro){
+            GameWinner()
+        }else{
+            PositionScreen()
+        }
+        }, 1500)
+
+    if(players[0].role == pro){
+        firstPlayerTurnDone = true;
+    }
+}
+
+
+//Card Population and deck control
 function AddCards(data, str) {
     let cards = []
     for (let i = 0; i < data['Base'].length; i++) {
@@ -80,188 +330,6 @@ function DrawCards(isFirstCard) {
         decks[i].RenderCard()
     }
 }
-
-function AssignDobblesScreen(){
-    EnableButton()
-    let proPlayer = FindProPlayer()
-    let imageDisplay = document.getElementById("judged-player")
-    imageDisplay.src = proPlayer.proFilepath
-    BlurContainer(true)
-    ShowDobbleContainer(true)
-    MainTabIndexesEnabled(false)
-    IsSecondCardTabIndexed(false)
-}
-
-function FindProPlayer(){
-    for(let i = 0; i < players.length; i++){
-        if (players[i].role == pro){
-            return players[i]
-        }
-    }
-}
-
-function AssignDobbles(){
-    let pointDisplay = document.getElementById("dobble-results")
-    let val = parseInt(pointDisplay.textContent)
-    let nextPlayer
-    let roleId = pro
-    
-    if(!isFirstJudge)
-        roleId = con
-    
-    for(let i = 0; i < players.length; i++){
-        if(players[i].role == roleId){
-            players[i].GiveDobbles(val)
-        }else if(players[i].role == roleId + 1){
-            nextPlayer = players[i]
-        }
-    }
-    
-    if(roleId == pro){
-        let imageDisplay = document.getElementById("judged-player")
-        imageDisplay.src = nextPlayer.conFilepath
-        isFirstJudge = false
-        pointDisplay.innerHTML = "0"
-    }else{
-        BlurContainer(false)
-        ShowDobbleContainer(false)
-        MainTabIndexesEnabled(true)
-        IsSecondCardTabIndexed(true)
-        isFirstJudge = true
-    }
-}
-
-function ChangeDobbles(v){
-    let pointDisplay = document.getElementById("dobble-results")
-    let currentVal = parseInt(pointDisplay.textContent)
-    let newVal = currentVal + v
-    
-    if(newVal <= 3 && newVal >= -1){
-        pointDisplay.textContent = newVal
-    }
-}
-
-function SetNewPoistions(){
-    for(let i = 0; i < players.length; i++){
-        players[i].role++
-        if(players[i].role == players.length){
-            players[i].role = 0;
-        }
-   }
-   console.log(players)
-   PreparePositions()
-}
-
-function PreparePositions(){
-    let proImage = document.getElementById("pro-player")
-    let conImage = document.getElementById("con-player")
-    let refImage = document.getElementById("ref-player")
-    for(let i = 0; i < players.length; i++){
-        if(players[i].role == pro){
-            proImage.src = players[i].proFilepath
-        }else if(players[i].role == con){
-            conImage.src = players[i].conFilepath
-        }else if(players[i].role == ref){
-            refImage.src = players[i].refFilepath
-        }
-    }
-}
-
-function PositionScreen(){
-    BlurContainer(true)
-    MainTabIndexesEnabled(false)
-    ShowPositionsContainer(true)
-}
-
-function MainTabIndexesEnabled(b){
-    let tabItems = document.getElementsByClassName("disable-tab-on-blur")
-    for (let i = 0; i < tabItems.length; i++){
-        if(b){
-            tabItems[i].tabIndex = 0
-        }else{
-            tabItems[i].tabIndex = -1
-        }
-    }
-}
-
-function AfterPositionScreen(){
-    BlurContainer(false)
-    ShowPositionsContainer(false)
-    MainTabIndexesEnabled(true)
-    if(isFirstCard){
-        Animate()
-        isFirstCard = false
-    }
-}
-
-
-function BlurContainer(b){
-    let container = document.getElementById("game-container")
-    if(b)
-        container.classList.add("blur")
-    else
-        container.classList.remove("blur")
-}
-
-function ShowDobbleContainer(b){
-    let container = document.getElementById("dobble-container")
-    container.hidden = !b
-}
-
-function ShowPositionsContainer(b){
-    let container = document.getElementById("positions-container")
-    container.hidden = !b
-}
-
-
-function LastCard(){
-    EnableButton()
-    for(let j = 0; j < bottomCard.length; j++){
-        bottomCard[j].style.visibility = "hidden"
-    }
-}
-
-function Animate(){
-    if(!isFirstCard){
-        AnimateDiscard()
-    }else{ 
-        DrawCards(isFirstCard)
-        AnimateFlip(0)
-    }
-}
-
-function AnimateDiscard(){
-    for(let i = 0; i < animCard.length; i++){
-        animCard[i].classList.add('discard')
-        animCard[i].classList.remove('first-flip')
-    }
-    IsSecondCardTabIndexed(false)
-    SetNewPoistions()
-    setTimeout(function(){
-        DrawCards(false)
-        AnimateFlip(0)
-        PositionScreen()
-        }, 1500)
-}
-
-function IsSecondCardTabIndexed(b){
-    let card = document.getElementById("situation-card")
-    if(b){
-        card.tabIndex = 0
-    }else{
-        card.tabIndex = -1
-    }
-}
-
-function AnimateFlip(card){
-    animCard[card].classList.add('first-flip')
-    animCard[card].classList.remove('discard')
-    if(card == 1){
-        IsSecondCardTabIndexed(true)
-    }
-    EnableButton()
-}
-
 function BreakString(str) {
     let characterArray = Array.from(str)
     let lastKnownSpace = 0
@@ -309,12 +377,14 @@ function EnableButton(){
     }
 }
 
-function Leaderboard(){
-    for(let i = 0; i < players.length; i++){
-        console.log(players[i].name + ":" + players[i].dobbles + " Dobbles")
+function LastCard(){
+    EnableButton()
+    for(let j = 0; j < bottomCard.length; j++){
+        bottomCard[j].style.visibility = "hidden"
     }
 }
 
+//Save data management
 function Load(){
     let tmpPlayers = JSON.parse(storage.getItem("players"))
     for(i = 0; i < tmpPlayers.length; i++){
@@ -329,7 +399,6 @@ function Save(){
 }
 
 function VerifyPlayers(){
-    console.log(players)
     if(players == null || players.length < 3){
         window.location.href = "character-creation.html"
     }
