@@ -35,6 +35,7 @@
                     </div>
                 </div>
 
+                <!--How To Play-->
                 <div class="modal" id="howToPlay" role="dialog" tabindex="-1" aria-labelledby="howToPlay"
                     aria-hidden="true">
                     <div class="modal-dialog modal-dialog-scrollable" role="document">
@@ -50,7 +51,10 @@
                     </div>
                 </div>
 
+                <!--Button Group, Card 1, Card 2-->
                 <div class="row">
+
+                    <!--Button Group taking 2/12 columns-->
                     <div class="col-md-2">
                         <div class="btn-group-vertical bgv" role="group">
                             <button class="btn btn-primary disable-tab-on-blur" id="drawSecondCard" onclick="AnimateFlip(1)">Draw Second Card</button>
@@ -60,21 +64,12 @@
                                 Cards</button>
                         </div>
                     </div>
+                    
+                    <!--Card 1 taking 4-12 columns depending on screensize-->
                     <div class="col-sm-12 col-md-4 h-50 card">
                         <div class="card__inner">
                             <div class="card__face card__face--front disable-tab-on-blur" tabindex="0">
                                 <img src="/Cards/Ability Cards/SVG/cardTemplate.svg" onload="SVGInject(this)" />
-                                <!--<div class="ability-card card-container" style="border-radius: 25px">
-                                    <div class="card-graphic">
-
-                                    </div>
-                                    <div class="card-content">
-                                        <h1 id="abil-name">Default</h1>
-                                        <ul id="abil-desc-1" class="abil-ul">Default</ul>
-                                        <ul id="abil-desc-2" class="abil-ul">Default</ul>
-                                        <ul id="abil-desc-3" class="abil-ul">Default</ul>
-                                    </div>
-                                </div>-->
                             </div>
                             <div class="card__face card__face--back">
                                 <img src="/Cards/Ability Cards/SVG/cardBackFinished.svg" onload="SVGInject(this)" />
@@ -84,21 +79,12 @@
                             <img src="/Cards/Ability Cards/SVG/cardBackFinished.svg" onload="SVGInject(this)" />
                         </div>
                     </div>
+
+                    <!--Card 2 taking 4-12 columns depending on screensize-->
                     <div class="col-sm-12 col-md-4 offset-md-1 card">
                         <div class="card__inner">
                             <div id="situation-card" class="card__face card__face--front" tabindex="-1">
                                 <img src="/Cards/Situation Cards/SVG/cardTemplate.svg" onload="SVGInject(this)"/>
-                                <!--<div class="card__front--container" style="border-radius: 25px">
-                                    <div class="card-graphic">
-
-                                    </div>
-                                    <div class="card-content">
-                                        <h1 id="sit-name">Default</h1>
-                                        <ul id="sit-desc-1">Default</ul>
-                                        <ul id="sit-desc-2">Default</ul>
-                                        <ul id="sit-desc-3">Default</ul>
-                                    </div>
-                                </div>-->
                             </div>
                             <div class="card__face card__face--back">
                                 <img src="/Cards/Situation Cards/SVG/cardTemplateBack.svg" onload="SVGInject(this)" />
@@ -110,6 +96,8 @@
                     </div>
                 </div>
             </div>
+
+            <!--Positions Container-->
             <div id="positions-container" class="hidden-container row position-absolute" hidden="true">
                 <div id="player-positions" class="row justify-content-center">
                     <div class="col-sm-3 positions-character ">
@@ -132,6 +120,7 @@
 
             </div>
 
+            <!--Positions Container-->
             <div id="dobble-container" class="hidden-container row position-absolute" hidden="true">
                 <div id="player-identification" class="row h-50">
                     <img id="judged-player" class="col-md-4 offset-md-4 position-image img-fluid" src="Assets/Characters/coffee.svg">
@@ -146,6 +135,7 @@
                 </div>
             </div>
 
+            <!--Winner Container-->
             <div id="winner-container" class="hidden-container row position-absolute" hidden="true">
                 <div id="winner-identification" class="row">
                     <img id="winner" class="col-md-4 offset-md-4 position-image img-fluid" src="Assets/Characters/coffee.svg">
@@ -154,7 +144,8 @@
                     <button id="btn-after-winner" class="btn btn-primary col-md-4 offset-md-4" onclick="AfterWinnerContainer()">Submit</button>
                 </div>
             </div>
-
+            
+            <!--Leaderboard container TBC-->
             <div id="leaderboard-container" class="hidden-container row position-absolute" hidden="true">
                 
             </div>
