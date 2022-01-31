@@ -139,13 +139,15 @@ video {
 #contentmain {
 	padding-left: 4em;
 	margin-top: 2em;
+	padding-left: 4em;
 }
 
 /* Content How To */
 
 #examples {
-	margin-top: 2em;
 	margin-right: 25em;
+	padding-left: 4em;
+	margin-top: 3em;
 }
 #contenthowto {
 	padding-left: 4em;
@@ -154,6 +156,12 @@ video {
 #contenthowto li {
 	padding-bottom: .4em;
 	padding-right: 25em;
+}
+#contenthowto details {
+		margin-right: 25em;
+}
+#contenthowto details li {
+		padding: 0;
 }
 
 #contentcards img {
