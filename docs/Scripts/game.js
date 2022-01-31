@@ -184,6 +184,7 @@ function GameWinner(){
         }
     }
     winnerDisplay.src = currentLeader.filepath
+    audioManager.Play("SFX", "win")
     ShowWinnerContainer(true)
 }
 
