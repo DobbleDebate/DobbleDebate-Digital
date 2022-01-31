@@ -411,6 +411,13 @@ function LastCard(){
     }
 }
 
+//Spark Card
+function SparkCard(){
+    names = ["001", "002", "003", "004", "005"]
+    let index = Math.floor(Math.random() * 5)
+    audioManager.Play("Spark", names[index])
+}
+
 //Save data management
 function Load(){
     let tmpPlayers = JSON.parse(storage.getItem("players"))

@@ -54,6 +54,14 @@ class AudioManager{
             new AudioClip("020", "/Assets/Audio/Situations/020.wav")
         ]
         this.audioGroups.push(new AudioGroup("Situations", this.audioClips))
+
+        this.audioClips = [
+            new AudioClip("001", "Assets/Audio/Spark/blind_humor.wav"),
+            new AudioClip("002", "Assets/Audio/Spark/born_deaf.wav"),
+            new AudioClip("003", "Assets/Audio/Spark/finding_a_positive_spi.wav"),
+            new AudioClip("004", "Assets/Audio/Spark/catharsis_through_art.wav"),
+            new AudioClip("005", "Assets/Audio/Spark/teaching_asl.wav"),
+        ]
         this.audioGroups.push(new AudioGroup("Spark", this.audioClips))
 
     }
