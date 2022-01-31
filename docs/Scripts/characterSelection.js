@@ -2,6 +2,7 @@ var players = []
 var avatars = []
 var alts = []
 var storage = window.sessionStorage
+var audioManager = new AudioManager()
 
 function AddCharacter(name, altText){
     let btn = document.getElementById(name + "-btn")
@@ -11,6 +12,7 @@ function AddCharacter(name, altText){
     btn.classList.remove("btn-danger")
     btn.ariaPressed = "true"
     btn.onclick = function() {RemoveCharacter(name)}
+    audioManager.Play("Characters", name)
 }
 
 function RemoveCharacter(name){
@@ -25,7 +27,7 @@ function RemoveCharacter(name){
 
 function AssignCharacters(){
     if(avatars.length < 3){
-        alert("This game needs at least 3 teams/players")
+        audioManager.Play("SFX", "error")
         return
     }
 
@@ -34,8 +36,12 @@ function AssignCharacters(){
         players[i].SetRole(i)
     }
 
-    SaveCharacters()
-    LoadGameState()
+    audioManager.Play("SFX", "submit")
+
+    setTimeout(function(){
+        SaveCharacters()
+        LoadGameState()
+    }, 3000)
 }
 
 function ClearSaveData(){

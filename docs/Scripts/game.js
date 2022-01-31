@@ -7,6 +7,7 @@ var phase = 0
 var isFirstJudge = true
 var tmpPoints = -2
 var firstPlayerTurnDone = false
+var audioManager = new AudioManager();
 
 const pro = 0
 const con = 1
@@ -48,6 +49,7 @@ function StartGame() {
         .then(response => response.json())
         .then(data => AddCards(data, 'Situation'))
     PositionScreen()
+    audioManager.Play("SFX", "start")
 }
 
 
@@ -57,6 +59,8 @@ function AssignDobbles(){
     let val = parseInt(pointDisplay.textContent)
     let nextPlayer
     let roleId = pro
+
+    PlayDobblesAudio(val)
     
     if(!isFirstJudge)
         roleId = con
@@ -135,6 +139,28 @@ function PreparePositions(){
             refImage.alt = "referee - " + players[i].altText
             refImage.tabIndex = 0
         }
+    }
+}
+
+function PlayDobblesAudio(val){
+    switch (val){
+        case -1:
+            audioManager.Play("SFX", "points-1")
+            break;
+        case 0:
+            audioManager.Play("SFX", "points0")
+            break;
+        case 1:
+            audioManager.Play("SFX", "points1")
+            break;
+        case 2:
+            audioManager.Play("SFX", "points2")
+            break;
+        case 3:
+            audioManager.Play("SFX", "points1")
+            break;
+        default:
+            break;
     }
 }
 
