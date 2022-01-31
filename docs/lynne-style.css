@@ -135,19 +135,25 @@ video {
 	height: 6.8em;
 }
 
-/* Content Main */
+/* Content */
 #contentmain {
 	padding-left: 4em;
 	margin-top: 2em;
 }
 
 /* Content How To */
+
+#examples {
+	margin-top: 2em;
+	margin-right: 25em;
+}
 #contenthowto {
 	padding-left: 4em;
 	margin-top: 3em;	
 }
 #contenthowto li {
 	padding-bottom: .4em;
+	padding-right: 25em;
 }
 
 #contentcards img {
@@ -199,7 +205,6 @@ details summary > * {
 /* Game Choice Buttons */
 .gamechoice img {
 	width: 16em;
-	padding-top: 2em;
 	padding-left: 4em;
 	padding-bottom: 2em;
 }
@@ -277,11 +282,17 @@ footer a:active {
   color: #f16522;
 } 
 footer img {
-	padding-right: 1.4em;
+	padding-right: 1em;
+	padding-bottom: 1em;
 }
 #ocadlogo {
 	float: right;
-	width: 10em;
+	width: 15em;
 	padding: 1em;
+}
+#license {
+	padding: 0;
+	margins: 0;
+	
 }
 
