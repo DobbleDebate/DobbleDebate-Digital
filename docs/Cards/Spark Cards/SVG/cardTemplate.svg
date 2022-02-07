@@ -1,14 +1,22 @@
 <svg viewBox="0 0 250 350" preserveAspectRatio="xMinYMin meet" class="svg-content" xmlns="http://www.w3.org/2000/svg">
-    
+    <style>
+        #text {
+            color: black;
+            height: 80%;
+            width: 80%;
+            overflow: auto;
+        }
+    </style>
     <!--Card Shapes-->
     <rect rx="25" ry="25" width="250" height="350"
-    style="fill:rgb(241,101,34);"/>
+    style="fill:rgb(246,200,32);"/>
     
     <rect x="5" y="5" rx="25" ry="25" width="240" height="340"
     style="fill:rgb(255, 238, 226)"/>
     
     <rect x="25" y="30" rx="15" ry="15" width="200" height="115"
-    style="fill:rgb(241,101,34)"/>
+    style="fill:rgb(246,200,32)"/>
+    
     <!--<foreignObject x="25" y="30" width="200" height="115">
         <video xmlns="http://www.w3.org/1999/xhtml" width="200" height="115" controls="" class="disable-tab-on-blur">
             <source src="https://static.observableusercontent.com/files/a1cb7c2d8c7a82427667af8052a1428755a9f0f33bfe715e9b4b31673cfa7c8b875c83bf40b7ca4d02cba4543c64736435b70efa0c69ed5fb0d151f06aa9dcc3" type="video/mp4"/>
@@ -27,22 +35,14 @@
     -->
 
     <!--Name Text-->
-    <text x="30" y="160" class="name" id="abil-name">Undefined Name</text>
-
-    <!--Bullets-->
-    <text x="30" y="175" class="description" id="abil-bullet-1" visibility="hidden">•</text>
-    <text x="30" y="225" class="description" id="abil-bullet-2" visibility="hidden">•</text>
-    <text x="30" y="275" class="description" id="abil-bullet-3" visibility="hidden">•</text>
+    <text x="30" y="160" class="name" id="spark-name">Undefined Name</text>
 
     <!--Description Text-->
-    <text x="45" y="175" class="description" id="abil-desc-1a"></text>
-    <text x="45" y="185" class="description" id="abil-desc-1b"></text>
-    <text x="45" y="195" class="description" id="abil-desc-1c"></text>
-    <text x="45" y="225" class="description" id="abil-desc-2a"></text>
-    <text x="45" y="235" class="description" id="abil-desc-2b"></text>
-    <text x="45" y="245" class="description" id="abil-desc-2c"></text>
-    <text x="45" y="275" class="description" id="abil-desc-3a"></text>
-    <text x="45" y="285" class="description" id="abil-desc-3b"></text>
-    <text x="45" y="295" class="description" id="abil-desc-3c"></text>
+    <foreignObject x="30" y="170" width="190" height="190">
+        
+        <div xmlns="http://www.w3.org/1999/xhtml" id="text" width="190" height="190">
+            <p id="spark-textcontent"></p>
+        </div>
+    </foreignObject>
 
 </svg>

@@ -56,7 +56,7 @@ class AudioManager{
         this.audioGroups.push(new AudioGroup("Situations", this.audioClips))
 
         this.audioClips = [
-            new AudioClip("001", "Assets/Audio/Spark/blind_humor.wav"),
+            new AudioClip("001", "Assets/Audio/Spark/drive_through.wav"),
             new AudioClip("002", "Assets/Audio/Spark/born_deaf.wav"),
             new AudioClip("003", "Assets/Audio/Spark/finding_a_positive_spi.wav"),
             new AudioClip("004", "Assets/Audio/Spark/catharsis_through_art.wav"),

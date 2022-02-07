@@ -13,8 +13,13 @@ class Deck {
     AssignElements() {
         this.AssignQueryPrefix()
         this.AssignCardName()
-        this.AssignCardDescription()
-        this.AssignCardBullets()
+
+        if (this.name != "Spark") {
+            this.AssignCardDescription()
+            this.AssignCardBullets()
+        } else {
+            this.AssignSparkText()
+        }
         //if(this.name == 'Situation') this.AssignCardQuotation()
     }
 
@@ -23,6 +28,8 @@ class Deck {
             this.queryPrefix = "#abil-"
         } else if (this.name == 'Situation') {
             this.queryPrefix = "#sit-"
+        } else if (this.name == "Spark") {
+            this.queryPrefix = "#spark-"
         }
     }
 
@@ -37,6 +44,10 @@ class Deck {
         document.querySelector(this.queryPrefix + "desc-3b"),
         document.querySelector(this.queryPrefix + "desc-3c")
         ]
+    }
+
+    AssignSparkText() {
+        this.cardText = document.querySelector(this.queryPrefix + "textcontent")
     }
 
     AssignCardBullets() {
@@ -59,34 +70,43 @@ class Deck {
         this.cardNameElement.textContent = this.cards[0].name
         this.cardNameElement.ariaLabel = this.cards[0].name + "."
 
-        let brokenString = BreakString(this.cards[0].description1)
-        for (let i = 0; i < this.cardDescriptionElements.length; i++) {
-            if (i >= 6) {
-                brokenString = BreakString(this.cards[0].description3)
-            } else if (i >= 3) {
-                brokenString = BreakString(this.cards[0].description2)
+        if (this.name != "Spark") {
+            let brokenString = BreakString(this.cards[0].description1)
+            for (let i = 0; i < this.cardDescriptionElements.length; i++) {
+                if (i >= 6) {
+                    brokenString = BreakString(this.cards[0].description3)
+                } else if (i >= 3) {
+                    brokenString = BreakString(this.cards[0].description2)
+                }
+                this.cardDescriptionElements[i].textContent = brokenString[i % 3]
+                if (i % 3 == 2) {
+                    this.cardDescriptionElements[i].ariaLabel = brokenString[i % 3] + "."
+                } else {
+                    this.cardDescriptionElements[i].ariaLabel = brokenString[i % 3]
+                }
+
             }
-            this.cardDescriptionElements[i].textContent = brokenString[i % 3]
-            if(i % 3 == 2){
-                this.cardDescriptionElements[i].ariaLabel = brokenString[i % 3] + "."
-            }else{
-                this.cardDescriptionElements[i].ariaLabel = brokenString[i % 3]
+
+            for (let i = 0; i < this.cardBulletElements.length; i++) {
+                this.cardBulletElements[i].style.visibility = 'visible'
             }
-
-        }
-
-        /*if(this.name == 'Situation'){
-            this.cardQuotationElement.textContent = this.cards[0].quotation
-            this.cardQuotationAuthorElement.textContent = this.cards[0].author
-        }*/
-
-        for (let i = 0; i < this.cardBulletElements.length; i++) {
-            this.cardBulletElements[i].style.visibility = 'visible'
+            /*if(this.name == 'Situation'){
+                this.cardQuotationElement.textContent = this.cards[0].quotation
+                this.cardQuotationAuthorElement.textContent = this.cards[0].author
+            }*/
+        }else{
+            this.cardText.textContent = this.cards[0].text
         }
     }
 
     Discard() {
         this.cards.shift()
+    }
+
+    PlaceAtBottomOfDeck(){
+        let card = this.cards[0]
+        this.cards.shift()
+        this.cards.push(card)
     }
 
     Shuffle() {

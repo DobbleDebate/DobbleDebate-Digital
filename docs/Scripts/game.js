@@ -48,6 +48,9 @@ function StartGame() {
     fetch('/Cards/Situation Cards/JSON/Situations.json')
         .then(response => response.json())
         .then(data => AddCards(data, 'Situation'))
+    fetch('/Cards/Spark Cards/JSON/Spark.json')
+        .then(response => response.json())
+        .then(data => AddCards(data, 'Spark'))
     PositionScreen()
     audioManager.Play("SFX", "start")
 }
@@ -225,6 +228,11 @@ function ShowWinnerContainer(b){
     container.hidden = !b
 }
 
+function ShowSparkContainer(b){
+    let container = document.getElementById("spark-container")
+    container.hidden = !b
+}
+
 function AfterWinnerContainer(){
     BlurContainer(false)
     ShowWinnerContainer(false)
@@ -339,6 +347,8 @@ function BuildDeck(d, str) {
         index = 0
     } else if (str == 'Situation') {
         index = 1
+    } else if (str == 'Spark'){
+        index = 2
     }
     decks[index] = new Deck(d, str)
     decks[index].Shuffle()
@@ -346,7 +356,7 @@ function BuildDeck(d, str) {
 }
 
 function DrawCards(isFirstCard) {
-    for (let i = 0; i < decks.length; i++) {
+    for (let i = 0; i < decks.length - 1; i++) {
         if (!isFirstCard) {
             if (decks[i].CardsInDeck > 1) {
                 decks[i].Discard()
@@ -413,9 +423,20 @@ function LastCard(){
 
 //Spark Card
 function SparkCard(){
-    names = ["001", "002", "003", "004", "005"]
-    let index = Math.floor(Math.random() * 5)
-    audioManager.Play("Spark", names[index])
+    DrawSparkCard()
+    BlurContainer(true)
+    ShowSparkContainer(true)
+    audioManager.Play("Spark", decks[2].cards[0].id)
+}
+
+function DrawSparkCard(){
+    decks[2].RenderCard()
+}
+
+function CloseSparkContainer(){
+    BlurContainer(false)
+    ShowSparkContainer(false)
+    audioManager.StopAllAudio()
 }
 
 //Save data management
