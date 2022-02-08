@@ -9,11 +9,11 @@
     
     <rect x="25" y="30" rx="15" ry="15" width="200" height="115"
     style="fill:rgb(241,101,34)"/>
-    <foreignObject x="25" y="30" width="200" height="115">
+    <!--<foreignObject x="25" y="30" width="200" height="115">
         <video xmlns="http://www.w3.org/1999/xhtml" width="200" height="115" controls="" class="disable-tab-on-blur">
             <source src="https://static.observableusercontent.com/files/a1cb7c2d8c7a82427667af8052a1428755a9f0f33bfe715e9b4b31673cfa7c8b875c83bf40b7ca4d02cba4543c64736435b70efa0c69ed5fb0d151f06aa9dcc3" type="video/mp4"/>
         </video>
-    </foreignObject>
+    </foreignObject>-->
 
 <!--ASL Gridlines
     <line x1="30" y1="65" x2="220" y2="65" stroke="gray" stroke-width="0.5"/>

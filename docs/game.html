@@ -11,6 +11,7 @@
             makeIdsUnique: false
         });
     </script>
+    <script src="Scripts/audioManager.js"></script>
     <script src="Scripts/deck.js"></script>
     <script src="Scripts/player.js"></script>
     <script src="/Scripts/game.js"></script>
@@ -32,6 +33,7 @@
                                 data-bs-target="#howToPlay">How-to Play?</button>
                             <button class="btn btn-primary disable-tab-on-blur p-3 mr-2" id="showPositions" onclick="PositionScreen()">Show Positions</button>
                             <button class="btn btn-primary disable-tab-on-blur p-3 mr-2" id="showLeaderboard" onclick="Leaderboard()">Leaderboard</button>
+                            <button class="btn btn-primary disable-tab-on-blur p-3 mr-2" id="playSparkCard" onclick="SparkCard()">Spark Card</button>
                         </div>
                     </div>
                 </div>
@@ -59,10 +61,8 @@
                     <div class="col-md-2">
                         <div class="btn-group-vertical bgv" role="group">
                             <button class="btn btn-primary disable-tab-on-blur" id="drawSecondCard" onclick="AnimateFlip(1)">Draw Second Card</button>
-                            <button class="btn btn-primary disable-tab-on-blur" id="assignDobbles" onclick="AssignDobblesScreen()" disabled>Assign
-                                Dobbles</button>
-                            <button class="btn btn-primary disable-tab-on-blur" id="drawCard" onclick="Animate()" disabled>Draw New
-                                Cards</button>
+                            <button class="btn btn-primary disable-tab-on-blur" id="assignDobbles" onclick="AssignDobblesScreen()" disabled>Assign Dobbles</button>
+                            <button class="btn btn-primary disable-tab-on-blur" id="drawCard" onclick="Animate()" disabled>Draw New Cards</button>
                         </div>
                     </div>
                     
@@ -149,6 +149,18 @@
             <!--Leaderboard container TBC-->
             <div id="leaderboard-container" class="hidden-container row position-absolute" hidden="true">
                 
+            </div>
+
+            <!--Spark Container-->
+            <div id="spark-container" class="hidden-container row position-absolute" hidden="true">
+                <div class="col-sm-12 col-md-4 offset-md-4 h-50">
+                    <img src="/Cards/Spark Cards/SVG/cardTemplate.svg" onload="SVGInject(this)" />
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col">
+                        <button class="btn btn-primary btn-positions" onclick="CloseSparkContainer()">Continue</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

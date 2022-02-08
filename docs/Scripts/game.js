@@ -7,6 +7,7 @@ var phase = 0
 var isFirstJudge = true
 var tmpPoints = -2
 var firstPlayerTurnDone = false
+var audioManager = new AudioManager();
 
 const pro = 0
 const con = 1
@@ -47,7 +48,11 @@ function StartGame() {
     fetch('/Cards/Situation Cards/JSON/Situations.json')
         .then(response => response.json())
         .then(data => AddCards(data, 'Situation'))
+    fetch('/Cards/Spark Cards/JSON/Spark.json')
+        .then(response => response.json())
+        .then(data => AddCards(data, 'Spark'))
     PositionScreen()
+    audioManager.Play("SFX", "start")
 }
 
 
@@ -57,6 +62,8 @@ function AssignDobbles(){
     let val = parseInt(pointDisplay.textContent)
     let nextPlayer
     let roleId = pro
+
+    PlayDobblesAudio(val)
     
     if(!isFirstJudge)
         roleId = con
@@ -138,6 +145,28 @@ function PreparePositions(){
     }
 }
 
+function PlayDobblesAudio(val){
+    switch (val){
+        case -1:
+            audioManager.Play("SFX", "points-1")
+            break;
+        case 0:
+            audioManager.Play("SFX", "points0")
+            break;
+        case 1:
+            audioManager.Play("SFX", "points1")
+            break;
+        case 2:
+            audioManager.Play("SFX", "points2")
+            break;
+        case 3:
+            audioManager.Play("SFX", "points1")
+            break;
+        default:
+            break;
+    }
+}
+
 //Winners
 function AssignWinner(){
     let winnerDisplay = document.getElementById("winner")
@@ -158,6 +187,7 @@ function GameWinner(){
         }
     }
     winnerDisplay.src = currentLeader.filepath
+    audioManager.Play("SFX", "win")
     ShowWinnerContainer(true)
 }
 
@@ -195,6 +225,11 @@ function ShowPositionsContainer(b){
 
 function ShowWinnerContainer(b){
     let container = document.getElementById("winner-container")
+    container.hidden = !b
+}
+
+function ShowSparkContainer(b){
+    let container = document.getElementById("spark-container")
     container.hidden = !b
 }
 
@@ -312,6 +347,8 @@ function BuildDeck(d, str) {
         index = 0
     } else if (str == 'Situation') {
         index = 1
+    } else if (str == 'Spark'){
+        index = 2
     }
     decks[index] = new Deck(d, str)
     decks[index].Shuffle()
@@ -319,7 +356,7 @@ function BuildDeck(d, str) {
 }
 
 function DrawCards(isFirstCard) {
-    for (let i = 0; i < decks.length; i++) {
+    for (let i = 0; i < decks.length - 1; i++) {
         if (!isFirstCard) {
             if (decks[i].CardsInDeck > 1) {
                 decks[i].Discard()
@@ -382,6 +419,24 @@ function LastCard(){
     for(let j = 0; j < bottomCard.length; j++){
         bottomCard[j].style.visibility = "hidden"
     }
+}
+
+//Spark Card
+function SparkCard(){
+    DrawSparkCard()
+    BlurContainer(true)
+    ShowSparkContainer(true)
+    audioManager.Play("Spark", decks[2].cards[0].id)
+}
+
+function DrawSparkCard(){
+    decks[2].RenderCard()
+}
+
+function CloseSparkContainer(){
+    BlurContainer(false)
+    ShowSparkContainer(false)
+    audioManager.StopAllAudio()
 }
 
 //Save data management
