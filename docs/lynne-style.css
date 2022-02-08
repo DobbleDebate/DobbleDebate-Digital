@@ -12,6 +12,13 @@ body {
 	font-size: 1.4rem;
 	font-style: normal;
 	font-weight: 200;
+	line-height: 1.4;
+}
+body li {
+	margin-bottom: .5em;
+}
+body p {
+	margin-bottom: .5em;
 }
 
 /* H1-3 */
@@ -26,6 +33,8 @@ h2 {
 	font-size: 1.1em;
 	font-weight: 600;
 	text-transform: uppercase;
+	line-height: .4em;
+	padding-top: 1em;
 }
 h3{
 	font-size: 2em;
@@ -178,6 +187,10 @@ video {
 	height: 16em;
 	padding-right: .4em;
 }
+#avatars img {
+		height: 16em;
+	padding-right: .4em;
+}
 
 /* Info */
 #info img {
@@ -192,8 +205,7 @@ details {
     padding: .5em .5em 0;
 }
 summary {
-    margin: -.5em -.5em 0;
-    padding: .5em;
+
 	color: #EA4606;
 }
 details[open] {
@@ -231,21 +243,21 @@ details summary > * {
         display: inline;
     }
 
-#button {
+#ready {
         position: relative;
         display: inline-block;
     }
-#button img {
-		width: 14em;
+#ready img {
+		width: 16em;
 }
-#button .img-top {
+#ready .img-top {
         display: none;
         position: absolute;
         top: 0;
         left: 0;
         z-index: 99;
     }
-#button:hover .img-top {
+#ready:hover .img-top {
         display: inline;
     }
 
