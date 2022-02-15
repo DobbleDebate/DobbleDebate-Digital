@@ -275,8 +275,10 @@ function MainTabIndexesEnabled(b){
     for (let i = 0; i < tabItems.length; i++){
         if(b){
             tabItems[i].tabIndex = 0
+            tabItems[i].hidden = false;
         }else{
             tabItems[i].tabIndex = -1
+            tabItems[i].hidden = true;
         }
     }
 }
