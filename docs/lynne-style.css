@@ -316,3 +316,29 @@ footer img {
 	
 }
 
+input[aria-pressed=true]{
+	/*! outline: solid 5px blue; */
+	transform: rotateZ(4deg);
+	transition: transform 1s;
+}
+input[aria-pressed=false]{
+	/*! outline: solid 5px blue; */
+	transform: rotateZ(0deg);
+	transition: transform 1s;
+}
+input[aria-pressed=true]:after {
+	content: "✓";
+	font-size: 3rem;
+	position: relative;
+	bottom: 23px;
+	right: 84px;
+	z-index: 2;
+	transform: rotateZ(4deg);
+	color: #44ade2;
+	transition: transform 1s;
+}
+input[aria-pressed=false]:focus, input:hover{
+	outline: solid 5px #EA4606;
+}
+  
+
