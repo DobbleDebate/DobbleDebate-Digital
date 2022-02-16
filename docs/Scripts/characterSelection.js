@@ -4,23 +4,19 @@ var alts = []
 var storage = window.sessionStorage
 var audioManager = new AudioManager()
 
-function AddCharacter(name, altText){
-    let btn = document.getElementById(name + "-btn")
+function AddCharacter(name){
+    let btn = document.getElementById(name)
     avatars.push(name)
-    alts.push(altText)
-    btn.classList.add("btn-success")
-    btn.classList.remove("btn-danger")
+    alts.push(btn.alt)
     btn.ariaPressed = "true"
     btn.onclick = function() {RemoveCharacter(name)}
     audioManager.Play("Characters", name)
 }
 
 function RemoveCharacter(name){
-    let btn = document.getElementById(name + "-btn")
+    let btn = document.getElementById(name)
     let index = avatars.indexOf(name)
     avatars.splice(index,1)
-    btn.classList.add("btn-danger")
-    btn.classList.remove("btn-success")
     btn.ariaPressed = "false"
     btn.onclick = function() {AddCharacter(name)}
 }
