@@ -37,7 +37,6 @@ function StartGame() {
     Load()
     VerifyPlayers()
     PreparePositions()
-    document.querySelector("#drawCard").disabled = false
     animCardNL = document.querySelectorAll('.card__inner')
     bottomCardNL = document.querySelectorAll('.card__below')
     animCard = Array.prototype.slice.call(animCardNL)
@@ -257,10 +256,6 @@ function AfterPositionScreen(){
     proImage.tabIndex = 0
     conImage.tabIndex = 0
     refImage.tabIndex = 0
-    if(isFirstCard){
-        Animate()
-        isFirstCard = false
-    }
 }
 
 function Leaderboard(){
@@ -292,16 +287,6 @@ function IsSecondCardTabIndexed(b){
     }
 }
 
-//Animation Control
-function Animate(){
-    if(!isFirstCard){
-        AnimateDiscard()
-    }else{ 
-        DrawCards(isFirstCard)
-        AnimateFlip(0)
-    }
-}
-
 function AnimateFlip(card){
     animCard[card].classList.add('first-flip')
     animCard[card].classList.remove('discard')
@@ -316,11 +301,11 @@ function AnimateDiscard(){
         animCard[i].classList.add('discard')
         animCard[i].classList.remove('first-flip')
     }
+    EnableButton()
     IsSecondCardTabIndexed(false)
     SetNewPoistions()
     setTimeout(function(){
         DrawCards(false)
-        AnimateFlip(0)
         if(firstPlayerTurnDone && players[0].role == pro){
             GameWinner()
         }else{
@@ -332,7 +317,6 @@ function AnimateDiscard(){
         firstPlayerTurnDone = true;
     }
 }
-
 
 //Card Population and deck control
 function AddCards(data, str) {
@@ -354,7 +338,7 @@ function BuildDeck(d, str) {
     }
     decks[index] = new Deck(d, str)
     decks[index].Shuffle()
-    console.log(decks[index].cards)
+    DrawCards(true)
 }
 
 function DrawCards(isFirstCard) {
@@ -366,9 +350,11 @@ function DrawCards(isFirstCard) {
                 LastCard()
             }
         }
+        console.log(decks[i])
         decks[i].RenderCard()
     }
 }
+
 function BreakString(str) {
     let characterArray = Array.from(str)
     let lastKnownSpace = 0
@@ -379,7 +365,7 @@ function BreakString(str) {
             lastKnownSpace = i
         }
 
-        if (i == 40) {
+        if (i == 55) {
             breakSpace = lastKnownSpace
             endStrings[0] = str.substring(0, breakSpace + 1)
 
@@ -388,7 +374,7 @@ function BreakString(str) {
                 return endStrings
             }
 
-        }else if (i == 80) {
+        }else if (i == 110) {
             endStrings[1] = str.substring(breakSpace, lastKnownSpace + 1)
             endStrings[2] = str.substring(lastKnownSpace + 1)
             return endStrings
@@ -399,20 +385,54 @@ function BreakString(str) {
 }
 
 function EnableButton(){
-    let sideButtons = [document.getElementById("drawSecondCard"), 
+    let phaseButtons = [document.getElementById("drawFirstCard"),
+    document.getElementById("drawFirstCard-hover"), 
+    document.getElementById("drawSecondCard"), 
+    document.getElementById("drawSecondCard-hover"), 
     document.getElementById("assignDobbles"),
-    document.getElementById("drawCard")]
-    
-    for(i = 0; i < sideButtons.length; i++){
-        if(i == phase)
-            sideButtons[i].disabled = false
-        else
-            sideButtons[i].disabled = true
-    }
+    document.getElementById("assignDobbles-hover"), 
+    document.getElementById("newRound"),
+    document.getElementById("newRound-hover")]
 
     phase++
-    if(phase == 3){
+    if(phase == 4){
         phase = 0;
+    }
+
+    for(i = 0; i < phaseButtons.length; i+=2){
+        if(i/2 == phase){
+            phaseButtons[i].classList.add("is-in-phase")
+            phaseButtons[i+1].classList.add("is-in-phase")
+            phaseButtons[i].classList.remove("not-in-phase")
+            phaseButtons[i+1].classList.remove("not-in-phase")
+        }
+        else{
+            console.log("i:"+ i + "\nPhase Button:" + phaseButtons[i].id + "\nNext Button:" + phaseButtons[i+1].id)
+            phaseButtons[i].classList.remove("is-in-phase")
+            phaseButtons[i+1].classList.remove("is-in-phase")
+            phaseButtons[i].classList.add("not-in-phase")
+            phaseButtons[i+1].classList.add("not-in-phase")
+            phaseButtons[i].removeAttribute("onclick")
+            phaseButtons[i+1].removeAttribute("onclick")
+        }
+    }
+    switch(phase){
+        case 0:
+            phaseButtons[0].onclick = function () {AnimateFlip(0)}
+            phaseButtons[1].onclick = function () {AnimateFlip(0)}
+            break;
+        case 1:
+            phaseButtons[2].onclick = function () {AnimateFlip(1)}
+            phaseButtons[3].onclick = function () {AnimateFlip(1)}
+            break;
+        case 2:
+            phaseButtons[4].onclick = function () {AssignDobblesScreen()}
+            phaseButtons[5].onclick = function () {AssignDobblesScreen()}
+            break;
+        case 3:
+            phaseButtons[6].onclick = function () {AnimateDiscard()}
+            phaseButtons[7].onclick = function () {AnimateDiscard()}
+            break;
     }
 }
 

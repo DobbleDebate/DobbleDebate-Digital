@@ -94,6 +94,7 @@ class AudioClip{
         this.name = name
         this.fileName = file
         this.audio = new Audio(this.fileName)
+        this.audio.volume = 0.3
     }
 
     Play(){

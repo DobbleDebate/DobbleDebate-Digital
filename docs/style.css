@@ -3,9 +3,9 @@
 .collection {font: 4px sans-serif;}
 
 .card{
-	position: relative;
+	/*position: relative;
 	background: transparent;
-	perspective: 1000px;
+	perspective: 1000px;*/
 }
 
 .card__inner{
@@ -44,8 +44,8 @@
 }
 
 .blur{
-	filter: blur(10px);
-	-webkit-filter: blur(10px);
+	filter: blur(50px);
+	-webkit-filter: blur(50px);
 }
 
 .dobble-card{
@@ -54,20 +54,12 @@
 	padding-left: 3%;
 }
 
-.section-header{
-	border-radius: 25px;
-	background-color: rgb(7,147,208);
-	height: 100px;
-	margin-left: 50px;
-	margin-right: 50px;
-}
-
-.bgv{
-	margin-top: 100%;
-}
-
 #dobble-results{
 	text-align: center;
+}
+
+.not-in-phase{
+	opacity: 0.5
 }
 
 @keyframes discard{
