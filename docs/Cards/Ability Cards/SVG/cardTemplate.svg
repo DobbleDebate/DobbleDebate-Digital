@@ -1,48 +1,64 @@
 <svg viewBox="0 0 250 350" preserveAspectRatio="xMinYMin meet" class="svg-content" xmlns="http://www.w3.org/2000/svg">
     
+    <style>
+        .card-name{
+            font-family: "Myriad Pro", "Gill Sans", "Gill Sans MT", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+            font-size: .8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .description{
+            font-family: "Myriad Pro", "Gill Sans", "Gill Sans MT", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+            font-size: .6rem;
+            color: black;
+            height: 80%;
+            width: 100%;
+        }    
+    </style>
+
+
+
     <!--Card Shapes-->
-    <rect rx="25" ry="25" width="250" height="350"
+    <rect rx="15" ry="15" width="250" height="350"
     style="fill:rgb(241,101,34);"/>
     
-    <rect x="5" y="5" rx="25" ry="25" width="240" height="340"
-    style="fill:rgb(255, 238, 226)"/>
+    <rect x="5" y="5" rx="15" ry="15" width="240" height="340"
+    style="fill:rgb(255, 238, 226);"/>
     
-    <rect x="25" y="30" rx="15" ry="15" width="200" height="115"
-    style="fill:rgb(241,101,34)"/>
+    <rect x="10" y="10" rx="15" ry="15" width="230" height="155"
+    style="fill:rgb(241,101,34);"/>
+    
     <!--<foreignObject x="25" y="30" width="200" height="115">
         <video xmlns="http://www.w3.org/1999/xhtml" width="200" height="115" controls="" class="disable-tab-on-blur">
             <source src="https://static.observableusercontent.com/files/a1cb7c2d8c7a82427667af8052a1428755a9f0f33bfe715e9b4b31673cfa7c8b875c83bf40b7ca4d02cba4543c64736435b70efa0c69ed5fb0d151f06aa9dcc3" type="video/mp4"/>
         </video>
     </foreignObject>-->
 
-<!--ASL Gridlines
-    <line x1="30" y1="65" x2="220" y2="65" stroke="gray" stroke-width="0.5"/>
-    <line x1="30" y1="105" x2="220" y2="105" stroke="gray" stroke-width="0.5"/>
-
-    <line x1="61" y1="35" x2="61" y2="140" stroke="gray" stroke-width="0.5"/>
-    <line x1="92" y1="35" x2="92" y2="140" stroke="gray" stroke-width="0.5"/>
-    <line x1="123" y1="35" x2="123" y2="140" stroke="gray" stroke-width="0.5"/>
-    <line x1="154" y1="35" x2="154" y2="140" stroke="gray" stroke-width="0.5"/>
-    <line x1="185" y1="35" x2="185" y2="140" stroke="gray" stroke-width="0.5"/>
-    -->
-
     <!--Name Text-->
-    <text x="30" y="160" class="name" id="abil-name">Undefined Name</text>
+    <text x="15" y="195" class="card-name" id="abil-name">Undefined Name</text>
 
     <!--Bullets-->
-    <text x="30" y="175" class="description" id="abil-bullet-1" visibility="hidden">•</text>
-    <text x="30" y="225" class="description" id="abil-bullet-2" visibility="hidden">•</text>
-    <text x="30" y="275" class="description" id="abil-bullet-3" visibility="hidden">•</text>
+    <text x="15" y="220" class="description" id="abil-bullet-1" visibility="hidden">•</text>
+    <text x="15" y="260" class="description" id="abil-bullet-2" visibility="hidden">•</text>
+    <text x="15" y="300" class="description" id="abil-bullet-3" visibility="hidden">•</text>
 
     <!--Description Text-->
-    <text x="45" y="175" class="description" id="abil-desc-1a"></text>
-    <text x="45" y="185" class="description" id="abil-desc-1b"></text>
-    <text x="45" y="195" class="description" id="abil-desc-1c"></text>
-    <text x="45" y="225" class="description" id="abil-desc-2a"></text>
-    <text x="45" y="235" class="description" id="abil-desc-2b"></text>
-    <text x="45" y="245" class="description" id="abil-desc-2c"></text>
-    <text x="45" y="275" class="description" id="abil-desc-3a"></text>
-    <text x="45" y="285" class="description" id="abil-desc-3b"></text>
-    <text x="45" y="295" class="description" id="abil-desc-3c"></text>
+    <foreignObject x="22" y="210" width="200" height="35">
+        <div xmlns="http://www.w3.org/1999/xhtml" width="220" height="35">
+            <p id="abil-desc-1" class="description"></p>
+        </div>
+    </foreignObject>
+    
+    <foreignObject x="22" y="250" width="200" height="35">
+        <div xmlns="http://www.w3.org/1999/xhtml" width="220" height="35">
+            <p id="abil-desc-2" class="description"></p>
+        </div>
+    </foreignObject>
+
+    <foreignObject x="22" y="290" width="200" height="35">
+        <div xmlns="http://www.w3.org/1999/xhtml" width="220" height="35">
+            <p id="abil-desc-3" class="description"></p>
+        </div>
+    </foreignObject>
 
 </svg>

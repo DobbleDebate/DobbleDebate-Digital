@@ -34,15 +34,9 @@ class Deck {
     }
 
     AssignCardDescription() {
-        this.cardDescriptionElements = [document.querySelector(this.queryPrefix + "desc-1a"),
-        document.querySelector(this.queryPrefix + "desc-1b"),
-        document.querySelector(this.queryPrefix + "desc-1c"),
-        document.querySelector(this.queryPrefix + "desc-2a"),
-        document.querySelector(this.queryPrefix + "desc-2b"),
-        document.querySelector(this.queryPrefix + "desc-2c"),
-        document.querySelector(this.queryPrefix + "desc-3a"),
-        document.querySelector(this.queryPrefix + "desc-3b"),
-        document.querySelector(this.queryPrefix + "desc-3c")
+        this.cardDescriptionElements = [document.querySelector(this.queryPrefix + "desc-1"),
+        document.querySelector(this.queryPrefix + "desc-2"),
+        document.querySelector(this.queryPrefix + "desc-3")
         ]
     }
 
@@ -71,7 +65,7 @@ class Deck {
         this.cardNameElement.ariaLabel = this.cards[0].name + "."
 
         if (this.name != "Spark") {
-            let brokenString = BreakString(this.cards[0].description1)
+            /*let brokenString = BreakString(this.cards[0].description1)
             for (let i = 0; i < this.cardDescriptionElements.length; i++) {
                 if (i >= 6) {
                     brokenString = BreakString(this.cards[0].description3)
@@ -85,7 +79,11 @@ class Deck {
                     this.cardDescriptionElements[i].ariaLabel = brokenString[i % 3]
                 }
 
-            }
+            }*/
+
+            this.cardDescriptionElements[0].textContent = this.cards[0].description1;
+            this.cardDescriptionElements[1].textContent = this.cards[0].description2;
+            this.cardDescriptionElements[2].textContent = this.cards[0].description3;
 
             for (let i = 0; i < this.cardBulletElements.length; i++) {
                 this.cardBulletElements[i].style.visibility = 'visible'

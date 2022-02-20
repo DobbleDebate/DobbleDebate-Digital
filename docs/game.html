@@ -23,24 +23,16 @@
 </head>
 
 <body onload="StartGame()">
+    <!-- Logo -->
+<header> 
+	<a href="https://dobbledebate.com" target="_blank"><img src="images/basics/top_logo.svg" alt="Dobble Debate logo, two capital D's superimposed one on the other, the word Dobble written in orange, the word Debate written in blue" width="200"></a>
+</header>
     <div id="container" class="container-fluid">
         <div class="row position-relative">
             <div id="game-container">
                 <div class="row">
-                    <div class="btn-toolbar" role="toolbar">
-                        <div class="col-md-6" id="tips">
-                            Hints Section Here
-                        </div>
-                        <div class="btn-group offset-md-2" role="group">
-                            <button type="button" class="btn btn-primary disable-tab-on-blur p-3 mr-2"
-                                data-bs-toggle="modal" data-bs-target="#howToPlay">How-to Play?</button>
-                            <button class="btn btn-primary disable-tab-on-blur p-3 mr-2" id="showPositions"
-                                onclick="PositionScreen()">Show Positions</button>
-                            <button class="btn btn-primary disable-tab-on-blur p-3 mr-2" id="showLeaderboard"
-                                onclick="Leaderboard()">Leaderboard</button>
-                            <button class="btn btn-primary disable-tab-on-blur p-3 mr-2" id="playSparkCard"
-                                onclick="SparkCard()">Spark Card</button>
-                        </div>
+                    <div class="col-md-6" id="tips">
+                        Hints Section Here
                     </div>
                 </div>
 
@@ -64,7 +56,7 @@
                 <div class="row">
 
                     <!--Card 1 taking 4-12 columns depending on screensize-->
-                    <div class="col-sm-12 col-md-4 offset-1 h-50 card">
+                    <div class="col-sm-12 col-md-4 card">
                         <div class="card__inner">
                             <div class="card__face card__face--front disable-tab-on-blur" tabindex="0">
                                 <img src="/Cards/Ability Cards/SVG/cardTemplate.svg" onload="SVGInject(this)" />
@@ -73,13 +65,13 @@
                                 <img src="/Cards/Ability Cards/SVG/cardBackFinished.svg" onload="SVGInject(this)" />
                             </div>
                         </div>
-                        <div class="card__below disable-tab-on-blur">
-                            <img src="/Cards/Ability Cards/SVG/cardBackFinished.svg" onload="SVGInject(this)" />
+                        <div class="card__below disable-tab-on-blur" style="min-height: 50rem;">
+                            <!--<img src="/Cards/Ability Cards/SVG/cardBackFinished.svg" onload="SVGInject(this)" />-->
                         </div>
                     </div>
 
                     <!--Card 2 taking 4-12 columns depending on screensize-->
-                    <div class="col-sm-12 col-md-4 offset-md-2 card">
+                    <div class="col-sm-12 col-md-4 offset-md-1 card">
                         <div class="card__inner">
                             <div id="situation-card" class="card__face card__face--front disable-tab-on-blur" tabindex="-1">
                                 <img src="/Cards/Situation Cards/SVG/cardTemplate.svg" onload="SVGInject(this)" />
@@ -88,23 +80,78 @@
                                 <img src="/Cards/Situation Cards/SVG/cardTemplateBack.svg" onload="SVGInject(this)" />
                             </div>
                         </div>
-                        <div class="card__below disable-tab-on-blur">
-                            <img src="/Cards/Situation Cards/SVG/cardTemplateBack.svg" onload="SVGInject(this)" />
+                        <div class="card__below disable-tab-on-blur" style="min-height: 50rem">
+                            <!--<img src="/Cards/Situation Cards/SVG/cardTemplateBack.svg" onload="SVGInject(this)" />-->
                         </div>
                     </div>
+                    <div class="col-sm-12 col-md-2 offset-md-1">
+                        <div class="row" style="min-height: 10rem">
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 offset-md-1">
+                                <img src="images/pre-baked/spark_hover.svg" class="img-fluid"/>
+                            </div>
+                            <div class="col-md-12 offset-md-2">
+                                <div class="row pb-5">
+                                    <div class="col-12 hover-img-container pb-3">
+                                        <img src="images/pre-baked/how_to.svg" class="img-fluid pt-4" alt="assign points" onclick="AnimateDiscard()">
+                                        <img src="images/pre-baked/how_to_hover.svg" class="img-fluid pt-4 img-top" alt="assign points focus" onclick="AnimateDiscard()">
+                                    </div>
+                                </div>
+                                <div class="row pb-5">
+                                    <div class="col-12 hover-img-container pb-3">
+                                        <img src="images/pre-baked/positions.svg" class="img-fluid pt-4" alt="assign points" onclick="AnimateDiscard()">
+                                        <img src="images/pre-baked/positions_hover.svg" class="img-fluid pt-4 img-top" alt="assign points focus" onclick="AnimateDiscard()">
+                                    </div>
+                                </div>
+                                <div class="row pb-5">
+                                    <div class="col-12 hover-img-container pb-3">
+                                        <img src="images/pre-baked/scoreboard.svg" class="img-fluid pt-4" alt="assign points" onclick="AnimateDiscard()">
+                                        <img src="images/pre-baked/scoreboard_hover.svg" class="img-fluid pt-4 img-top" alt="assign points focus" onclick="AnimateDiscard()">
+                                    </div>
+                                </div>
+                                <!--<button type="button" class="btn btn-primary disable-tab-on-blur"
+                                    data-bs-toggle="modal" data-bs-target="#howToPlay">How-to Play?</button>
+                                <button class="btn btn-primary disable-tab-on-blur" id="showPositions"
+                                    onclick="PositionScreen()">Show Positions</button>
+                                <button class="btn btn-primary disable-tab-on-blur" id="showLeaderboard"
+                                    onclick="Leaderboard()">Leaderboard</button>
+                                <button class="btn btn-primary disable-tab-on-blur" id="playSparkCard"
+                                    onclick="SparkCard()">Spark Card</button>-->
+                        </div>
+                        <div class="row" style="min-height:3rem"></div>
+                    </div>
+                    </div>
+
                 </div>
                 <div class="row">
-                    <div class="col-md-2 offset-2 d-flex justify-content-center">
-                        <button class="btn btn-primary disable-tab-on-blur" id="drawSecondCard"
-                            onclick="AnimateFlip(1)">Draw Second Card</button>
+                    <div class="col-2 hover-img-container">
+                        <img src="images/pre-baked/ability.svg" class="img-fluid pt-5 is-in-phase" alt="reveal ability card" id="drawFirstCard" onclick="AnimateFlip(0)">
+                        <img src="images/pre-baked/ability_hover.svg" class="img-fluid pt-5 img-top is-in-phase" alt="reveal ability card focus" id="drawFirstCard-hover" onclick="AnimateFlip(0)">
+                        <!--<button class="btn btn-primary disable-tab-on-blur" id="drawFirstCard"
+                            onclick="AnimateFlip(0)">Reveal Ability Card</button>-->
                     </div>
-                    <div class="col-md-2 offset-1 d-flex justify-content-center">
-                        <button class="btn btn-primary disable-tab-on-blur" id="assignDobbles"
-                            onclick="AssignDobblesScreen()" disabled>Assign Dobbles</button>
+                    <div class="col-2 offset-1 hover-img-container">
+                        <img src="images/pre-baked/situation.svg" class="img-fluid pt-5 not-in-phase" alt="reveal ability card" id="drawSecondCard">
+                        <img src="images/pre-baked/situation_hover.svg" class="img-fluid pt-5 img-top not-in-phase" alt="reveal ability card focus" id="drawSecondCard-hover">
+                        <!--<button class="btn btn-primary disable-tab-on-blur" id="drawSecondCard"
+                            onclick="AnimateFlip(1)" disabled>Draw Situation Card</button>-->
                     </div>
-                    <div class="col-md-2 offset-1 d-flex justify-content-center">
-                        <button class="btn btn-primary disable-tab-on-blur" id="drawCard" onclick="Animate()"
-                            disabled>Draw New Cards</button>
+                    <div class="col-2">
+                        <img src="images/pre-baked/debate.svg" class="img-fluid pt-2"/>
+                    </div>
+                    <div class="col-2 hover-img-container">
+                        <img src="images/pre-baked/assign.svg" class="img-fluid pt-5 not-in-phase" alt="assign points" id="assignDobbles">
+                        <img src="images/pre-baked/assign_hover.svg" class="img-fluid pt-5 img-top not-in-phase" alt="assign points focus" id="assignDobbles-hover">
+                        <!--<button class="btn btn-primary disable-tab-on-blur" id="assignDobbles"
+                            onclick="AssignDobblesScreen()" disabled>Ref Weighs In</button>-->
+                    </div>
+                    <div class="col-2 offset-1 hover-img-container">
+                        <img src="images/pre-baked/next.svg" class="img-fluid pt-5 not-in-phase" alt="assign points" id="newRound">
+                        <img src="images/pre-baked/next_hover.svg" class="img-fluid pt-5 img-top not-in-phase" alt="assign points focus" id="newRound-hover">
+                        <!--<button class="btn btn-primary disable-tab-on-blur" id="drawCard"
+                         onclick="AnimateDiscard()" disabled>Discard and Next Round</button>-->
                     </div>
                 </div>
             </div>
@@ -187,5 +234,34 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
 </body>
+<!-- Footer -->	
+<footer>
+    <div id="credits">
+        <div id="ocadlogo"><img src="images/basics/ocad_logo.svg" alt="OCAD University logo, outlined boxes with university's name inside"/></div>
+        <h2>Contact Us</h2>
+            <p><a href="mailto:hello@dobbledebate.com">hello@dobbledebate.com</a></p>
+        <h2>Open Source</h2>
+            <p>Dobble Debate is publically available for modification and development through <a href="https://github.com/DobbleDebate/DobbleDebate.github.io.git" target="_blank">GitHub</a></p>
+        <h2>Browser & Device Support</h2>
+        <p>Dobble Debate has been designed to work on desktop, tablets and mobile devices. You can play the game on both Windows and Mac operating systems. Supported browsers are Google Chrome, Apple's Safari, Microsoft Edge, and Firefox.</p>
+        <h2>Land Acknowledgement</h2>
+            <p>OCAD University acknowledges the ancestral and traditional territories of the Mississaugas of the Credit, the Haudenosaunee, the Anishinaabe and the Huron-Wendat, who are the original owners and custodians of the land on which we stand and create.</p>
+        <h2>Funding & Support</h2>
+            <p>Dobble Debate was developed at OCAD University in partnership with Sensorium Lab, York University and Heart Lab, Ryerson University, Holland Bloorview Kids Rehabiilitation Hospital & the University of Toronto</p>
+            <img src="images/basics/sensorium_logo.svg" alt="Sensorium logo, name of lab written in write on black background" height="100px"/><img src="images/basics/heart_logo.svg" alt="Heart Lab logo with child in a wheelchiar and name of the lab" height="100px"/>
+            <p>The digital version of this project is made possible with funding by the Government of Ontario and through eCampusOntario’s support of the Virtual Learning Strategy. To learn more about the Virtual Learning Strategy visit: <a href="https://vls.ecampusontario.ca/" target="_blank">https://vls.ecampusontario.ca</a>.</p>
+            <img src="images/basics/eCO_logo.svg" alt="eCampusOntario logo, with the name of the organization" height="60px"/>
+            <img src="images/basics/ON_logo.svg" alt="Government of Ontario logo with trillium icon" height="60px"/>
+        <h2>The Team</h2>
+            <p>The following people all contributed to the creation of the current digital version of Dobble Debate. We would also like to acknowldege all those who has participated in previous phases of the project</p>
+            <p>Marcia Adolphe, Anonymous, Raphael Arar, Michael Awad, Courage Bacchus, David Bobier, Jack Butler, Ted Carrick, Colin Clark, Nina Czegledy, Dan Czutrin, Shital Desai, Robert Durant, Deb Fels, Eamon Gaudio, Howard Green, Lynne  Heller, Alexa Hickox, Lynn Hughes, David Kolenda, Jananda Lima, Wesley Magee-Saxon, Christine Malec, Jo-Ann Martin, Jonah Monaghan, Fiona Moola, Michele Niffeler, Justin Obara, Joel Ong, Adrian Petterson, Nedward W. Rehanek, Myra Rodrigues, David Rokeby, Veronica Rutherford, Furyal Sadiq, Alex Semmelhack, Colleen Shea, Martin Shook, Delilah Simoes-Shand, Rohan Smith, Matheus Trece, Shelley Wall, Melanie Wilmink, Sol Younan </p>
+        </div>
+        <div id="license">
+        <h2>License</h2>
+            <img src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-sa.svg" alt="Creative Commons logo, with icons indicating the terms of the license"/><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+            </div>
+    
+    </footer>
+    <!-- Footer Ends -->
 
 </html>
