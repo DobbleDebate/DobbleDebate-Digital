@@ -18,6 +18,7 @@
 
 .card__inner.first-flip{
 	transform:rotateY(180deg);
+	transform:rotateX(0deg);
 }
 
 .card__inner.discard{
