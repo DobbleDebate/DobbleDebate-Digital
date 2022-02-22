@@ -8,7 +8,7 @@ function AddCharacter(name){
     let btn = document.getElementById(name)
     avatars.push(name)
     alts.push(btn.alt)
-    btn.ariaPressed = "true"
+    btn.setAttribute("aria-pressed", "true")
     btn.onclick = function() {RemoveCharacter(name)}
     audioManager.Play("Characters", name)
 }
@@ -17,7 +17,7 @@ function RemoveCharacter(name){
     let btn = document.getElementById(name)
     let index = avatars.indexOf(name)
     avatars.splice(index,1)
-    btn.ariaPressed = "false"
+    btn.setAttribute("aria-pressed", "false")
     btn.onclick = function() {AddCharacter(name)}
 }
 
