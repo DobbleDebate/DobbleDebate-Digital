@@ -327,7 +327,6 @@ input[aria-pressed=false]{
 	transition: transform 1s;
 }
 input[aria-pressed=true]:after {
-	content: "✓";
 	font-size: 3rem;
 	position: relative;
 	bottom: 23px;
