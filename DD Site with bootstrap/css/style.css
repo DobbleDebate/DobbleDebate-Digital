@@ -1,0 +1,214 @@
+/* Body */
+html {
+	font-family: "Myriad Pro", "Gill Sans", "Gill Sans MT", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	background-color: #fffff8;
+}
+
+#wrapper {
+	width: 80%;
+	margin: auto;
+	padding: 1rem 0;
+}
+
+/* Fonts */
+body {
+	font-size: 1.5rem;
+	font-style: normal;
+	font-weight: 200;
+	line-height: 1.5;
+}
+
+body li {
+	margin-bottom: .5rem;
+}
+
+body p {
+	margin-bottom: .5rem;
+}
+
+/* H1-3 */
+h1 {
+	font-size: 4rem;
+	color: #F16522;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 0;
+}
+
+h2 {
+	font-size: 2.1rem;
+	font-weight: 200;
+	margin: 0;
+	padding: 0;
+	color: #1B7CAC;
+}
+
+h3 {
+	font-size: 1.2rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	line-height: 1.5;
+	padding-top: 1.2rem;
+}
+
+/* Header */
+header img {
+	width: 15rem;
+}
+
+/* Title Bar & Animation */
+#animation {
+	border-radius: 1.2rem;
+	background: #44ade2;
+	width: 100%;
+}
+
+#title {
+	border-radius: 1.2rem;
+	background-color: #44ade2;
+}
+
+#title img {
+	transform: translateY(30%);
+	padding-left: 6rem;
+}
+
+/* Details */
+details {
+		padding-bottom: 3rem;
+}
+
+summary {
+	color: #EA4606;
+}
+
+details[open] {
+	padding-bottom: 3rem;
+}
+
+details[open] summary {
+	border-bottom: 1px solid #aaa;
+}
+
+details summary {
+	cursor: pointer;
+}
+
+details summary>* {
+	display: inline;
+}
+
+/* Ready-to-go link */
+#ready {
+	position: relative;
+	display: inline-block;
+}
+
+#ready .img-top {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 99;
+}
+
+#ready:hover .img-top {
+	display: inline;
+}
+
+#ready img {
+	width: 20rem;
+}
+
+/* Links */
+a:link {
+	color: #EA4606;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #003970;
+}
+
+a:hover {
+	color: #003970;
+}
+
+a:active {
+	color: #44ade2;
+}
+
+#credits {
+	width: 100%;
+	margin-top: 1.2rem;
+	margin-bottom: 1rem;
+}
+
+/* Game Choice Buttons */
+.gamechoice img {
+	margin-left: 4rem;
+	margin-bottom: 3rem;
+}
+
+.gamechoice {
+	position: relative;
+	display: inline-block;
+}
+
+.gamechoice .img-top {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 99;
+}
+
+.gamechoice:hover .img-top {
+	display: inline;
+}
+
+/* Footer */
+footer {
+	background-color: #44ade2;
+	border-top-style: solid;
+	border-top-width: .6rem;
+	border-top-color: #f16522;
+	font-size: 1.1rem;
+}
+
+footer a:link {
+	color: #000;
+	text-decoration: underline;
+}
+
+footer a:visited {
+	color: #f16522;
+}
+
+footer a:hover {
+	color: #f16522;
+}
+
+footer a:active {
+	color: #f16522;
+}
+
+footer h2 {
+	font-size: 2.1rem;
+	font-weight: 200;
+	margin: 0;
+	padding: 0;
+}
+
+#ocadlogo {
+	width: 16rem;
+	padding: 1.2rem;
+}
+
+
+/*Media Queries*/
+
+@media (min-width: 768px) {
+	#ready img {
+		width: 28rem;
+	}

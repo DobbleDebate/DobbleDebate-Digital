@@ -1,0 +1,326 @@
+/* Body */
+html {
+	font-family: "Myriad Pro", "Gill Sans", "Gill Sans MT", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	background-color: #fffff8;
+}
+
+body {
+	font-size: 1.5rem;
+	font-style: normal;
+	font-weight: 200;
+	line-height: 1.5;
+}
+
+.nav-pills .nav-link {
+	color: #EA4606;
+	border-radius: 0.2rem;
+	border-radius: 1rem 1rem 0 0;
+	border: 2px solid #EA4606;
+	border-bottom: 0;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+	background-color: #EA4606;
+	background-image: linear-gradient(#EA4606, white);
+	color: #fff;
+}
+
+.button {
+	opacity: 80%;
+	border-radius: 50%;
+}
+
+.video-file {
+	width: 16rem;
+	height: 16rem;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+	color: #EA4606;
+	background-color: #fff;
+}
+
+.bg-orange {
+	display: none;
+	transition: .5s;
+}
+
+.video__content:hover {
+	transition: .5s;
+	transform: scale(1.1);
+}
+
+.video__content:hover .bg-orange {
+	display: block;
+	background-color: #fff;
+	color: #000;
+}
+
+.btn-outline {
+	border: #000 2px #eee;
+	/* outline: 2px solid #EA4606; */
+	border-bottom: 0px;
+	/* border-radius: 1rem 1rem .5rem .5rem; */
+}
+
+.swiper-button-next {
+	right: -30px;
+}
+
+.swiper-button-prev {
+	left: -30px;
+}
+
+#avatars img {
+	height: 14rem;
+	padding-right: 2rem;
+}
+
+body li {
+	margin-bottom: .5rem;
+}
+
+body p {
+	margin-bottom: .5rem;
+}
+
+/* Fonts */
+
+#title {
+	border-radius: 1.7rem;
+	background-color: #44ade2;
+
+}
+
+#title img {
+	transform: translateY(30%);
+	/* padding-left: 1rem; */
+}
+
+
+/* Details */
+details {
+	border-radius: 4px;
+	padding: .5rem .5rem 0;
+}
+
+summary {
+
+	color: #EA4606;
+}
+
+details[open] {
+	padding: .5rem;
+}
+
+details[open] summary {
+	border-bottom: 1px solid #aaa;
+	margin-bottom: .5rem;
+}
+
+details summary {
+	cursor: pointer;
+}
+
+details summary>* {
+	display: inline;
+}
+
+/* ready styles */
+#ready {
+	position: relative;
+	display: inline-block;
+}
+
+#ready .img-top {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 99;
+}
+
+#ready:hover .img-top {
+	display: inline;
+}
+
+
+#ready img {
+	width: 20rem;
+}
+
+/* H1-3 */
+h1 {
+	font-size: 4rem;
+	color: #F16522;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 0;
+}
+
+h2 {
+	font-size: 1.2rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	line-height: 1.5;
+	padding-top: 1.2rem;
+}
+
+h3 {
+	font-size: 2.1rem;
+	font-weight: 200;
+	margin: 0;
+	padding: 0;
+	color: #44ADE2;
+}
+
+.accordion-button:not(.collapsed) {
+	background-color: white;
+}
+
+/* Links */
+a:link {
+	color: #EA4606;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #003970;
+}
+
+a:hover {
+	color: #003970;
+}
+
+a:active {
+	color: #44ade2;
+}
+
+#credits {
+	width: 100%;
+	margin-top: 1.2rem;
+	margin-bottom: 1rem;
+}
+
+/* Title Bar & Animation */
+#animation {
+	border-radius: 1.2rem;
+	background: #44ade2;
+	width: 100%;
+}
+
+#wrapper {
+	width: 80%;
+	margin: auto;
+	padding: 1rem 0;
+}
+
+
+/* Game Choice Buttons */
+.gamechoice img {
+	width: 20rem;
+	margin-left: 4rem;
+	margin-bottom: 2rem;
+}
+
+.gamechoice {
+	position: relative;
+	display: inline-block;
+}
+
+.gamechoice .img-top {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 99;
+}
+
+.gamechoice:hover .img-top {
+	display: inline;
+}
+
+
+footer {
+	background-color: #44ade2;
+	border-top-style: solid;
+	border-top-width: .6rem;
+	border-top-color: #f16522;
+	font-size: 1.2rem;
+}
+
+footer a:link {
+	color: #000;
+	text-decoration: underline;
+}
+
+footer a:visited {
+	color: #f16522;
+}
+
+footer a:hover {
+	color: #f16522;
+}
+
+footer a:active {
+	color: #f16522;
+}
+
+#ocadlogo {
+	width: 16rem;
+	padding: 1.2rem;
+}
+
+.swiper {
+	width: 100%;
+	height: 100%;
+}
+
+.swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+
+	/* Center slide text vertically */
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+.swiper-slide img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/*media queries*/
+
+@media (min-width: 768px) {
+	#ready img {
+		width: 28rem;
+	}
+
+	.gamechoice img {
+		width: 28rem;
+	}
+
+	#title img {
+		padding-left: 0;
+	}
+
+	#title img {
+		padding-left: 2rem;
+	}
+}
