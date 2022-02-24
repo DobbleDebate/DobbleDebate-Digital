@@ -2,10 +2,22 @@
 .description {font: 10px sans-serif;}
 .collection {font: 4px sans-serif;}
 
-.card{
-	/*position: relative;
+.scroll1::-webkit-scrollbar {
+	width: 5px;
+}
+   
+.scroll1::-webkit-scrollbar-track {
+	background: #ddd;
+}
+   
+.scroll1::-webkit-scrollbar-thumb {
+	background: #666; 
+}
+
+.gamecard{
+	position: relative;
 	background: transparent;
-	perspective: 1000px;*/
+	perspective: 1000px;
 }
 
 .card__inner{

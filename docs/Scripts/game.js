@@ -131,15 +131,12 @@ function PreparePositions(){
         if(players[i].role == pro){
             proImage.src = players[i].proFilepath
             proImage.alt = "arguing pro - " + players[i].altText
-            proImage.tabIndex = 0
         }else if(players[i].role == con){
             conImage.src = players[i].conFilepath
             conImage.alt = "arguing con - " + players[i].altText
-            conImage.tabIndex = 0
         }else if(players[i].role == ref){
             refImage.src = players[i].refFilepath
             refImage.alt = "referee - " + players[i].altText
-            refImage.tabIndex = 0
         }
     }
 }
@@ -250,12 +247,6 @@ function AfterPositionScreen(){
     BlurContainer(false)
     ShowPositionsContainer(false)
     MainTabIndexesEnabled(true)
-    let proImage = document.getElementById("pro-player")
-    let conImage = document.getElementById("con-player")
-    let refImage = document.getElementById("ref-player")
-    proImage.tabIndex = 0
-    conImage.tabIndex = 0
-    refImage.tabIndex = 0
 }
 
 function Leaderboard(){
@@ -405,6 +396,8 @@ function EnableButton(){
             phaseButtons[i+1].classList.add("is-in-phase")
             phaseButtons[i].classList.remove("not-in-phase")
             phaseButtons[i+1].classList.remove("not-in-phase")
+            phaseButtons[i].tabIndex = 0
+            phaseButtons[i+1].tabIndex = 0
         }
         else{
             console.log("i:"+ i + "\nPhase Button:" + phaseButtons[i].id + "\nNext Button:" + phaseButtons[i+1].id)
@@ -414,6 +407,8 @@ function EnableButton(){
             phaseButtons[i+1].classList.add("not-in-phase")
             phaseButtons[i].removeAttribute("onclick")
             phaseButtons[i+1].removeAttribute("onclick")
+            phaseButtons[i].tabIndex = -1
+            phaseButtons[i+1].tabIndex = -1
         }
     }
     switch(phase){
