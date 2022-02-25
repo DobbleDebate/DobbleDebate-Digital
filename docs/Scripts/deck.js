@@ -19,7 +19,10 @@ class Deck {
         } else {
             this.AssignSparkText()
         }
-        //if(this.name == 'Situation') this.AssignCardQuotation()
+        if(this.name == 'Situation'){ 
+            //this.AssignCardQuotation()
+            this.AssignCardImage();
+        }
     }
 
     AssignQueryPrefix() {
@@ -53,6 +56,10 @@ class Deck {
         this.cardQuotationAuthorElement = document.querySelector(this.queryPrefix + "author")
     }
 
+    AssignCardImage(){
+        this.cardImageElement = document.querySelector(this.queryPrefix + "image")
+    }
+
     RenderCard() {
         this.cardNameElement.textContent = this.cards[0].name
         this.cardNameElement.ariaLabel = this.cards[0].name + "."
@@ -78,10 +85,11 @@ class Deck {
             this.cardDescriptionElements[1].textContent = this.cards[0].description2;
             this.cardDescriptionElements[2].textContent = this.cards[0].description3;
 
-            /*if(this.name == 'Situation'){
-                this.cardQuotationElement.textContent = this.cards[0].quotation
-                this.cardQuotationAuthorElement.textContent = this.cards[0].author
-            }*/
+            if(this.name == 'Situation'){
+                //this.cardQuotationElement.textContent = this.cards[0].quotation
+                //this.cardQuotationAuthorElement.textContent = this.cards[0].author
+                this.cardImageElement.setAttribute("href", this.cards[0].img)
+            }
         }else{
             this.cardText.textContent = this.cards[0].text
         }

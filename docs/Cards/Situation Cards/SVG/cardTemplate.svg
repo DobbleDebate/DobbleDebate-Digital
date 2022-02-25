@@ -14,7 +14,7 @@
     <!--<rect x="25" y="30" rx="15" ry="15" width="200" height="115"
     style="fill:rgb(7,147,208)"/>-->
 
-    <image href="Cards/Situation Cards/SVG/Pirate Ship_img.svg" x="0" y="10" rx="25" ry="25" width="250" height="155"/>
+    <image id="sit-image" href="Cards/Situation Cards/SVG/Pirate Ship_img.svg" x="0" y="10" rx="25" ry="25" width="250" height="155"/>
 
 <!--ASL Gridlines
     <line x1="30" y1="65" x2="220" y2="65" stroke="gray" stroke-width="0.5"/>

@@ -57,6 +57,9 @@
 
                     <!--Card 1 taking 4-12 columns depending on screensize-->
                     <div class="col-sm-12 col-md-4 gamecard">
+                        <div class="card__below disable-tab-on-blur">
+                            <img class="card__face--bottom" src="images\pre-baked\stack_ability.svg"/>
+                        </div>
                         <div class="card__inner">
                             <div class="card__face card__face--front disable-tab-on-blur" tabindex="0">
                                 <img src="/Cards/Ability Cards/SVG/cardTemplate.svg" onload="SVGInject(this)" />
@@ -64,8 +67,6 @@
                             <div class="card__face card__face--back disable-tab-on-blur">
                                 <img src="/Cards/Ability Cards/SVG/cardBackFinished.svg" onload="SVGInject(this)" />
                             </div>
-                        </div>
-                        <div class="card__below disable-tab-on-blur" style="min-height: 50rem;">
                         </div>
                     </div>
 
@@ -91,25 +92,6 @@
                             <div class="col-md-12 offset-md-1">
                                 <img src="images/pre-baked/spark_hover.svg" class="img-fluid"/>
                             </div>
-                            <div class="col-md-12 offset-md-2">
-                                <div class="row pb-5">
-                                    <div class="col-12 hover-img-container pb-3">
-                                        <img src="images/pre-baked/how_to.svg" class="img-fluid pt-4" alt="assign points" onclick="AnimateDiscard()">
-                                        <img src="images/pre-baked/how_to_hover.svg" class="img-fluid pt-4 img-top" alt="assign points focus" onclick="AnimateDiscard()">
-                                    </div>
-                                </div>
-                                <div class="row pb-5">
-                                    <div class="col-12 hover-img-container pb-3">
-                                        <img src="images/pre-baked/positions.svg" class="img-fluid pt-4" alt="assign points" onclick="AnimateDiscard()">
-                                        <img src="images/pre-baked/positions_hover.svg" class="img-fluid pt-4 img-top" alt="assign points focus" onclick="AnimateDiscard()">
-                                    </div>
-                                </div>
-                                <div class="row pb-5">
-                                    <div class="col-12 hover-img-container pb-3">
-                                        <img src="images/pre-baked/scoreboard.svg" class="img-fluid pt-4" alt="assign points" onclick="AnimateDiscard()">
-                                        <img src="images/pre-baked/scoreboard_hover.svg" class="img-fluid pt-4 img-top" alt="assign points focus" onclick="AnimateDiscard()">
-                                    </div>
-                                </div>
                                 <button type="button" class="btn btn-primary disable-tab-on-blur"
                                     data-bs-toggle="modal" data-bs-target="#howToPlay">How-to Play?</button>
                                 <button class="btn btn-primary disable-tab-on-blur" id="showPositions"
@@ -121,38 +103,31 @@
                         </div>
                         <div class="row" style="min-height:3rem"></div>
                     </div>
-                    </div>
 
                 </div>
                 <div class="row">
-                    <div class="col-2 hover-img-container">
-                        <img src="images/pre-baked/ability.svg" class="img-fluid pt-5 is-in-phase" alt="reveal ability card" id="drawFirstCard" onclick="AnimateFlip(0)">
-                        <img src="images/pre-baked/ability_hover.svg" class="img-fluid pt-5 img-top is-in-phase" alt="reveal ability card focus" id="drawFirstCard-hover" onclick="AnimateFlip(0)">
-                        <!--<button class="btn btn-primary disable-tab-on-blur" id="drawFirstCard"
-                            onclick="AnimateFlip(0)">Reveal Ability Card</button>-->
+                    <div class="col-sm-12 col-md-2 hover-img-container">
+                        <img src="images/pre-baked/ability.svg" class="img-fluid pt-5 is-in-phase" alt="reveal ability card" id="drawFirstCard" onclick="AnimateFlip(0)"/>
+                        <img src="images/pre-baked/ability_hover.svg" class="img-fluid pt-5 img-top is-in-phase" alt="reveal ability card focus" id="drawFirstCard-hover" onclick="AnimateFlip(0)"/>
                     </div>
-                    <div class="col-2 offset-1 hover-img-container">
-                        <img src="images/pre-baked/situation.svg" class="img-fluid pt-5 not-in-phase" alt="reveal ability card" id="drawSecondCard">
-                        <img src="images/pre-baked/situation_hover.svg" class="img-fluid pt-5 img-top not-in-phase" alt="reveal ability card focus" id="drawSecondCard-hover">
-                        <!--<button class="btn btn-primary disable-tab-on-blur" id="drawSecondCard"
-                            onclick="AnimateFlip(1)" disabled>Draw Situation Card</button>-->
+                    <div class="col-sm-12 col-md-2 offset-1 hover-img-container">
+                        <img src="images/pre-baked/situation.svg" class="img-fluid pt-5 not-in-phase" alt="reveal situation card" id="drawSecondCard"/>
+                        <img src="images/pre-baked/situation_hover.svg" class="img-fluid pt-5 img-top not-in-phase" alt="reveal situation card focus" id="drawSecondCard-hover"/>
                     </div>
-                    <div class="col-2">
-                        <img src="images/pre-baked/debate.svg" class="img-fluid pt-2"/>
+                    <div class="col-sm-12 col-md-2 hover-img-container text-center">
+                        <img src="images/pre-baked/debate.svg" class="pt-2 debate_img not-in-phase" alt="start debating" id="debateBegins"/>
+                        <img src="images/pre-baked/debate_hover.svg" class="img-top pt-2 debate_img not-in-phase" alt="start debating focus" id="debateBegins-hover"/>
                     </div>
-                    <div class="col-2 hover-img-container">
-                        <img src="images/pre-baked/assign.svg" class="img-fluid pt-5 not-in-phase" alt="assign points" id="assignDobbles">
-                        <img src="images/pre-baked/assign_hover.svg" class="img-fluid pt-5 img-top not-in-phase" alt="assign points focus" id="assignDobbles-hover">
-                        <!--<button class="btn btn-primary disable-tab-on-blur" id="assignDobbles"
-                            onclick="AssignDobblesScreen()" disabled>Ref Weighs In</button>-->
+                    <div class="col-sm-12 col-md-2 hover-img-container">
+                        <img src="images/pre-baked/assign.svg" class="img-fluid pt-5 not-in-phase" alt="assign points" id="assignDobbles"/>
+                        <img src="images/pre-baked/assign_hover.svg" class="img-fluid pt-5 img-top not-in-phase" alt="assign points focus" id="assignDobbles-hover"/>
                     </div>
-                    <div class="col-2 offset-1 hover-img-container">
-                        <img src="images/pre-baked/next.svg" class="img-fluid pt-5 not-in-phase" alt="assign points" id="newRound">
-                        <img src="images/pre-baked/next_hover.svg" class="img-fluid pt-5 img-top not-in-phase" alt="assign points focus" id="newRound-hover">
-                        <!--<button class="btn btn-primary disable-tab-on-blur" id="drawCard"
-                         onclick="AnimateDiscard()" disabled>Discard and Next Round</button>-->
+                    <div class="col-sm-12 col-md-2 offset-1 hover-img-container">
+                        <img src="images/pre-baked/next.svg" class="img-fluid pt-5 not-in-phase" alt="assign points" id="newRound"/>
+                        <img src="images/pre-baked/next_hover.svg" class="img-fluid pt-5 img-top not-in-phase" alt="assign points focus" id="newRound-hover"/>
                     </div>
                 </div>
+                <div class="row" style="min-height: 6rem;"></div>
             </div>
 
             <!--Positions Container-->
@@ -178,7 +153,6 @@
                         <button class="btn btn-primary btn-positions" onclick="AfterPositionScreen()">Continue</button>
                     </div>
                 </div>
-
             </div>
 
             <!--Positions Container-->

@@ -55,6 +55,12 @@
 	backface-visibility: hidden;
 }
 
+.card__below{
+	position: absolute;
+	width: 125%;
+	height: auto;
+}
+
 .hidden-container{
 	z-index: 1;
 }
@@ -76,6 +82,12 @@
 
 .not-in-phase{
 	opacity: 0.5
+}
+
+.debate_img{
+	max-width: 75%;
+	height: auto;
+	margin-left: 2rem;
 }
 
 @keyframes discard{
