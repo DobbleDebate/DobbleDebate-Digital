@@ -14,7 +14,7 @@
     <!--<rect x="25" y="30" rx="15" ry="15" width="200" height="115"
     style="fill:rgb(7,147,208)"/>-->
 
-    <image href="Cards/Situation Cards/SVG/Pirate Ship_img.svg" x="0" y="10" rx="25" ry="25" width="250" height="155"/>
+    <image id="sit-image" href="Cards/Situation Cards/SVG/Pirate Ship_img.svg" x="0" y="10" rx="25" ry="25" width="250" height="155"/>
 
 <!--ASL Gridlines
     <line x1="30" y1="65" x2="220" y2="65" stroke="gray" stroke-width="0.5"/>
@@ -31,29 +31,17 @@
     <text x="15" y="195" class="card-name" id="sit-name">Undefined Name</text>
     <text x="225" y="210" class="quotation" id="sit-quotation">""</text>
 
-    <!--Bullets-->
-    <text x="15" y="230" class="description" id="sit-bullet-1" visibility="hidden">•</text>
-    <text x="15" y="270" class="description" id="sit-bullet-2" visibility="hidden">•</text>
-    <text x="15" y="310" class="description" id="sit-bullet-3" visibility="hidden">•</text>
-
     <!--Description Text-->
-    <foreignObject x="22" y="220" width="200" height="35">
-        <div xmlns="http://www.w3.org/1999/xhtml" width="220" height="35">
-            <p id="sit-desc-1" class="description"></p>
-        </div>
-    </foreignObject>
-    
-    <foreignObject x="22" y="260" width="200" height="35">
-        <div xmlns="http://www.w3.org/1999/xhtml" width="220" height="35">
-            <p id="sit-desc-2" class="description"></p>
+    <foreignObject x="10" y="210" width="240" height="165">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="card-text" width="190" height="165">
+            <ul class="scroll1">
+                <li id="sit-desc-1" class="description"></li>
+                <li id="sit-desc-2" class="description"></li>
+                <li id="sit-desc-3" class="description"></li>
+            </ul>
         </div>
     </foreignObject>
 
-    <foreignObject x="22" y="300" width="200" height="35">
-        <div xmlns="http://www.w3.org/1999/xhtml" width="220" height="35">
-            <p id="sit-desc-3" class="description"></p>
-        </div>
-    </foreignObject>
 
 
 </svg>

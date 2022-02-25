@@ -26,12 +26,6 @@ const ref = 2
 //8: Next turn
 
 
-//Comments from 10th meeting
-//Try to show the Kibitzer roles
-//Add rule/guidance to call on Kibitzer role
-//Showcase some cards for loading screen
-//Possibly type player name
-
 
 function StartGame() {
     Load()
@@ -131,15 +125,12 @@ function PreparePositions(){
         if(players[i].role == pro){
             proImage.src = players[i].proFilepath
             proImage.alt = "arguing pro - " + players[i].altText
-            proImage.tabIndex = 0
         }else if(players[i].role == con){
             conImage.src = players[i].conFilepath
             conImage.alt = "arguing con - " + players[i].altText
-            conImage.tabIndex = 0
         }else if(players[i].role == ref){
             refImage.src = players[i].refFilepath
             refImage.alt = "referee - " + players[i].altText
-            refImage.tabIndex = 0
         }
     }
 }
@@ -250,12 +241,6 @@ function AfterPositionScreen(){
     BlurContainer(false)
     ShowPositionsContainer(false)
     MainTabIndexesEnabled(true)
-    let proImage = document.getElementById("pro-player")
-    let conImage = document.getElementById("con-player")
-    let refImage = document.getElementById("ref-player")
-    proImage.tabIndex = 0
-    conImage.tabIndex = 0
-    refImage.tabIndex = 0
 }
 
 function Leaderboard(){
@@ -292,6 +277,7 @@ function AnimateFlip(card){
     animCard[card].classList.remove('discard')
     if(card == 1){
         IsSecondCardTabIndexed(true)
+        audioManager.Play("Situations", decks[1].cards[0].id)
     }
     EnableButton()
 }
@@ -389,13 +375,15 @@ function EnableButton(){
     document.getElementById("drawFirstCard-hover"), 
     document.getElementById("drawSecondCard"), 
     document.getElementById("drawSecondCard-hover"), 
+    document.getElementById("debateBegins"),
+    document.getElementById("debateBegins-hover"),
     document.getElementById("assignDobbles"),
     document.getElementById("assignDobbles-hover"), 
     document.getElementById("newRound"),
     document.getElementById("newRound-hover")]
 
     phase++
-    if(phase == 4){
+    if(phase == 5){
         phase = 0;
     }
 
@@ -405,6 +393,8 @@ function EnableButton(){
             phaseButtons[i+1].classList.add("is-in-phase")
             phaseButtons[i].classList.remove("not-in-phase")
             phaseButtons[i+1].classList.remove("not-in-phase")
+            phaseButtons[i].tabIndex = 0
+            phaseButtons[i+1].tabIndex = 0
         }
         else{
             console.log("i:"+ i + "\nPhase Button:" + phaseButtons[i].id + "\nNext Button:" + phaseButtons[i+1].id)
@@ -412,12 +402,15 @@ function EnableButton(){
             phaseButtons[i+1].classList.remove("is-in-phase")
             phaseButtons[i].classList.add("not-in-phase")
             phaseButtons[i+1].classList.add("not-in-phase")
-            phaseButtons[i].removeAttribute("onclick")
-            phaseButtons[i+1].removeAttribute("onclick")
+            phaseButtons[i].onclick = function () {return false}
+            phaseButtons[i+1].onclick = function () {return false}
+            phaseButtons[i].tabIndex = -1
+            phaseButtons[i+1].tabIndex = -1
         }
     }
     switch(phase){
         case 0:
+
             phaseButtons[0].onclick = function () {AnimateFlip(0)}
             phaseButtons[1].onclick = function () {AnimateFlip(0)}
             break;
@@ -426,12 +419,16 @@ function EnableButton(){
             phaseButtons[3].onclick = function () {AnimateFlip(1)}
             break;
         case 2:
-            phaseButtons[4].onclick = function () {AssignDobblesScreen()}
-            phaseButtons[5].onclick = function () {AssignDobblesScreen()}
+            phaseButtons[4].onclick = function () {EnableButton()}
+            phaseButtons[5].onclick = function () {EnableButton()}
             break;
         case 3:
-            phaseButtons[6].onclick = function () {AnimateDiscard()}
-            phaseButtons[7].onclick = function () {AnimateDiscard()}
+            phaseButtons[6].onclick = function () {AssignDobblesScreen()}
+            phaseButtons[7].onclick = function () {AssignDobblesScreen()}
+            break;
+        case 4:
+            phaseButtons[8].onclick = function () {AnimateDiscard()}
+            phaseButtons[9].onclick = function () {AnimateDiscard()}
             break;
     }
 }
@@ -464,8 +461,12 @@ function CloseSparkContainer(){
 //Save data management
 function Load(){
     let tmpPlayers = JSON.parse(storage.getItem("players"))
-    for(i = 0; i < tmpPlayers.length; i++){
-        tmpPlayers[i] = Object.assign(new Player(), tmpPlayers[i])
+    if(tmpPlayers == null){
+        return;
+    }else{
+        for(i = 0; i < tmpPlayers.length; i++){
+            tmpPlayers[i] = Object.assign(new Player(), tmpPlayers[i])
+        }
     }
     players = tmpPlayers
 }
@@ -477,6 +478,6 @@ function Save(){
 
 function VerifyPlayers(){
     if(players == null || players.length < 3){
-        window.location.href = "character-creation.html"
+        window.location.href = "pre_03.html"
     }
 }
