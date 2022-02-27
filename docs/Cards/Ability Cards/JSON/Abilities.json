@@ -5,7 +5,9 @@
             "name": "ADD/ADHD",
             "description1": "a chronic difference that includes difficulty maintaining attention, hyperactivity, and impulsive behaviour",
             "description2": "people with ADD/ADHD may experience difficulties following through on instructions and orgainizing tasks or activities",
-            "description3": "those with ADD/ADHD are often more creative and spontaneous"
+            "description3": "those with ADD/ADHD are often more creative and spontaneous",
+            "link": "link here",
+            "image": "image src here"
         },
         {
             "id": "002",

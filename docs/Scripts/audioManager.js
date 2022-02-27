@@ -1,5 +1,5 @@
-class AudioManager{
-    constructor(){
+class AudioManager {
+    constructor() {
         this.audioGroups = []
         this.audioClips = [
             new AudioClip("coffee", "/Assets/Audio/Characters/coffee.wav"),
@@ -14,7 +14,7 @@ class AudioManager{
             new AudioClip("wool", "/Assets/Audio/Characters/wool.wav")
         ]
         this.audioGroups.push(new AudioGroup("Characters", this.audioClips))
-        
+
         this.audioClips = [
             new AudioClip("cardflip", "/Assets/Audio/SFX/cardflip.wav"),
             new AudioClip("error", "/Assets/Audio/SFX/error.wav"),
@@ -63,24 +63,31 @@ class AudioManager{
             new AudioClip("005", "Assets/Audio/Spark/teaching_asl.wav"),
         ]
         this.audioGroups.push(new AudioGroup("Spark", this.audioClips))
-
+        this.mute = false;
     }
 
-    StopAllAudio(){
-        for(let i=0; i<this.audioGroups.length; i++){
-            for(let j=0; j<this.audioGroups[i].audioClips.length; j++){
+    StopAllAudio() {
+        for (let i = 0; i < this.audioGroups.length; i++) {
+            for (let j = 0; j < this.audioGroups[i].audioClips.length; j++) {
                 this.audioGroups[i].audioClips[j].Stop()
             }
         }
     }
 
-    Play(group, track){
+    Mute(b) {
+        this.mute = b;
         this.StopAllAudio()
-        for(let i=0; i<this.audioGroups.length; i++){
-            if(this.audioGroups[i].groupName == group){
-                for(let j=0; j<this.audioGroups[i].audioClips.length; j++){
-                    if(this.audioGroups[i].audioClips[j].name == track){
-                        this.audioGroups[i].audioClips[j].Play()
+    }
+
+    Play(group, track) {
+        this.StopAllAudio()
+        if (!this.mute) {
+            for (let i = 0; i < this.audioGroups.length; i++) {
+                if (this.audioGroups[i].groupName == group) {
+                    for (let j = 0; j < this.audioGroups[i].audioClips.length; j++) {
+                        if (this.audioGroups[i].audioClips[j].name == track) {
+                            this.audioGroups[i].audioClips[j].Play()
+                        }
                     }
                 }
             }
@@ -89,27 +96,27 @@ class AudioManager{
 
 }
 
-class AudioClip{
-    constructor(name, file){
+class AudioClip {
+    constructor(name, file) {
         this.name = name
         this.fileName = file
         this.audio = new Audio(this.fileName)
         this.audio.volume = 0.3
     }
 
-    Play(){
+    Play() {
         this.audio.play()
     }
 
-    Stop(){
+    Stop() {
         this.audio.pause()
         this.audio.currentTime = 0
     }
 }
 
-class AudioGroup{
+class AudioGroup {
 
-    constructor(name, audioClips){
+    constructor(name, audioClips) {
         this.groupName = name
         this.audioClips = audioClips
     }

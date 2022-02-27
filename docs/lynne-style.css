@@ -93,6 +93,23 @@ header {
 	display: inline;
 }
 
+#anim {
+	width: 4rem;
+	margin-top: .6em;
+    position: relative;
+	display: inline-block;
+}
+#anim .img-top {
+	display: none;
+	position: absolute;
+	top: 0em;
+	left: 0em;
+	z-index: 99;
+}
+#anim:hover .img-top {
+	display: inline;
+}
+
 .dropdown {
 	float: right;
 	width: 4rem;

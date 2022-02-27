@@ -214,6 +214,7 @@ function ShowPositionsContainer(b){
 }
 
 function ShowWinnerContainer(b){
+    BlurContainer(b)
     let container = document.getElementById("winner-container")
     container.hidden = !b
 }
@@ -224,7 +225,6 @@ function ShowSparkContainer(b){
 }
 
 function AfterWinnerContainer(){
-    BlurContainer(false)
     ShowWinnerContainer(false)
     MainTabIndexesEnabled(true)
     let winnerDisplay = document.getElementById("winner")
@@ -456,6 +456,64 @@ function CloseSparkContainer(){
     BlurContainer(false)
     ShowSparkContainer(false)
     audioManager.StopAllAudio()
+}
+
+//Mute and animation
+function MuteAudio(){
+    audioManager.Mute(true);
+    let soundImage = document.getElementById("sound-icon")
+    let soundImageHover = document.getElementById("sound-icon-hover")
+
+    soundImage.src = "images/basics/sound_on.svg"
+    soundImageHover.src = "images/basics/sound_on_hover.svg"
+
+    soundImage.onclick = function () {UnmuteAudio()}
+    soundImageHover.onclick = function () {UnmuteAudio()}
+}
+
+function UnmuteAudio(){
+    audioManager.Mute(false);
+    let soundImage = document.getElementById("sound-icon")
+    let soundImageHover = document.getElementById("sound-icon-hover")
+
+    soundImage.src = "images/basics/sound.svg"
+    soundImageHover.src = "images/basics/sound_hover.svg"
+
+    soundImage.onclick = function () {MuteAudio()}
+    soundImageHover.onclick = function () {MuteAudio()}
+}
+
+function StopAnimation(){
+    let cards = Array.from(document.getElementsByClassName("card__inner"))
+    for(let i = 0; i < cards.length; i++){
+        cards[i].classList.add("notransition");
+    }
+
+    let animImage = document.getElementById("anim-icon")
+    let animHoverImage = document.getElementById("anim-icon-hover")
+
+    animImage.src = "images/basics/animation_on.svg"
+    animHoverImage.src = "images/basics/animation_on_hover.svg"
+    
+    animImage.onclick = function () {StartAnimation()}
+    animHoverImage.onclick = function () {StartAnimation()}
+
+}
+
+function StartAnimation(){
+    let cards = Array.from(document.getElementsByClassName("card__inner"))
+    for(let i = 0; i < cards.length; i++){
+        cards[i].classList.remove("notransition");
+    }
+
+    let animImage = document.getElementById("anim-icon")
+    let animHoverImage = document.getElementById("anim-icon-hover")
+
+    animImage.src = "images/basics/animation.svg"
+    animHoverImage.src = "images/basics/animation_hover.svg"
+    
+    animImage.onclick = function () {StopAnimation()}
+    animHoverImage.onclick = function () {StopAnimation()}
 }
 
 //Save data management
