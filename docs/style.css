@@ -2,6 +2,10 @@
 .description {font: 10px sans-serif;}
 .collection {font: 4px sans-serif;}
 
+body{
+	background-color: #fffff8
+}
+
 .scroll1::-webkit-scrollbar {
 	width: 5px;
 }
@@ -14,8 +18,18 @@
 	background: #666; 
 }
 
+header{
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	background-color: #fffff8;
+	-moz-box-shadow: 0px 4px 4px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0px 4px 4px rgba(0,0,0,0.5);
+	box-shadow: 0px 4px 4px rgba(0,0,0,0.5);
+}
+
 .gamecard{
-	position: relative;
 	background: transparent;
 	perspective: 1000px;
 }
@@ -25,7 +39,7 @@
 	height:100%;
 	transition: transform 1s;
 	transform-style: preserve-3d;
-	position:relative;
+	position:static;
 }
 
 .card__inner.first-flip{
@@ -44,7 +58,7 @@
 .card__face--front{
 	width:100%;
 	height:100%;
-	transform: rotateY(180deg);
+	transform: rotateY(180deg);	
 }
 
 .card__face{
@@ -59,6 +73,8 @@
 	position: absolute;
 	width: 125%;
 	height: auto;
+	top: 0;
+	left: 0;
 }
 
 .hidden-container{
@@ -88,6 +104,14 @@
 	max-width: 75%;
 	height: auto;
 	margin-left: 2rem;
+}
+
+.notransition {
+	-webkit-transition: none !important;
+	-moz-transition: none !important;
+	-o-transition: none !important;
+	transition: none !important;
+	animation: none !important;
 }
 
 @keyframes discard{

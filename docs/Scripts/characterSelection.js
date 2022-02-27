@@ -11,6 +11,7 @@ function AddCharacter(name){
     btn.setAttribute("aria-pressed", "true")
     btn.onclick = function() {RemoveCharacter(name)}
     audioManager.Play("Characters", name)
+    btn.src = "Assets/Animations/"+name+".gif"
 }
 
 function RemoveCharacter(name){
@@ -19,6 +20,7 @@ function RemoveCharacter(name){
     avatars.splice(index,1)
     btn.setAttribute("aria-pressed", "false")
     btn.onclick = function() {AddCharacter(name)}
+    btn.src = "Assets/Characters/"+name+".svg"
 }
 
 function AssignCharacters(){
