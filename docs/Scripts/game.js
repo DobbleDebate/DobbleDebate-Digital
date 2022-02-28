@@ -213,6 +213,13 @@ function ShowPositionsContainer(b){
     container.hidden = !b
 }
 
+function ShowScoreContainer(b){
+    BlurContainer(b)
+    MainTabIndexesEnabled(!b)
+    let container = document.getElementById("scoreboard-container")
+    container.hidden = !b
+}
+
 function ShowWinnerContainer(b){
     BlurContainer(b)
     let container = document.getElementById("winner-container")
@@ -243,10 +250,77 @@ function AfterPositionScreen(){
     MainTabIndexesEnabled(true)
 }
 
-function Leaderboard(){
-    for(let i = 0; i < players.length; i++){
-        console.log(players[i].name + ":" + players[i].dobbles + " Dobbles")
+function Scoreboard(){
+
+    let scoreboardRowElements = [document.getElementById("1st"),
+        document.getElementById("2nd"),
+        document.getElementById("3rd"),
+        document.getElementById("4th"),
+        document.getElementById("5th"),
+        document.getElementById("6th"),
+        document.getElementById("7th"),
+        document.getElementById("8th"),
+        document.getElementById("9th"),
+        document.getElementById("10th")
+    ]
+
+    let scoreboardNameElements = [document.getElementById("1st-name"),
+    document.getElementById("2nd-name"),
+    document.getElementById("3rd-name"),
+    document.getElementById("4th-name"),
+    document.getElementById("5th-name"),
+    document.getElementById("6th-name"),
+    document.getElementById("7th-name"),
+    document.getElementById("8th-name"),
+    document.getElementById("9th-name"),
+    document.getElementById("10th-name")
+    ]
+
+    let scoreboardScoreElements =[document.getElementById("1st-score"),
+    document.getElementById("2nd-score"),
+    document.getElementById("3rd-score"),
+    document.getElementById("4th-score"),
+    document.getElementById("5th-score"),
+    document.getElementById("6th-score"),
+    document.getElementById("7th-score"),
+    document.getElementById("8th-score"),
+    document.getElementById("9th-score"),
+    document.getElementById("10th-score")
+    ]
+
+    let sortedPlayers = SortPlayersByDobbles()
+
+    for (let i = sortedPlayers.length-1; i >= 0; i--){
+        if(i == sortedPlayers.length - 1){
+            for(let j = 0; j <= i; j++){
+                scoreboardRowElements[j].hidden = false;
+            }
+        }
+
+        let currentPlayer = sortedPlayers[i]
+
+        console.log(currentPlayer)
+
+        scoreboardNameElements[i].textContent = currentPlayer.name
+        scoreboardScoreElements[i].textContent = currentPlayer.dobbles
     }
+
+    ShowScoreContainer(true)
+}
+
+function SortPlayersByDobbles(){
+    let n = players.length
+    let sortedArray = players
+    for (let i = 1; i < n; i++){
+        let current = sortedArray[i]
+        let j = i-1
+        while((j > -1) && (current.dobbles > sortedArray[j].dobbles)){
+            sortedArray[j+1] = sortedArray[j]
+            j--
+        }
+        sortedArray[j+1] = current;
+    }
+    return sortedArray
 }
 
 //Tab Indexing

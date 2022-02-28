@@ -29,12 +29,13 @@
 
     <!--Name Text-->
     <text x="15" y="195" class="card-name" id="sit-name">Undefined Name</text>
-    <text x="225" y="210" class="quotation" id="sit-quotation">""</text>
 
     <!--Description Text-->
     <foreignObject x="10" y="210" width="240" height="165">
-        <div xmlns="http://www.w3.org/1999/xhtml" class="card-text" width="190" height="165">
-            <ul class="scroll1">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="card-text scroll1" width="190" height="165">
+            <span id="sit-quotation"></span>
+            <span id="sit-author"></span>
+            <ul style="margin-top:1em;">
                 <li id="sit-desc-1" class="description"></li>
                 <li id="sit-desc-2" class="description"></li>
                 <li id="sit-desc-3" class="description"></li>

@@ -25,11 +25,12 @@
 <body onload="StartGame()">
     <!-- Logo -->
 <header>         
-    <div class="row d-flex flex-wrap align-items-center">
+    <div class="row d-flex flex-wrap align-items-center pb-2">
     <div class="col-1">
         <a href="https://dobbledebate.com" target="_blank"><img src="images/basics/top_logo.svg" alt="Dobble Debate logo, two capital D's superimposed one on the other, the word Dobble written in orange, the word Debate written in blue" width="200"></a>
     </div>
     <div class="col-2 offset-1">
+        <img src="">
         <p id="hints">HINTS GO HERE</p>
     </div>
     <div class="col-1 offset-5">
@@ -39,7 +40,7 @@
                 <ul>
                     <li><a href="pre_01.html"><img src="images/pre-baked/how_to.svg" alt="how to play button"></a></li>
                     <li><img src="images/pre-baked/positions.svg" onclick="PositionScreen()"></li>
-                    <li><img src="images/pre-baked/scoreboard.svg"></li>
+                    <li><img src="images/pre-baked/scoreboard.svg" onclick="Scoreboard()"></li>
                     <li><a href="pre_02.html"><img src="images/pre-baked/start_again.svg" alt="start again link"></a></li>
                     <li><a href="main.html"><img src="images/pre-baked/exit.svg" alt="exit link"></a></li>
                 </ul>
@@ -63,9 +64,6 @@
         <div class="row position-relative">
             <div id="game-container">
                 <div class="row">
-                    <div class="col-md-6" id="tips">
-                        Hints Section Here
-                    </div>
                 </div>
 
                 <!--Button Group, Card 1, Card 2-->
@@ -142,9 +140,6 @@
 
             <!--Positions Container-->
             <div id="positions-container" class="hidden-container row position-absolute" hidden="true">
-                <div id="hint" class="row justify-content-center">
-                    Insert Hint Here
-                </div>
                 <div id="player-positions" class="row justify-content-center">
                     <div class="col-sm-3 positions-character ">
                         <img id="pro-player" class="position-image img-fluid" src="Assets/Characters/gum.svg">
@@ -173,14 +168,19 @@
                         src="Assets/Characters/coffee.svg">
                 </div>
                 <div id="dobble-assignment" class="row">
-                    <button id="btn-minus" class="btn btn-primary col-md-1 offset-md-4"
-                        onclick="ChangeDobbles(-1)">-1</button>
-                    <h2 id="dobble-results" class="col-md-2">0</h2>
-                    <button id="btn-plus" class="btn btn-primary col-md-1" onclick="ChangeDobbles(1)">+1</button>
-                </div>
-                <div class="row">
-                    <button id="btn-submit-dobbles" class="btn btn-primary col-md-4 offset-md-4"
-                        onclick="AssignDobbles()">Submit</button>
+                    <h2 id="dobble-results" class="col-md-2 offset-md-4">0</h2>
+                    <div class="col-md-1 offset-md-1 hover-img-container">
+                            <img src="images/pre-baked/dobble_arrow_up.svg" class="img-fluid is-in-phase" alt="add dobbles" id="increaseDobbles" onclick="ChangeDobbles(1)"/>
+                            <img src="images/pre-baked/dobble_arrow_up_hover.svg" class="img-fluid img-top is-in-phase" alt="add dobbles focus" id="increaseDobbles-hover" onclick="ChangeDobbles(1)"/>
+                    </div>
+                    <div class="col-md-1 hover-img-container">
+                        <img src="images/pre-baked/dobble_arrow_down.svg" class="img-fluid is-in-phase" alt="subtract dobbles" id="decreaseDobbles" onclick="ChangeDobbles(-1)"/>
+                        <img src="images/pre-baked/dobble_arrow_down_hover.svg" class="img-fluid img-top is-in-phase" alt="subtract dobbles focus" id="decreaseDobbles-hover" onclick="ChangeDobbles(-1)"/>
+                    </div>
+                    <div class="col-md-4 offset-md-5 hover-img-container">
+                        <img src="images/pre-baked/submit_dobbles.svg" class="img-fluid is-in-phase" alt="submit dobbles" id="submitDobbles" onclick="AssignDobbles()"/>
+                        <img src="images/pre-baked/submit_dobbles_hover.svg" class="img-fluid img-top is-in-phase" alt="submit dobbles focus" id="submitDobbles-hover" onclick="AssignDobbles()"/>
+                    </div>
                 </div>
             </div>
 
@@ -189,16 +189,11 @@
                 <div id="winner-identification" class="row">
                     <img id="winner" class="col-md-4 offset-md-4 position-image img-fluid"
                         src="Assets/Characters/coffee.svg">
+                    <div class="col-md-4 offset-md-5 hover-img-container">
+                        <img src="images/pre-baked/continue.svg" class="img-fluid is-in-phase" alt="continue" onclick="AfterWinnerContainer()"/>
+                        <img src="images/pre-baked/continue_hover.svg" class="img-fluid img-top is-in-phase" alt="continue focus" onclick="AfterWinnerContainer()"/>
+                    </div>
                 </div>
-                <div class="row">
-                    <button id="btn-after-winner" class="btn btn-primary col-md-4 offset-md-4"
-                        onclick="AfterWinnerContainer()">Submit</button>
-                </div>
-            </div>
-
-            <!--Leaderboard container TBC-->
-            <div id="leaderboard-container" class="hidden-container row position-absolute" hidden="true">
-
             </div>
 
             <!--Spark Container-->
@@ -217,8 +212,8 @@
             <!--Scoreboard Container-->
             <div id="scoreboard-container" class="hidden-container row position-absolute" hidden="true">
                 <div class="col-sm-12 col-md-6 offset-md-3 h-50">
-                    <table>
-                        <thead>
+                    <table class="table">
+                        <thead class="thead-dark">
                             <tr>
                                 <th scope="col">#</th>
                                 <th scope="col">Character</th>
@@ -226,22 +221,62 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th id="1st" scope="row">1</th>
-                                <th id="2nd" scope="row">2</th>
-                                <th id="3rd" scope="row">3</th>
-                                <th id="4th" scope="row">4</th>
-                                <th id="5th" scope="row">5</th>
-                                <th id="6th" scope="row">6</th>
-                                <th id="7th" scope="row">7</th>
-                                <th id="8th" scope="row">8</th>
-                                <th id="9th" scope="row">9</th>
-                                <th id="10th" scope="row">10</th>
-                                <th id="11th" scope="row">11</th>
-                                <th id="12th" scope="row">12</th>
+                            <tr id="1st" hidden>
+                                <th scope="row">1</th>
+                                <td id="1st-name"></td>
+                                <td id="1st-score"></td>
+                            </tr>
+                            <tr id="2nd" hidden>
+                                <th scope="row">2</th>
+                                <td id="2nd-name"></td>
+                                <td id="2nd-score"></td>
+                            </tr>
+                            <tr id="3rd" hidden>
+                                <th scope="row">3</th>
+                                <td id="3rd-name"></td>
+                                <td id="3rd-score"></td>
+                            </tr>
+                            <tr id="4th" hidden>
+                                <th scope="row">4</th>
+                                <td id="4th-name"></td>
+                                <td id="4th-score"></td>
+                            </tr>
+                            <tr id="5th" hidden>
+                                <th scope="row">5</th>
+                                <td id="5th-name"></td>
+                                <td id="5th-score"></td>
+                            </tr>
+                            <tr id="6th" hidden>
+                                <th scope="row">6</th>
+                                <td id="6th-name"></td>
+                                <td id="6th-score"></td>
+                            </tr>
+                            <tr id="7th" hidden>
+                                <th scope="row">7</th>
+                                <td id="7th-name"></td>
+                                <td id="7th-score"></td>
+                            </tr>
+                            <tr id="8th" hidden>
+                                <th scope="row">8</th>
+                                <td id="8th-name"></td>
+                                <td id="8th-score"></td>
+                            </tr>
+                            <tr id="9th" hidden>
+                                <th scope="row" hidden>9</th>
+                                <td id="9th-name"></td>
+                                <td id="9th-score"></td>
+                            </tr>
+                            <tr id="10th" hidden>
+                                <th scope="row" hidden>10</th>
+                                <td id="10th-name"></td>
+                                <td id="10th-score"></td>
                             </tr>
                         </tbody>
                     </table>
+                </div>
+                <div class="col-md-2 hover-img-container">
+                    <img src="images/pre-baked/continue.svg" class="img-fluid is-in-phase" alt="close scoreboard" onclick="ShowScoreContainer(false)"/>
+                    <img src="images/pre-baked/continue_hover.svg" class="img-fluid img-top is-in-phase" alt="close scoreboard focus" onclick="ShowScoreContainer(false)"/>
                 </div>
             </div>
 
@@ -278,7 +313,7 @@
             <img src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-sa.svg" alt="Creative Commons logo, with icons indicating the terms of the license"/><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
             </div>
     
-    </footer>
+</footer>
     <!-- Footer Ends -->
 
 </html>

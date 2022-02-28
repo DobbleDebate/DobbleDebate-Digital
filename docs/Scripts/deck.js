@@ -20,7 +20,7 @@ class Deck {
             this.AssignSparkText()
         }
         if(this.name == 'Situation'){ 
-            //this.AssignCardQuotation()
+            this.AssignCardQuotation()
             this.AssignCardImage();
         }
     }
@@ -65,29 +65,14 @@ class Deck {
         this.cardNameElement.ariaLabel = this.cards[0].name + "."
 
         if (this.name != "Spark") {
-            /*let brokenString = BreakString(this.cards[0].description1)
-            for (let i = 0; i < this.cardDescriptionElements.length; i++) {
-                if (i >= 6) {
-                    brokenString = BreakString(this.cards[0].description3)
-                } else if (i >= 3) {
-                    brokenString = BreakString(this.cards[0].description2)
-                }
-                this.cardDescriptionElements[i].textContent = brokenString[i % 3]
-                if (i % 3 == 2) {
-                    this.cardDescriptionElements[i].ariaLabel = brokenString[i % 3] + "."
-                } else {
-                    this.cardDescriptionElements[i].ariaLabel = brokenString[i % 3]
-                }
-
-            }*/
 
             this.cardDescriptionElements[0].textContent = this.cards[0].description1;
             this.cardDescriptionElements[1].textContent = this.cards[0].description2;
             this.cardDescriptionElements[2].textContent = this.cards[0].description3;
 
             if(this.name == 'Situation'){
-                //this.cardQuotationElement.textContent = this.cards[0].quotation
-                //this.cardQuotationAuthorElement.textContent = this.cards[0].author
+                this.cardQuotationElement.textContent = "\"" + this.cards[0].description1 + "\""
+                this.cardQuotationAuthorElement.textContent = "~" + this.cards[0].name
                 this.cardImageElement.setAttribute("href", this.cards[0].img)
             }
         }else{
