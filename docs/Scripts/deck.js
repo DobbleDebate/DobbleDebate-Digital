@@ -16,12 +16,12 @@ class Deck {
 
         if (this.name != "Spark") {
             this.AssignCardDescription()
+            this.AssignCardImage();
         } else {
             this.AssignSparkText()
         }
         if(this.name == 'Situation'){ 
             this.AssignCardQuotation()
-            this.AssignCardImage();
         }
     }
 
@@ -69,11 +69,17 @@ class Deck {
             this.cardDescriptionElements[0].textContent = this.cards[0].description1;
             this.cardDescriptionElements[1].textContent = this.cards[0].description2;
             this.cardDescriptionElements[2].textContent = this.cards[0].description3;
+            this.cardImageElement.setAttribute("href", this.cards[0].img)
 
             if(this.name == 'Situation'){
                 this.cardQuotationElement.textContent = "\"" + this.cards[0].description1 + "\""
                 this.cardQuotationAuthorElement.textContent = "~" + this.cards[0].name
-                this.cardImageElement.setAttribute("href", this.cards[0].img)
+            }else{
+                console.log(this.cards[0].link)
+                let link = this.cards[0].link
+                this.cardImageElement.onclick = function(){
+                    window.open(link, '_blank').focus();
+                }
             }
         }else{
             this.cardText.textContent = this.cards[0].text

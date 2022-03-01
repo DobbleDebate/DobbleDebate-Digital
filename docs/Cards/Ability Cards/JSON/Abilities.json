@@ -2,159 +2,201 @@
     "Base": [
         {
             "id": "001",
+            "link": "https://www.additudemag.com/slideshows/benefits-of-adhd-to-love/",
             "name": "ADD/ADHD",
-            "description1": "a chronic difference that includes difficulty maintaining attention, hyperactivity, and impulsive behaviour",
-            "description2": "people with ADD/ADHD may experience difficulties following through on instructions and orgainizing tasks or activities",
-            "description3": "those with ADD/ADHD are often more creative and spontaneous",
-            "link": "link here",
-            "image": "image src here"
+            "description1": "a chronic difference that includes very high energy levels, difficulty maintaining attention, and impulsivity",
+            "description2": "people with ADD/ADHD are often more creative and spontaneous than their peers",
+            "description3": "those with ADD/ADHD may have difficulty following instructions and organizing tasks or activities",
+            "img": "Cards/Ability Cards/QRS/01_ADD.svg"
         },
         {
             "id": "002",
+            "link": "http://dyslexiahelp.umich.edu/dyslexics/learn-about-dyslexia/what-is-dyslexia/the-many-strengths-of-dyslexics",
             "name": "Dyslexia",
-            "description1": "signs of dyslexia include trouble reading, writing, and spelling",
-            "description2": "people with dyslexia may have difficulty learning a foreign language and/or have poor handwriting",
-            "description3": "people who have dyslexia are often more spatially aware and creative"
+            "description1": "people with dyslexia are often unusually spatially aware and creative, and make compelling public speakers",
+            "description2": "signs of dyslexia include trouble reading, writing, and spelling",
+            "description3": "people with dyslexia may experience difficulty learning foreign languages and have poor handwriting",
+            "img": "Cards/Ability Cards/QRS/02_dyslexia.svg"
         },
         {
             "id": "003",
+            "link": "https://www.idlsgroup.com/news/strengths-of-dyscalculia ",
             "name": "Dyscalculia",
-            "description1": "this difference in learning makes it difficult to understand arithmetic",
-            "description2": "people with dyscalculia may have trouble reading analog clocks, working with budgets and timelines, performing basic math skills and differentiating between numbers and values",
-            "description3": "struggling with matricies in algebra or flunking calculus doesn't usually mean you have dyscalculia; it affects more basic arithmetic facts such as simple addition"
+            "description1": "those with dyscalculia may have trouble reading analog clocks, working with budgets and timelines, performing basic math skills, and differentiating between numbers and values",
+            "description2": "struggling with algebraic matrices or flunking calculus don't necessarily suggest dyscalculia, which complicates basic math functions like simple addition",
+            "description3": "people with dyscalculia are often highly strategic and intuitive thinkers, have advanced language skills, and can approach problem-solving with creative and practical verve",
+            "img": "Cards/Ability Cards/QRS/03_dyscalculia.svg"
         },
         {
             "id": "004",
+            "link": "https://drdustinerey.com/dysgraphia-an-unappreciated-blessing/",
             "name": "Dysgraphia",
-            "description1": "a learning disability that affects children and adults, and interferes with practically all aspects of the writing process, including spelling, legibility, word spacing and sizing, and expression ",
-            "description2": "people have trouble forming letters shapes and a tight, awkward, or painful grip on a pencil",
-            "description3": "dysgraphia symptoms typically change over time"
+            "description1": "dysgraphia affects children and adults, and interferes with most writing processes including spelling, legibility, word spacing and sizing, and expression",
+            "description2": "people with dysgraphia have trouble forming letter shapes and may have a tight, awkward, or painful grip on pen or pencil; they often thrive with keyboarding and computer programs supporting editing and reorganization",
+            "description3": "advanced listening, story-telling, and memorization skills can make those with dysgraphia notably more comfortable and engaging in social contexts than their peers",
+            "img": "Cards/Ability Cards/QRS/04_dysgraphia.svg"
         },
         {
             "id": "005",
-            "name": "Disassociative Disorder",
-            "description1": "this disorder generates feelings of unreality, as if one is detached from their own mind, body, self, and/or surroundings",
-            "description2": "during episodes, one is aware what one is experiencing is abnormal",
-            "description3": "the disorder can result in long-term memory gaps, forgetting personal information, or past events"
+            "link": "https://www.lapiak.com/index.php?id=7",
+            "name": "Deafness",
+            "description1": "The World Health Organization estimates that over 1 billion young adults are at risk of permanent, avoidable hearing loss from unsafe listening practices",
+            "description2": "people with hearing loss or who are 'hard of hearing' usually communicate with spoken language; 'deaf' people have very little or no hearing and often sign to communicate",
+            "description3": "SL emerged as a language in the American School for the Deaf, founded in 1817; it brought together Old French Sign Language, various village sign languages, and home sign systems",
+            "img": "Cards/Ability Cards/QRS/05_deafness.svg"
         },
         {
             "id": "006",
+            "link": "https://movementdisorders.ufhealth.org/2020/01/31/strengths-of-tourette-syndrome/ ",
             "name": "Tourette’s Syndrome",
-            "description1": "a disorder of the nervous system that causes the individual to make involuntary sounds and movements called ‘tics’",
-            "description2": "Tourette’s is characterized by multiple motor tics and at least one vocal (phonic) tic",
-            "description3": "some people with Tourette’s have a gift for hyper-focusing on a task"
+            "description1": "a nervous system condition that causes the individual to make involuntary sounds and movements called ‘tics’",
+            "description2": "some people with Tourette’s have a gift for hyper-focusing, exhibit greater cognitive control over other motor impulses, and benefit from increased humour and creativity",
+            "description3": "Tourette’s is characterized by multiple motor tics and at least one vocal (phonic) tic",
+            "img": "Cards/Ability Cards/QRS/06_tourettes.svg"
         },
         {
             "id": "007",
+            "link": "https://www.sleepadvisor.org/exercises-for-sleep-apnea-and-snoring/",
             "name": "Sleep Apnea",
-            "description1": "this condition causes pauses in the breath or shallow breathing during sleep ",
-            "description2": "this is a common and often chronic condition that disrupts deep sleep causing people to be tired during the day",
-            "description3": "people who experience sleep apnea snore loudly"
+            "description1": "sleep apnea causes breathing pauses or shallow breathing during sleep, as well as loud snoring",
+            "description2": "this common and often chronic condition disrupts deep sleep and can make people tired during the day",
+            "description3": "many treatments are available for sleep apnea, like OTC sleeping pills or sinus medication for mild cases; CPAP machines can help clear airways to reduce sleep apnea disruptions",
+            "img": "Cards/Ability Cards/QRS/07_apnea.svg"
         },
         {
             "id": "008",
+            "link": "https://blog.knitrite.com/2017/08/16/tanyas-top-10-reasons-why-its-great-to-be-an-amputee/",
             "name": "Amputee",
-            "description1": "an amputee is someone who has partially or entirely lost a limb",
-            "description2": "reasons for an amputation can include severe injuries, cancerous tumors, acute infections and thickening of nerve tissue or frostbite",
-            "description3": "amputees can use artificial limbs and assistive devices to compensate for their missing limb(s)"
+            "description1": "an amputee is someone who has partially or entirely lost one or more limbs",
+            "description2": "reasons for amputation can include severe injuries, cancerous tumours, acute infections, thickening of nerve tissue, and frostbite",
+            "description3": "amputees can use artificial limbs and assistive devices to live fully without missing limb(s), including creating new artistic forms and learning opportunities for and with other amputees",
+            "img": "Cards/Ability Cards/QRS/08_amputee.svg"
         },
         {
             "id": "009",
-            "name": "Hypertheymesia",
-            "description1": "the condition of possessing an extremely detailed autobiographical memory and remembering a vast number of life experiences",
-            "description2": "people with hyperthymesia spend excessive amounts of time thinking about their past",
-            "description3": "they can recall almost every day of their lives in near perfect detail"
+            "link": "https://gizmodo.com/would-perfect-memory-be-a-burden-or-a-superpower-1829146902",
+            "name": "Hyperthymesia",
+            "description1": "the condition of possessing an extremely detailed autobiographical memory of a vast number of life experiences",
+            "description2": "people with hyperthymesia spend large amounts of time thinking about their pasts and may recall almost every day of their lives in near perfect detail",
+            "description3": "minute access to their past can help people boost their mood by accessing happy memories, keep them from repeating mistakes, and nurture compassion and forgiveness for others",
+            "img": "Cards/Ability Cards/QRS/09_hyperthymesia.svg"
         },
         {
             "id": "010",
-            "name": "Eidetic Memory",
-            "description1": "the ability to vividly recall images from memory after only a few instances of exposure without using a mnemonic device",
-            "description2": "it is sometimes erroneously called photographic memory",
-            "description3": "eidetic memory is reported to occur in a small number of children, not usually in adults"
+            "link": "https://www.nytimes.com/2022/01/19/well/mind/anxiety-benefits.html",
+            "name": "Anxiety",
+            "description1": "if not too intense, anxiety can improve performance and conscientiousness, increase empathy, alert people to danger, and help people work or study more sustainably",
+            "description2": "most people experience anxiety at some point but it can become a disorder, of which generalized anxiety disorder is the most common",
+            "description3": "anxiety is experienced widely, for many reasons; it can manifest as fatigue, lack of focus, panic attacks, sleeping trouble, and GI issues",
+            "img": "Cards/Ability Cards/QRS/10_anxiety.svg"
         },
         {
             "id": "011",
+            "link": "https://www.down-syndrome.org/en-gb/research/education-21",
             "name": "Down Syndrome",
-            "description1": "Down syndrome is a congenital difference",
-            "description2": "this difference includes lower intellectual and physical variations including short stature and broad facial profile",
-            "description3": "people with Down syndrome are often more nurturing and have greater well-being"
+            "description1": "a congenital difference including lower than average intellectual capacity and physical variations like short stature and broad facial profile",
+            "description2": "Down syndrome babies now have a life expectancy (in the west) of 50-60 years and Downs adults are building careers in various artistic sectors like acting and modelling",
+            "description3": "people with Down syndrome are often more nurturing and have greater well-being than their non-Down syndrome peers",
+            "img": "Cards/Ability Cards/QRS/11_down.svg"
         },
         {
             "id": "012",
+            "link": "https://www.lpaonline.org/",
             "name": "Dwarfism",
-            "description1": "a condition that causes slow growth, affecting the height of an individual and results in short stature",
-            "description2": "people with dwarfism often struggle with social prejudice due to their height, as well as difficulties in day-to-day tasks such as driving",
-            "description3": "the terms 'dwarf', 'little person', 'LP', and 'person of short stature' are now generally considered acceptable by most people affected by these disorders"
+            "description1": "a condition that causes slow growth, affecting individuals’ heights and resulting in short stature",
+            "description2": "the terms 'dwarf', 'little person', 'LP', and 'person of short stature' are now generally considered acceptable by most people affected by this condition ",
+            "description3": "people with dwarfism often struggle with social prejudice due to their height, as well as difficulties in day-to-day tasks such as driving",
+            "img": "Cards/Ability Cards/QRS/12_dwarfism.svg"
         },
         {
             "id": "013",
+            "link": "https://creakyjoints.org/living-with-arthritis/benefits-of-rheumatoid-arthritis/",
             "name": "Arthritis",
-            "description1": "painful inflammation and stiffness of the joints",
+            "description1": "painful inflammation and stiffness of the joints that becomes more common with age",
             "description2": "arthritis can decrease one’s range of motion, making it difficult to complete daily tasks",
-            "description3": "the disease becomes more common with age"
+            "description3": "symptoms may be alleviated with low-impact exercise like swimming and healthy diet, as both increase general well-being",
+            "img": "Cards/Ability Cards/QRS/13_arthritis.svg"
         },
         {
             "id": "014",
+            "link": "https://narcolepsy.sleep-disorders.net/living/advantages",
             "name": "Narcolepsy",
-            "description1": "people with this difference experience excessive daytime fatigue, and disturbed routine sleep",
-            "description2": "people with narcolepsy may feel drowsy or fall asleep at undesirable times of the day",
-            "description3": "PLACEHOLDER"
+            "description1": "narcoleptics can often sleep anywhere and anytime, resulting in effective power naps and minimal jet lag from long-distance travel",
+            "description2": "people with narcolepsy may feel drowsy and excessive daytime fatigue, and fall asleep at undesirable times",
+            "description3": "those with this difference experience disturbed sleep routines which can negatively impact daily activities like work or school but may help them more easily adapt to shift work (as in hospitals)",
+            "img": "Cards/Ability Cards/QRS/14_narcolepsy.svg"
         },
         {
             "id": "015",
+            "link": "https://www.pbs.org/newshour/health/for-dostoevsky-epilepsy-was-a-matter-of-both-life-and-literature",
             "name": "Epilepsy",
-            "description1": "epilepsy is abnormal activity of the brain cells",
-            "description2": "it results in unprovoked seizures ",
-            "description3": "epilepsy symptoms include temporary confusion, staring spells, uncontrollable jerking movements and loss of consciousness or awareness"
+            "description1": "epilepsy is abnormal brain cell activity resulting in unprovoked seizures",
+            "description2": "this condition can lead to non-pharmacological euphoria and significantly increased creativity",
+            "description3": "symptoms may include temporary confusion, staring spells, unintentional jerking movements, and loss of consciousness or awareness",
+            "img": "Cards/Ability Cards/QRS/15_epilepsy.svg"
         },
         {
             "id": "016",
+            "link": "https://nfb.org/blog/ten-advantages-being-blind",
             "name": "Blindness",
-            "description1": "condition of poor visual perception or complete loss of vision",
-            "description2": "people with this difference may experience their other senses overcompensate and become stronger",
-            "description3": "people with this difference may use different tools to help them with their daily life; these can include guide dogs or canes"
+            "description1": "the condition of poor visual perception or complete vision loss",
+            "description2": "blind persons often find their other senses are much more finely honed than their fully sighted peers’ senses",
+            "description3": "people with this difference may use various tools to enhance daily life, such as guide dogs, canes, and smartphones",
+            "img": "Cards/Ability Cards/QRS/16_blindness.svg"
         },
         {
             "id": "017",
+            "link": "https://www.psychologytoday.com/ca/blog/fixing-families/201301/3-good-things-about-depression",
             "name": "Depression",
-            "description1": "depression disrupts a person’s daily functional abilities",
-            "description2": "depression can induce people to be over critical and they may seem like they are unable to have fun",
-            "description3": "people can feel hopeless, sad, irritable or have a lack of energy and self-esteem"
+            "description1": "depression disrupts a person’s daily functional abilities but seems often to correlate to intellectual and creative genius",
+            "description2": "depression can induce people to be overly critical and they may seem incapable of having fun",
+            "description3": "people with depression can feel hopeless, sad, irritable, and lack energy and self-esteem",
+            "img": "Cards/Ability Cards/QRS/17_depression.svg"
         },
         {
             "id": "018",
+            "link": "https://www.columbiapsychiatry.org/news/why-forgetting-good-your-memory",
             "name": "Amnesia",
-            "description1": "amnesia is a loss of whole or partial memory",
-            "description2": "loss ranges from particular facts of information to an inability to transfer information into long term memory",
-            "description3": "people with this difference can learn new information, but may not remember the act of learning new information"
+            "description1": "amnesia is whole or partial memory loss resulting from injury, illness, or other causes",
+            "description2": "people with this difference can learn new information but may not remember the act of learning new information",
+            "description3": "memory loss ranges from specific inputs and facts, to an inability to transfer information into long-term memory",
+            "img": "Cards/Ability Cards/QRS/18_amnesia.svg"
         },
         {
             "id": "019",
+            "link": "https://www.thesmellpodcast.com/",
             "name": "Anosmia",
-            "description1": "anosmia is the complete absence of the sense of smell",
-            "description2": "can be a temporary or permanent condition",
-            "description3": "can affect loss of appetite, smell memory and libido"
+            "description1": "anosmia is the complete absence of the sense of smell and may be either temporary or permanent",
+            "description2": "it may not prevent one from becoming a global ice cream magnate—both Ben and Jerry reportedly have anosmia",
+            "description3": "it can affect appetite, smell memory, and libido",
+            "img": "Cards/Ability Cards/QRS/19_anosmia.svg"
         },
         {
             "id": "020",
+            "link": "https://www.cbc.ca/parents/learning/view/i-want-to-share-10-positive-traits-that-people-with-autism-have",
             "name": "Autism",
-            "description1": "people with autism have a range of intelligence",
-            "description2": "people with autism often have a particularly keen interest in specific items or information",
-            "description3": "they can sometimes have a strong reaction to stimuli"
+            "description1": "people with autism have a range of intelligence levels but many test well above average",
+            "description2": "autistic people often have a particularly keen interest in specific items or information, with a matching ability to focus",
+            "description3": "people with autism sometimes react strongly to stimuli",
+            "img": "Cards/Ability Cards/QRS/20_autism.svg"
         },
         {
             "id": "021",
+            "link": "https://www.netmeds.com/health-library/post/ageusia-causes-symptoms-and-treatment",
             "name": "Ageusia",
-            "description1": "ageusia is the inability to detect tastes, such as sweetness, sourness, bitterness, saltiness and umami",
-            "description2": "this loss of east can be caused by neurological damage, problems with the endocrine system, tobacco use and aging",
-            "description3": "the tongue can only sense texture and tastes, most of what is perceived as the sense of taste is derived from smell"
+            "description1": "ageusia is the inability to detect tastes, such as sweetness, sourness, bitterness, saltiness, and umami",
+            "description2": "this loss of taste can be caused by neurological damage, endocrine system problems, tobacco use, and aging—some simple lifestyle changes may revive the ability to taste",
+            "description3": "the tongue can only sense texture and tastes, so most of what is perceived as taste is derived from smell",
+            "img": "Cards/Ability Cards/QRS/21_ageusia.svg"
         },
         {
             "id": "022",
+            "link": "https://www.theguardian.com/science/2014/apr/27/benefit-synaesthesia-brain-injury-mental-decline",
             "name": "Synesthesia",
-            "description1": "a crossing of neurological pathways where stimuli that usually affect one sense can involuntarily trigger another",
-            "description2": "a common form of synesthesia causes the individual to perceive numbers and letters as intrinsically coloured",
-            "description3": "PLACEHOLDER"
+            "description1": "a crossing of neurological pathways where stimuli that usually affect one sense involuntarily and simultaneously trigger another; synesthetes may get exhausted from sensory overload",
+            "description2": "a common form of synesthesia causes individuals to perceive numbers and letters as intrinsically coloured",
+            "description3": "it may confer sensory enhancements, such as making synesthetes better able to distinguish between smells and between colours; most seem to enjoy their amplified and elegantly combined senses",
+            "img": "Cards/Ability Cards/QRS/22_synesthesia.svg"
         }
     ]
 }

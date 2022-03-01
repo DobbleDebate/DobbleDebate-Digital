@@ -8,6 +8,7 @@ var isFirstJudge = true
 var tmpPoints = -2
 var firstPlayerTurnDone = false
 var audioManager = new AudioManager();
+var hints;
 
 const pro = 0
 const con = 1
@@ -44,6 +45,7 @@ function StartGame() {
     fetch('/Cards/Spark Cards/JSON/Spark.json')
         .then(response => response.json())
         .then(data => AddCards(data, 'Spark'))
+    hints = document.getElementById("hints")
     PositionScreen()
     audioManager.Play("SFX", "start")
 }
@@ -77,12 +79,14 @@ function AssignDobbles(){
         imageDisplay.src = nextPlayer.conFilepath
         imageDisplay.alt = "arguing con - " + nextPlayer.altText
         isFirstJudge = false
+        hints.innerHTML = "Referee, assign dobbles for the player arguing <b>con</b> (Range: -1 to +3)"
     }else{
         ShowDobbleContainer(false)
         imageDisplay.tabIndex = -1
         AssignWinner()
         ShowWinnerContainer(true)
         isFirstJudge = true
+        hints.innerHTML = "Here's this round's winner! Continue when ready."
     }
 
     pointDisplay.innerHTML = "0"
@@ -201,6 +205,7 @@ function AssignDobblesScreen(){
     ShowDobbleContainer(true)
     MainTabIndexesEnabled(false)
     IsSecondCardTabIndexed(false)
+    hints.innerHTML = "Referee, assign dobbles for the player arguing <b>pro</b> (Range: -1 to +3)"
 }
 
 function ShowDobbleContainer(b){
@@ -236,18 +241,21 @@ function AfterWinnerContainer(){
     MainTabIndexesEnabled(true)
     let winnerDisplay = document.getElementById("winner")
     winnerDisplay.tabIndex = -1
+    hints.innerHTML = "Click next round when ready for a new set of cards. Remember, if you need inspiration pick a spark!"
 }
 
 function PositionScreen(){
     BlurContainer(true)
     MainTabIndexesEnabled(false)
     ShowPositionsContainer(true)
+    hints.innerHTML = "Remember your new position!"
 }
 
 function AfterPositionScreen(){
     BlurContainer(false)
     ShowPositionsContainer(false)
     MainTabIndexesEnabled(true)
+    hints.innerHTML = "Click to show <b>ability</b>, then read out loud or sign the card for the group"
 }
 
 function Scoreboard(){
@@ -352,6 +360,9 @@ function AnimateFlip(card){
     if(card == 1){
         IsSecondCardTabIndexed(true)
         audioManager.Play("Situations", decks[1].cards[0].id)
+        hints.innerHTML = "Start the debate, audience don't hesitate to chime in"
+    }else{
+        hints.innerHTML = "Click to show <b>situation</b>, then read out loud or sign the card for the group"
     }
     EnableButton()
 }
@@ -471,7 +482,6 @@ function EnableButton(){
             phaseButtons[i+1].tabIndex = 0
         }
         else{
-            console.log("i:"+ i + "\nPhase Button:" + phaseButtons[i].id + "\nNext Button:" + phaseButtons[i+1].id)
             phaseButtons[i].classList.remove("is-in-phase")
             phaseButtons[i+1].classList.remove("is-in-phase")
             phaseButtons[i].classList.add("not-in-phase")
@@ -495,6 +505,7 @@ function EnableButton(){
         case 2:
             phaseButtons[4].onclick = function () {EnableButton()}
             phaseButtons[5].onclick = function () {EnableButton()}
+            hints.innerHTML = "Time for the referee to assign dobbles based on each debater's creativity, persuasivness, and/or logical arguments"
             break;
         case 3:
             phaseButtons[6].onclick = function () {AssignDobblesScreen()}

@@ -27,6 +27,8 @@
     
     <rect x="10" y="10" rx="15" ry="15" width="230" height="155"
     style="fill:rgb(241,101,34);"/>
+
+    <image id="abil-image" href="Cards/Situation Cards/SVG/Pirate Ship_img.svg" x="0" y="10" rx="25" ry="25" width="250" height="155"/>
     
     <!--<foreignObject x="25" y="30" width="200" height="115">
         <video xmlns="http://www.w3.org/1999/xhtml" width="200" height="115" controls="" class="disable-tab-on-blur">
