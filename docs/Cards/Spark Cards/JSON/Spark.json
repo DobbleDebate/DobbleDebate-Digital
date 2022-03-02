@@ -2,8 +2,10 @@
     "Base":[
         {
             "id": "001",
-            "name": "Sol's Story",
-            "text": "I’ve certainly got some funny stories… When I was about 10, I tried bringing my chair through a restaurant drive-thru. It worked too. They asked, “How may I help you?”, and they looked around, and all they saw was a hand! But my 10-year-old logic was, “There are cars on wheels, I'm on wheels… It's even the same number of wheels!”, I thought to myself."
+            "link": "video/test1.mp4",
+	        "bio": "Dan is a lawyer who is currently not practicing as he has progressive multiple sclerosis. He is a wheelchair user.",
+            "name": "Growth",
+            "story": "I practiced Law for about 10 years before my MS progressed to the point that I couldn’t work anymore. I think with time and experience, I developed a much different perspective of what’s important in how you practice Law. And through experience and the challenges I’ve had, I think about things, and I would be much more open now, to listen, and to let go of it and to not be so controlling. So, that’s my experience."
         }
     ]
 }

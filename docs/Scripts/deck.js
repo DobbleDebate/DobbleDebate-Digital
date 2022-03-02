@@ -19,6 +19,7 @@ class Deck {
             this.AssignCardImage();
         } else {
             this.AssignSparkText()
+            this.AssignSparkLink()
         }
         if(this.name == 'Situation'){ 
             this.AssignCardQuotation()
@@ -44,6 +45,11 @@ class Deck {
 
     AssignSparkText() {
         this.cardText = document.querySelector(this.queryPrefix + "textcontent")
+    }
+
+    AssignSparkLink(){
+        this.cardVideo = document.querySelector(this.queryPrefix + "video")
+        this.cardSource = document.querySelector(this.queryPrefix + "source")
     }
 
 
@@ -82,7 +88,12 @@ class Deck {
                 }
             }
         }else{
-            this.cardText.textContent = this.cards[0].text
+            this.cardText.innerHTML = "<b>" + 
+            this.cards[0].bio + "</b><br><br>" + this.cards[0].story
+            this.cardSource.src = this.cards[0].link
+            this.cardVideo.load()
+            this.cardVideo.play()
+            this.cardVideo.pause()
         }
     }
 
