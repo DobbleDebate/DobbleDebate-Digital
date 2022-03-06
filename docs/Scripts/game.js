@@ -248,6 +248,10 @@ function PositionScreen(){
     BlurContainer(true)
     MainTabIndexesEnabled(false)
     ShowPositionsContainer(true)
+    document.getElementById("pro-player").tabIndex = 0
+    document.getElementById("con-player").tabIndex = 0
+    document.getElementById("ref-player").tabIndex = 0
+    document.getElementById("positions-button").tabIndex = 0
     hints.innerHTML = "Remember your new position!"
 }
 
@@ -255,6 +259,10 @@ function AfterPositionScreen(){
     BlurContainer(false)
     ShowPositionsContainer(false)
     MainTabIndexesEnabled(true)
+    document.getElementById("pro-player").tabIndex = -1
+    document.getElementById("con-player").tabIndex = -1
+    document.getElementById("ref-player").tabIndex = -1
+    document.getElementById("positions-button").tabIndex = -1
     hints.innerHTML = "Click to show <b>ability</b>, then read out loud or sign the card for the group"
 }
 
