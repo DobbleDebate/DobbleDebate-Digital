@@ -87,6 +87,9 @@ function AssignDobbles(){
         ShowWinnerContainer(true)
         isFirstJudge = true
         hints.innerHTML = "Here's this round's winner! Continue when ready."
+        document.getElementById("increment-dobbles").tabIndex = -1
+        document.getElementById("decrease-dobbles").tabIndex = -1
+        document.getElementById("submit-dobbles").tabIndex = -1
     }
 
     pointDisplay.innerHTML = "0"
@@ -167,6 +170,7 @@ function AssignWinner(){
     winnerDisplay.src = leadingPlayer.filepath
     winnerDisplay.alt = leadingPlayer.altText
     winnerDisplay.tabIndex = 0
+    document.getElementById("submit-winner").tabIndex = -1
     tmpPoints = -2
 }
 
@@ -201,6 +205,11 @@ function AssignDobblesScreen(){
     imageDisplay.src = proPlayer.proFilepath
     imageDisplay.tabIndex = 0;
     imageDisplay.alt = "arguing pro - " + proPlayer.altText
+
+    document.getElementById("increment-dobbles").tabIndex = 0
+    document.getElementById("decrease-dobbles").tabIndex = 0
+    document.getElementById("submit-dobbles").tabIndex = 0
+
     BlurContainer(true)
     ShowDobbleContainer(true)
     MainTabIndexesEnabled(false)
