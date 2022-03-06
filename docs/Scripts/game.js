@@ -47,6 +47,7 @@ function StartGame() {
         .then(data => AddCards(data, 'Spark'))
     hints = document.getElementById("hints")
     PositionScreen()
+    AddEnterListener()
     audioManager.Play("SFX", "start")
 }
 
@@ -558,6 +559,36 @@ function CloseSparkContainer(){
     BlurContainer(false)
     ShowSparkContainer(false)
     audioManager.StopAllAudio()
+}
+
+function AddEnterListener(){
+    let buttons = [document.getElementById("drawFirstCard"),
+    document.getElementById("drawFirstCard-hover"), 
+    document.getElementById("drawSecondCard"), 
+    document.getElementById("drawSecondCard-hover"), 
+    document.getElementById("debateBegins"),
+    document.getElementById("debateBegins-hover"),
+    document.getElementById("assignDobbles"),
+    document.getElementById("assignDobbles-hover"), 
+    document.getElementById("newRound"),
+    document.getElementById("newRound-hover"),
+    document.getElementById("positions-button"),
+    document.getElementById("positions-button-hover"),
+    document.getElementById("increment-dobbles"),
+    document.getElementById("increment-dobbles-hover"),
+    document.getElementById("decrease-dobbles"),
+    document.getElementById("decrease-dobbles-hover"),
+    document.getElementById("submit-dobbles"),
+    document.getElementById("submit-dobbles-hover")]
+
+    for(let i = 0; i < buttons.length; i++){
+        buttons[i].addEventListener("keyup", function(event){
+            if(event.keyCode === 13){
+                event.preventDefault();
+                buttons[i].click()
+            }
+        })
+    }
 }
 
 //Mute and animation
