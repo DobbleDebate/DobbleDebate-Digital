@@ -39,23 +39,23 @@
             <span><img src="images/basics/menu.svg" alt="options menu dropdown icon"></span>
             <div class="dropdown-content">
                 <ul>
-                    <li><a href="pre_01.html"><img src="images/pre-baked/how_to.svg" alt="how to play button"></a></li>
-                    <li><img src="images/pre-baked/positions.svg" onclick="PositionScreen()"></li>
-                    <li><img src="images/pre-baked/scoreboard.svg" onclick="Scoreboard()"></li>
-                    <li><a href="pre_02.html"><img src="images/pre-baked/start_again.svg" alt="start again link"></a></li>
-                    <li><a href="main.html"><img src="images/pre-baked/exit.svg" alt="exit link"></a></li>
+                    <li><a href="pre_01.html"><img src="images/pre-baked/how_to.svg" alt="how to play button" role="button"></a></li>
+                    <li><img src="images/pre-baked/positions.svg" onclick="PositionScreen()" role="button"></li>
+                    <li><img src="images/pre-baked/scoreboard.svg" onclick="Scoreboard()" role="button"></li>
+                    <li><a href="pre_02.html"><img src="images/pre-baked/start_again.svg" alt="start again link" role="button"></a></li>
+                    <li><a href="main.html"><img src="images/pre-baked/exit.svg" alt="exit link" role="button"></a></li>
                 </ul>
             </div>
         </div>
     </div>
     <div class="col-2">
         <div id="sound">
-            <img id="sound-icon" src="images/basics/sound.svg" class="is-in-phase" alt="sound off icon" onclick="MuteAudio()">
-            <img id="sound-icon-hover" src="images/basics/sound_hover.svg" class="img-top" alt="sound off icon focus" onclick="MuteAudio()">
+            <img id="sound-icon" src="images/basics/sound.svg" class="is-in-phase" alt="sound off icon" onclick="MuteAudio()" role="button">
+            <img id="sound-icon-hover" src="images/basics/sound_hover.svg" class="img-top" alt="sound off icon focus" onclick="MuteAudio()" role="button">
         </div>
         <div id="anim" style="left: 1em;">
-            <img id="anim-icon" src="images/basics/animation.svg" alt="animation off icon" onclick="StopAnimation()">
-            <img id="anim-icon-hover" src="images/basics/animation_hover.svg" class="img-top" alt="sound off icon focus" onclick="StopAnimation()">
+            <img id="anim-icon" src="images/basics/animation.svg" alt="animation off icon" onclick="StopAnimation()" role="button">
+            <img id="anim-icon-hover" src="images/basics/animation_hover.svg" class="img-top" alt="sound off icon focus" onclick="StopAnimation()" role="button">
         </div>
     </div>
 </div>
@@ -106,8 +106,8 @@
                         </div>
                         <div class="row">
                             <div class="col-md-12 offset-md-1 gamecard hover-img-container">
-                                <img src="images/pre-baked/spark.svg" class="img-fluid is-in-phase" onclick="SparkCard()"/>
-                                <img src="images/pre-baked/spark_hover.svg" class="img-fluid img-top is-in-phase" onclick="SparkCard()"/>
+                                <img src="images/pre-baked/spark.svg" class="img-fluid is-in-phase" onclick="SparkCard()" role="button"/>
+                                <img src="images/pre-baked/spark_hover.svg" class="img-fluid img-top is-in-phase" onclick="SparkCard()" role="button"/>
                             </div>
                         </div>
                         <div class="row" style="min-height:40rem"></div>
@@ -116,24 +116,24 @@
                 </div>
                 <div class="row flex-nowrap pt-5">
                     <div class="col-sm-12 col-md-2 hover-img-container">
-                        <img src="images/pre-baked/ability.svg" class="img-fluid pt-5 is-in-phase" alt="reveal ability card" id="drawFirstCard" onclick="AnimateFlip(0)"/>
-                        <img src="images/pre-baked/ability_hover.svg" class="img-fluid pt-5 img-top is-in-phase" alt="reveal ability card focus" id="drawFirstCard-hover" onclick="AnimateFlip(0)"/>
+                        <img src="images/pre-baked/ability.svg" class="img-fluid pt-5 is-in-phase" alt="reveal ability card" id="drawFirstCard" onclick="AnimateFlip(0)" role="button"/>
+                        <img src="images/pre-baked/ability_hover.svg" class="img-fluid pt-5 img-top is-in-phase" alt="reveal ability card focus" id="drawFirstCard-hover" onclick="AnimateFlip(0)" role="button"/>
                     </div>
                     <div class="col-sm-12 col-md-2 offset-1 hover-img-container">
-                        <img src="images/pre-baked/situation.svg" class="img-fluid pt-5 not-in-phase" alt="reveal situation card" id="drawSecondCard"/>
-                        <img src="images/pre-baked/situation_hover.svg" class="img-fluid pt-5 img-top not-in-phase" alt="reveal situation card focus" id="drawSecondCard-hover"/>
+                        <img src="images/pre-baked/situation.svg" class="img-fluid pt-5 not-in-phase" alt="reveal situation card" id="drawSecondCard" role="button"/>
+                        <img src="images/pre-baked/situation_hover.svg" class="img-fluid pt-5 img-top not-in-phase" alt="reveal situation card focus" id="drawSecondCard-hover" role="button"/>
                     </div>
                     <div class="col-sm-12 col-md-2 hover-img-container text-center">
-                        <img src="images/pre-baked/debate.svg" class="pt-2 debate_img not-in-phase" alt="start debating" id="debateBegins"/>
-                        <img src="images/pre-baked/debate_hover.svg" class="img-top pt-2 debate_img not-in-phase" alt="start debating focus" id="debateBegins-hover"/>
+                        <img src="images/pre-baked/debate.svg" class="pt-2 debate_img not-in-phase" alt="start debating" id="debateBegins" role="button"/>
+                        <img src="images/pre-baked/debate_hover.svg" class="img-top pt-2 debate_img not-in-phase" alt="start debating focus" id="debateBegins-hover" role="button"/>
                     </div>
                     <div class="col-sm-12 col-md-2 hover-img-container">
-                        <img src="images/pre-baked/assign.svg" class="img-fluid pt-5 not-in-phase" alt="assign points" id="assignDobbles"/>
-                        <img src="images/pre-baked/assign_hover.svg" class="img-fluid pt-5 img-top not-in-phase" alt="assign points focus" id="assignDobbles-hover"/>
+                        <img src="images/pre-baked/assign.svg" class="img-fluid pt-5 not-in-phase" alt="assign points" id="assignDobbles" role="button"/>
+                        <img src="images/pre-baked/assign_hover.svg" class="img-fluid pt-5 img-top not-in-phase" alt="assign points focus" id="assignDobbles-hover" role="button"/>
                     </div>
                     <div class="col-sm-12 col-md-2 offset-1 hover-img-container">
-                        <img src="images/pre-baked/next.svg" class="img-fluid pt-5 not-in-phase" alt="assign points" id="newRound"/>
-                        <img src="images/pre-baked/next_hover.svg" class="img-fluid pt-5 img-top not-in-phase" alt="assign points focus" id="newRound-hover"/>
+                        <img src="images/pre-baked/next.svg" class="img-fluid pt-5 not-in-phase" alt="assign points" id="newRound" role="button"/>
+                        <img src="images/pre-baked/next_hover.svg" class="img-fluid pt-5 img-top not-in-phase" alt="assign points focus" id="newRound-hover" role="button"/>
                     </div>
                 </div>
                 <div class="row" style="min-height: 6rem;"></div>
@@ -156,8 +156,8 @@
                 </div>
                 <div class="row justify-content-center">
                     <div class="offset-4 col-md-2 hover-img-container">
-                        <img id="positions-button" src="images/pre-baked/continue.svg" class="img-fluid pt-5 is-in-phase" alt="assign points" id="continuePositions" onclick="AfterPositionScreen()" tabindex="-1"/>
-                        <img id="positions-button-hover" src="images/pre-baked/continue_hover.svg" class="img-fluid pt-5 img-top is-in-phase" alt="assign points and continue focus" id="continuePositions-hover" onclick="AfterPositionScreen()" tabindex="-1"/>
+                        <img id="positions-button" src="images/pre-baked/continue.svg" class="img-fluid pt-5 is-in-phase" alt="assign points" id="continuePositions" onclick="AfterPositionScreen()" tabindex="-1" role="button"/>
+                        <img id="positions-button-hover" src="images/pre-baked/continue_hover.svg" class="img-fluid pt-5 img-top is-in-phase" alt="assign points and continue focus" id="continuePositions-hover" onclick="AfterPositionScreen()" tabindex="-1" role="button"/>
                     </div>
                 </div>
             </div>
@@ -171,16 +171,16 @@
                 <div id="dobble-assignment" class="row">
                     <h2 id="dobble-results" class="col-md-2 offset-md-4">0</h2>
                     <div class="col-md-1 offset-md-1 hover-img-container">
-                            <img id="increment-dobbles" src="images/pre-baked/dobble_arrow_up.svg" class="img-fluid is-in-phase" alt="add dobbles" onclick="ChangeDobbles(1)" tabindex="-1"/>
-                            <img id="increment-dobbles-hover"src="images/pre-baked/dobble_arrow_up_hover.svg" class="img-fluid img-top is-in-phase" alt="add dobbles focus" onclick="ChangeDobbles(1)"/>
+                            <img id="increment-dobbles" src="images/pre-baked/dobble_arrow_up.svg" class="img-fluid is-in-phase" alt="add dobbles" onclick="ChangeDobbles(1)" tabindex="-1" role="button"/>
+                            <img id="increment-dobbles-hover"src="images/pre-baked/dobble_arrow_up_hover.svg" class="img-fluid img-top is-in-phase" alt="add dobbles focus" onclick="ChangeDobbles(1)" role="button"/>
                     </div>
                     <div class="col-md-1 hover-img-container">
-                        <img id="decrease-dobbles" src="images/pre-baked/dobble_arrow_down.svg" class="img-fluid is-in-phase" alt="subtract dobbles" onclick="ChangeDobbles(-1)" tabindex="-1"/>
-                        <img id="decrease-dobbles-hover" src="images/pre-baked/dobble_arrow_down_hover.svg" class="img-fluid img-top is-in-phase" alt="subtract dobbles focus" onclick="ChangeDobbles(-1)"/>
+                        <img id="decrease-dobbles" src="images/pre-baked/dobble_arrow_down.svg" class="img-fluid is-in-phase" alt="subtract dobbles" onclick="ChangeDobbles(-1)" tabindex="-1" role="button"/>
+                        <img id="decrease-dobbles-hover" src="images/pre-baked/dobble_arrow_down_hover.svg" class="img-fluid img-top is-in-phase" alt="subtract dobbles focus" onclick="ChangeDobbles(-1)" role="button"/>
                     </div>
                     <div class="col-md-4 offset-md-5 hover-img-container">
-                        <img id="submit-dobbles" src="images/pre-baked/submit_dobbles.svg" class="img-fluid is-in-phase" alt="submit dobbles" onclick="AssignDobbles()" tabindex="-1"/>
-                        <img id="submit-dobbles-hover" src="images/pre-baked/submit_dobbles_hover.svg" class="img-fluid img-top is-in-phase" alt="submit dobbles and continue focus" onclick="AssignDobbles()"/>
+                        <img id="submit-dobbles" src="images/pre-baked/submit_dobbles.svg" class="img-fluid is-in-phase" alt="submit dobbles" onclick="AssignDobbles()" tabindex="-1" role="button"/>
+                        <img id="submit-dobbles-hover" src="images/pre-baked/submit_dobbles_hover.svg" class="img-fluid img-top is-in-phase" alt="submit dobbles and continue focus" onclick="AssignDobbles()" role="button"/>
                     </div>
                 </div>
             </div>
@@ -191,8 +191,8 @@
                     <img id="winner" class="col-md-4 offset-md-4 position-image img-fluid"
                         src="Assets/Characters/coffee.svg" tabindex="-1">
                     <div class="col-md-4 offset-md-5 hover-img-container">
-                        <img id="submit-winner" src="images/pre-baked/continue.svg" class="img-fluid is-in-phase" alt="continue" onclick="AfterWinnerContainer()" tabindex="-1"/>
-                        <img id="submit-winner-hover" src="images/pre-baked/continue_hover.svg" class="img-fluid img-top is-in-phase" alt="continue focus" onclick="AfterWinnerContainer()" tabindex="-1"/>
+                        <img id="submit-winner" src="images/pre-baked/continue.svg" class="img-fluid is-in-phase" alt="continue" onclick="AfterWinnerContainer()" tabindex="-1" role="button"/>
+                        <img id="submit-winner-hover" src="images/pre-baked/continue_hover.svg" class="img-fluid img-top is-in-phase" alt="continue focus" onclick="AfterWinnerContainer()" tabindex="-1" role="button"/>
                     </div>
                 </div>
             </div>
@@ -204,8 +204,8 @@
                 </div>
                 <div class="row justify-content-center">
                     <div class="col hover-img-container">
-                        <img src="images/pre-baked/continue.svg" class="img-fluid is-in-phase" alt="assign points" id="continueSpark" onclick="CloseSparkContainer()"/>
-                        <img src="images/pre-baked/continue_hover.svg" class="img-fluid img-top is-in-phase" alt="assign points focus" id="continueSpark-hover" onclick="CloseSparkContainer()"/>
+                        <img src="images/pre-baked/continue.svg" class="img-fluid is-in-phase" alt="assign points" id="continueSpark" onclick="CloseSparkContainer()" role="button"/>
+                        <img src="images/pre-baked/continue_hover.svg" class="img-fluid img-top is-in-phase" alt="assign points focus" id="continueSpark-hover" onclick="CloseSparkContainer()" role="button"/>
                     </div>
                 </div>
             </div>
@@ -276,8 +276,8 @@
                     </table>
                 </div>
                 <div class="col-md-2 hover-img-container">
-                    <img src="images/pre-baked/continue.svg" class="img-fluid is-in-phase" alt="close scoreboard" onclick="ShowScoreContainer(false)"/>
-                    <img src="images/pre-baked/continue_hover.svg" class="img-fluid img-top is-in-phase" alt="close scoreboard focus" onclick="ShowScoreContainer(false)"/>
+                    <img src="images/pre-baked/continue.svg" class="img-fluid is-in-phase" alt="close scoreboard" onclick="ShowScoreContainer(false)" role="button"/>
+                    <img src="images/pre-baked/continue_hover.svg" class="img-fluid img-top is-in-phase" alt="close scoreboard focus" onclick="ShowScoreContainer(false)" role="button"/>
                 </div>
             </div>
 

@@ -584,7 +584,7 @@ function AddEnterListener(){
     for(let i = 0; i < buttons.length; i++){
         buttons[i].addEventListener("keyup", function(event){
             if(event.keyCode === 13){
-                event.preventDefault();
+                event.preventDefault()
                 buttons[i].click()
             }
         })
