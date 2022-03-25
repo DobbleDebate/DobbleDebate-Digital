@@ -90,7 +90,7 @@ class Deck {
         }else{
             this.cardText.innerHTML = "<b>" + 
             this.cards[0].bio + "</b><br><br>" + this.cards[0].story
-            this.cardSource.src = this.cards[0].link
+            this.cardSource.src = "https://lynnehellerprojects.com/dd/game/mp4s/" + this.cards[0].link
             this.cardVideo.load()
             this.cardVideo.play()
             this.cardVideo.pause()

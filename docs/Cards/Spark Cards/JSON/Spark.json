@@ -1,11 +1,368 @@
 {
-    "Base":[
+    "Base": [
         {
             "id": "001",
-            "link": "video/test1.mp4",
-	        "bio": "Dan is a lawyer who is currently not practicing as he has progressive multiple sclerosis. He is a wheelchair user.",
+            "link": "01%20Alexa.mp4",
+            "bio": "Alexa is deaf and an emerging artist in theatre, film and photography. She grew up on Toronto Island.",
+            "name": "Communicating with the Hearing",
+            "story": "As an artist, I am so passionate about putting all of my energy into making art and just creating. Honestly all of the blood, sweat and tears goes into making and producing art. I've been involved in so many different events and projects with the deaf community, and the hearing community. I've had my foot in everything. It's been an incredible experience just networking with people; meeting hearing and deaf people. But when I interact with the hearing community there is always a learning curve in learning how to communicate with me. So,  whether that be using a sign language interpreter or not, there is always a learning experience involved. I think where the barriers come in is just really communication at the very start. And that could be with artists who work in the same field as me or just the general public. It's always you know, just figuring out, navigating how to communicate with people. So whether they're deaf or hearing, learning how to communicate and be on the same page and breaking that barrier is very important, regardless of who you're involved with and what facets of the community you're involved with—communication is key for everyone, whether they're deaf, or hearing. And looking back, I do believe that I’ve expressed so much through my art, expressing those barriers and blocks I convey through my artistic practice."
+        },
+        {
+            "id": "002",
+            "link": "02%20Courage.mp4",
+            "bio": "Courage is a Black Deaf Female Queer actress, IBPOC art accessibility consultant and IBPOC Deaf activist. ",
+            "name": "My Experience as a Professional Athlete",
+            "story": "I was a track star and obviously I competed against other athletes but they were all hearing. There were so many barriers to get through. One specific barrier was the announcement for the race to start. When you call ready, set, or they countdown, one, two, three and then they fire the gun during the races. And every single time they would countdown, I have to depend on seeing the gun, seeing the smoke come from the gun. So that is why I prefer to set up in lanes two, three or four, because I could better hear the gun and see the smoke from the gun. And obviously as a deaf person, it is hard for me to hear, so depending on somebody else for accessibility and accommodation—advocating for myself to set up in the right lane. I did wear a hearing aid while I was racing which helped me hear the gun but it was loose and always bothering me while I was running. So I would have to depend on other people to let me know when my name was called, when they were calling my name to set up for the next heat. In high school everyone knew I was the deaf runner and they would help me and let me know that it was my turn and set up, you know, which lane I was in. Was I in two or three? So that was a big help for me to get ready for all of my races. But as a result of that experience from elementary school, high school, college and then being a deaf Olympian, there were several challenges. It was not an easy experience, whatsoever. I just had to make sure there were so many pieces in place, setting up in lanes two through four; who was responsible for the announcements? Making sure I could see the gun. But with the deaf Olympics, oh my gosh, all the accommodations were there. They were fabulous. But with the hearing races there were so many barriers I had to navigate. So many moving pieces that I had to have in place for me to have equal access."
+        },
+        {
+            "id": "003",
+            "link": "03%20Sol.mp4",
+            "bio": "Sol is a musician and educator. He was born with cerebral palsy and is a wheelchair user.",
+            "name": "Drive-Through",
+            "story": "I’ve certainly got some funny stories… When I was about 10, I tried bringing my chair through a restaurant drive-through. It worked too. They asked, \"How may I help you?\" They looked around and all they saw was a hand! But my 10-year-old logic was, \"There are cars on wheels, I'm on wheels… It's even the same number of wheels!\""
+        },
+        {
+            "id": "004",
+            "link": "04%20Sol.mp4",
+            "bio": "Sol is a musician and educator. He was born with cerebral palsy and is a wheelchair user.",
+            "name": "Performing & Labeling",
+            "story": "As a disabled musician, I’m an odd duck in my field, you know? Rolling up on stage, guitar in hand, in a wheelchair, is a weird thing for people to see; it often takes people aback… I mean, name three musicians with apparent physical disabilities, it’s kind of hard, you know? Jeff Healey, Itzhak Perlman, there are a handful of others, but we’re not common, by any stretch of the imagination. So, it’s one of those things where we do have to advocate for ourselves, or for those in the special needs or special learners’ community."
+        },
+        {
+            "id": "005",
+            "link": "05%20Sol.mp4",
+            "bio": "Sol is a musician and educator. He was born with cerebral palsy and is a wheelchair user.",
+            "name": "Sense of Humour",
+            "story": "I try to laugh at myself as much as possible, you know? I think it’s important [...] Where someone goes, \"Hey Sol, you want to go for a walk, I mean roll, I mean, oh, oh right…\", you know what I mean? Really? A walk? Let’s try that one again. I like being a dick about it sometimes; it’s just funny."
+        },
+        {
+            "id": "006",
+            "link": "06%20Jack.mp4",
+            "bio": "Jack is a practicing senior visual artist and educator. He has dyslexia and has lost some of the use of his right arm.",
+            "name": "Disability for One, Ability for Another ",
+            "story": "As a child, I was considered unintelligent, because I couldn't read. And I remember even to this age, even at age 84. I remember that sickening feeling of not even knowing what on earth the world was talking about, and why couldn't I do it? I fell back in grade school and had to repeat years. But, on the other hand—quite literally—I was able to draw, and drawing became my principal language through which I’ve built a lifetime. So, even with dyslexia, which is just one small aspect of reading readiness and understanding involved in a child learning to read, and with my own children, I’ve discovered there are different kinds of brains that develop at different rates. What is a disability for one is an ability for the other."
+        },
+        {
+            "id": "007",
+            "link": "07%20Jack.mp4",
+            "bio": "Jack is a practicing senior visual artist and educator. He has dyslexia and has lost some of the use of his right arm.",
+            "name": "Painting with Shorter Strokes",
+            "story": "At this stage of the game, I have a disabled right arm; advanced arthritis is the simplified version of what it is. And I’m right-handed, so I’ve learned to draw all over again, starting from a different perspective. I can’t get a large sweeping motion of any kind, so I’ve done recent work where I do small sections and build up a mosaic of images that I then transfer to a larger surface. This is my situation, through which I now access new work."
+        },
+        {
+            "id": "008",
+            "link": "08%20Christine.mp4",
+            "bio": "Christine is an Arts and Culture Consultant, and a member of the blind community. She has been totally blind from a young age.",
+            "name": "Prayer on the Bus",
+            "story": "I’m not the only blind person who’s had the experience in public, that someone wants to pray for you, and they want to pray so that you get your sight back. Frankly, that’s not something I think about on a day-to-day basis, that’s not a goal for me. And so, I’ve had to come up with strategies to make that less intrusive, invasive or irritating. I had a great experience on a bus once when someone really wanted to pray for me, and he was quite insistent. I said, \"Well, you know, I’m actually a lot more concerned about losing weight; do you think you could pray for that?\" There was this sort of pregnant pause, and then really ardently, and he really meant it, he said, \"Oh Lord, please let the pounds melt away from this woman.\" I got to have a laugh and got off the bus."
+        },
+        {
+            "id": "009",
+            "link": "09%20Christine.mp4",
+            "bio": "Christine is an Arts and Culture Consultant, and a member of the blind community. She has been totally blind from a young age.",
+            "name": "Blind Humour",
+            "story": "I’ve been totally blind for pretty much all of my life. I have a tiny bit of visual memory, but not very much. People say I’m pretty funny; I think I have a good sense of humour and wit. I was thinking about this and a friend asked, \"What’s blind humour like? What jokes do you make within the blind community? Every subculture has its own humour, so what do blind people think is funny?\" That was really provocative and not simple to answer, but I did come up with some things. I’m really interested in what humour can do and what the boundaries are. <br>And I definitely have boundaries, there are things where I go, \"Hmm, no I’m not okay with that joke,\" but I don’t get offended or upset. But there have been times with friends when I’ve had to say, \"Hmm, I’m not cool with that.\" So, it’s interesting to me to talk about how humour can be effective as a way to communicate, and how can it make people feel comfortable, and then the boundaries around where these stop. That’s a shifting boundary that’s moving all the time, depending on personal and social feelings, and moods of the public sphere."
+        },
+        {
+            "id": "010",
+            "link": "10%20Christine.mp4",
+            "bio": "Christine is an Arts and Culture Consultant, and a member of the blind community. She has been totally blind from a young age.",
+            "name": "Purdy’s Chocolatier",
+            "story": "It was the Christmas holiday season and I was having a friend over for dinner. I’m totally blind and I knew she was visually impaired but I didn’t know her level of vision loss; we just hadn’t gotten around to talking about that. After dinner, I went through a list of the different sweets on the table; in the holiday season, there are lots of chocolates and different kinds of sweets. While we were having dessert, I said, \"I was wondering, what is your level of vision loss,\" because I thought she had some vision, but I wasn’t sure. And she explained that, yeah, she does have some partial vision. So I said, \"Oh, well that's good to know, because, you know, if I’d thought you were totally blind, I wouldn’t have told you about the Purdy’s chocolate.\""
+        },
+        {
+            "id": "011",
+            "link": "11%20Christine.mp4",
+            "bio": "Christine is an Arts and Culture Consultant, and a member of the blind community. She has been totally blind from a young age.",
+            "name": "Braille & Chocolate",
+            "story": "The Purdy’s chocolate corporation, at the holiday season in 2021, released a box of their assorted chocolates and it had Braille indicators on the box to show you which way to open it. Inside, there was a Braille legend, a grid pattern and within each square there was written in Braille what the chocolate was. I can’t tell you how strangely exciting it was to read through the list and think, \"I want that one.\" Because as a blind person, when you go for a box of chocolates, you just kind of have to hover. And if there are people around, you can’t touch them all, so you just have to put your finger on one and take it. Even if there is no one around, you still just have to pick one and decide, and you don’t know what you’re going to get. <br>The experience of honing in and counting the grid and taking the one I wanted was incredibly satisfying and it actually led to decreased chocolate consumption because I didn’t have to eat two or three to get the one I wanted. Of course, that meant I lost the famous excuse, \"Well I had to eat two or three to get the one I wanted,\" but it was incredibly liberating in a strange, unexpected way to find out what they are, decide which one I wanted and grab that specific chocolate."
+        },
+        {
+            "id": "012",
+            "link": "12%20Myra.mp4",
+            "bio": "Myra is retired from the workforce but an active volunteer for many organizations and a rock climber. She is totally blind now but has visual memories from when she had sight as a young child. ",
+            "name": "Father’s Brailler",
+            "story": "I still have the Perkins Brailler that my Dad gave me for my seventeenth birthday – that was over sixty years ago. It works perfectly, has never needed repairs, and I use it every day. The old Perkins braillers are fast, mechanical, a wonderful, wonderful machine. I also make great use of many of the real estate and other fliers that come in the mail almost daily. Many are a perfect weight for brailling shopping lists and other short notes, so I used them before being tossed out and officially recycled. This is also a bit of a financial saving as braille paper tends to be expensive and not readily available like regular printer paper. "
+        },
+        {
+            "id": "013",
+            "link": "13%20Myra.mp4",
+            "bio": "Myra is retired from the workforce but an active volunteer for many organizations and a rock climber. She is totally blind now but has visual memories from when she had sight as a young child. ",
+            "name": "Walking into a Mailbox <em>(featuring Christine)</em>",
+            "story": "<em>Myra</em>: … And things like, especially travelling with a white cane, you know, walking into… you think it’s somebody and you say, \"Excuse me,\" and then you find out it’s a mailbox.<br><em>Christine</em>: Yeah, yeah, done that, done that…<br><em>Myra</em>: Or asking a post if the bus is on its way.<br><em>Christine</em>: Right, right, yeah; I’m sure I’ve done that, too.<br><em>Myra</em>: \"Can you see the bus coming, please?\"<br><em>Christine<em>: Yup, \"Is this the bus stop?\" And you’ve just spoken to the pole."
+        },
+        {
+            "id": "014",
+            "link": "14%20Myra.mp4",
+            "bio": "Myra is retired from the workforce but an active volunteer for many organizations and a rock climber. She is totally blind now but has visual memories from when she had sight as a young child. ",
+            "name": "Bringing Friends to the Gallery",
+            "story": "There’s an online radio program, Vocal Eye on Wednesday nights coming out of B.C., which is wonderful. Sometimes the program is about art, and they might have four different people describing one piece of art, like the Mona Lisa, and from each person you get a different perspective. It’s made me feel when I go to an art gallery now, I don’t want to take one friend, I want to take four or five, because they all pick up on different things."
+        },
+        {
+            "id": "015",
+            "link": "15%20Myra.mp4",
+            "bio": "Myra is retired from the workforce but an active volunteer for many organizations and a rock climber. She is totally blind now but has visual memories from when she had sight as a young child. ",
+            "name": "The Big Brailler Bounce Initiative: <br>This program is managed by Braille Literacy Canada.  ",
+            "story": "A number of Perkins braillers, because they’re mechanical not digital, have ended up stored in dark cupboards or under people’s beds. <em>Braille Literacy Canada</em> continues to collect braillers that people are no longer using, get them cleaned up and serviced. Then, they’re given away free of charge to children and adults across Canada who are braille users in need of a brailler or who are learning Braille. These braillers are still valuable because when you buy them new now, they’re over $1,000 and lots of people can’t afford that."
+        },
+        {
+            "id": "016",
+            "link": "16%20Anonymous.mp4",
+            "bio": "Anonymous is a retired psychologist. They live with age-related arthritis. ",
+            "name": "Hidden Pain & a Cane",
+            "story": "When I first was experiencing arthritis, I had a lot of pain in my wrists. This was before I was on any kind of treatment. And when you describe pain to people, it’s very, very difficult for them to understand. You can’t describe it, no one can see it and no one will be interested. So, whenever I went to any kind of party or a place where there were no chairs, I had to find a spot where I could be comfortable. One day, I said I wish I had a cane to carry because then nobody would be suspicious of why I was doing what I was doing. When you carry a cane, you actually are giving people a signal that you’re not like them, that you need some help. I never did carry a cane but at one point, I really felt that would have been helpful to me."
+        },
+        {
+            "id": "017",
+            "link": "17%20Michele.mp4",
+            "bio": "Michele is an Early Childhood Educator. She works with children with a diversity of cognitive and physical abilities. She herself does not have any diagnosed disabilities.",
+            "name": "Seeing Abilities Rather than Disabilities",
+            "story": "I've been working with young children in large urban kindergarten classes for many years. At the beginning of the school year, there’s often a range of abilities and behaviours based on children’s ages and stages of development. This can make it challenging to give adequate support for those who need some extra TLC. One year, we had a very small boy called Jimmy*, who seemed like he could have been a good year younger than the others. He wasn’t at all interested in following the rules and routines of the classroom, and I would spend much time following him around and redirecting him. The main problem was that he wanted to play when everybody was expected to sit and listen. He didn’t speak much and it was hard to know how much language he understood. He quickly became exasperated with the limitations and began acting out. He had a couple of favourite tricks that kept me on my toes, for example, dumping baskets full of crayons onto the floor or pulling every Kleenex from the box. <br>One day, I took him for a walk in the hallway to keep him busy during lesson time. As we walked past the children’s paintings on the wall, Jimmy read each name on the children’s work. I was stunned. Jimmy who barely spoke was able to read. I told his mom this incredible news and she was relieved that I had something good to report. She told me that he was also able to recite songs on the piano and that he had considerably advanced skills in math. I had made assumptions based on the prevalence of undiagnosed ADHD and autism spectrum disorders as children enter the school system. This had led me to think in terms of deficits rather than abilities.<br> <em>*Not his real name</em>"
+        },
+        {
+            "id": "018",
+            "link": "18%20Dan.mp4",
+            "bio": "Dan is a lawyer who is currently not practicing as he has progressive multiple sclerosis. He is a wheelchair user.",
             "name": "Growth",
-            "story": "I practiced Law for about 10 years before my MS progressed to the point that I couldn’t work anymore. I think with time and experience, I developed a much different perspective of what’s important in how you practice Law. And through experience and the challenges I’ve had, I think about things, and I would be much more open now, to listen, and to let go of it and to not be so controlling. So, that’s my experience."
+            "story": "I practiced law for about 10 years before my MS progressed to the point that I couldn’t work anymore. I think with time and experience, I developed a much different perspective of what’s important in how you practice law. And through experience and the challenges I’ve had, I think about things, and I would be much more open now to listen, and to let go of it and to not be so controlling. So, that’s my experience."
+        },
+        {
+            "id": "019",
+            "link": "19%20Eamon.mp4",
+            "bio": "Eamon is a game designer and graduate student at OCAD University in Inclusive Design. He has a specific learning disability in written language.",
+            "name": "Finding a Positive Spin <em>(featuring Jonah)</em>",
+            "story": "<em>Eamon</em>: I think at a speed at which my hand can’t keep up with, nor my typing; this often leads to many misspelt words and repeated words, or parts of sentences get left out. I have yet to come up with a positive spin on that, unfortunately. It ends up with assignments taking a lot longer and me repeatedly going through documents, trying to piece together what my train of thought was before I jumped to the next thing.<br><em>Jonah</em>: I think that’s part of why I chose the Humanities, you know? You’re rewarded for going over your paper so many times. We’re told \"That’s such a great thing,\" and I’m like, \"No, it’s a necessity, but it’s okay.\""
+        },
+        {
+            "id": "020",
+            "link": "20%20Furyal.mp4",
+            "bio": "Furyal is studying to become a lawyer. She was born with issues with her retinas and only has limited vision in one eye.",
+            "name": "Early Diagnosis",
+            "story": "When I was born, my parents didn’t really know that I was visually impaired. I was born with retinal defects in my eyes and I wasn’t diagnosed until I was three. By the time I was diagnosed, I had lost most of my vision in my left eye. The way they found out about it is, I would bring everybody’s face very close to my face to look at them. I didn’t have glasses or anything and I couldn’t see things, so with every object I picked up I would go in like that to look at it very closely. That’s what made my parents realize something was off and take me to the doctor."
+        },
+        {
+            "id": "021",
+            "link": "21%20Furyal.mp4",
+            "bio": "Furyal is studying to become a lawyer. She was born with issues with her retinas and only has limited vision in one eye.",
+            "name": "Growing up with Vision Equipment",
+            "story": "I had magnifiers and monoculars. I had domes to make things bigger on the page, and I never felt comfortable taking them to school, because all the other kids didn’t have to use that equipment. I had a bunch of extra stuff I had to carry from class to class. I actually started hiding my objects, so nobody would ask me why I was using all this. I didn’t want to feel different or left out. I think kids feel like they have to fit in, so they do stuff like that and I used to do that. I realize now that I don’t have to, it doesn’t matter what anyone thinks; I can use my monocular or my zooming stuff in class and that’s totally fine."
+        },
+        {
+            "id": "022",
+            "link": "22%20Furyal.mp4",
+            "bio": "Furyal is studying to become a lawyer. She was born with issues with her retinas and only has limited vision in one eye.",
+            "name": "Hidden Disability & Cellphones",
+            "story": "Now, barely anyone knows that I have this eye problem because I don’t need glasses. I had surgery, so I don’t really use distance glasses, I use reading glasses. And, I don’t actually use my monocular all that much anymore because of my phone. For a lot of the things I need to see, I can use my phone to zoom in on distant things. I don’t need to carry all that equipment with me. When I tell someone, \"I’m legally blind, I can’t see out of my left eye at all,\" they’re kind of shocked. They don’t believe me because it’s so invisible. You can’t tell unless I tell you. So yeah, in that respect, I don’t really feel left out, but I guess there is a downside to it. I really have to explain it to people and get them to believe that I do have this problem and I do need assistance with certain things."
+        },
+        {
+            "id": "023",
+            "link": "23%20David.mp4",
+            "bio": "David is a hard of hearing and disabled media artist, curator, arts administrator and Founder/Director of VibraFusionLab.",
+            "name": "Adoption of Children Who Are Deaf",
+            "story": "I guess my introduction to the deaf community and deaf culture was in the adoption of two children that were born deaf and living in Saskatoon at the time. We adopted my son first knowing he was deaf, so we had done a fair bit of research and preparation beforehand; we started taking Sign Language courses with the intent of raising the children as much as possible through a deaf culture perspective. They also have an Indigenous background, so that was a second culture that we wanted to emphasize in raising them."
+        },
+        {
+            "id": "024",
+            "link": "24%20David.mp4",
+            "bio": "David is a hard of hearing and disabled media artist, curator, arts administrator and Founder/Director of VibraFusionLab.",
+            "name": "Raising Children Who Are Deaf",
+            "story": "Angelique picked up Sign very quickly because she was much younger than Thomas; for him, it was a much longer process for him to pick it up, and the frustration level heightened as he got older. He’s much more comfortable now. It’s all those sorts of decisions that parents make, and I’m judgemental about what decisions are made, in terms of a hearing parent with a deaf child. You know, there’s a lot of politics involved, the medical perspective is involved*… An interesting side point is that hearing aids for the deaf are only partially covered [by the health care system], whereas cochlear implants are fully covered. And implants can cost $10-12 thousand, fully covered. There’s still a real discrepancy. <br><em>*There is concern that cochlear implants are suggested without adequate discussion around dangers they may pose if someone requires an MRI or experiences a head injury.</em>"
+        },
+        {
+            "id": "025",
+            "link": "25%20David.mp4",
+            "bio": "David is a hard of hearing and disabled media artist, curator, arts administrator and Founder/Director of VibraFusionLab.",
+            "name": "Hearing Loss & Working with the Deaf Community",
+            "story": "Partial hearing loss was something that I experienced since birth, but I never really felt it was unusual. However, it was a very long and challenging process to be integrated into deaf culture. I think as an artist, I had to start exploring all this experience through my work; I put an exhibition together back in the mid-90’s, that kind of delved into and encompassed some of those experiences of being a parent of deaf children, and my research and understanding of deaf culture and language from a non-D/deaf person. That exhibition opened up a kind of connection with the deaf community."
+        },
+        {
+            "id": "026",
+            "link": "26%20Lynne.mp4",
+            "bio": "Lynne is an artist and designer; language can be a challenge for her.",
+            "name": "The Ass-bassador",
+            "story": "I can’t always express the words that I hear in my head; they just don’t come out of my mouth the same way that I’m hearing them in my mind. I think I have a sort of George-Bush Syndrome. I often try to say a word and it comes out wrong; most of the time, that’s just a tad uncomfortable, but one time it was actually kind of funny. I was in Cuba and really lucky to be showing my work there. We planned this opening and, once again we were really lucky, the Canadian ambassador agreed to come to my opening. Everybody arrived, there were remarks and I got up to thank him and said, \"I’d really like to thank the Ass-bassador for coming today.\" People were too polite to laugh."
+        },
+        {
+            "id": "027",
+            "link": "27%20Martin.mp4",
+            "bio": "Martin is a designer and was a member of the Dobble Debate team for quite some time; he does not identify as disabled.",
+            "name": "Insomnia & Day Planning",
+            "story": "My partner, he's a physician. We got to talking about sleep, especially when I was starting grad school and working my way up to that. I was always really impressed and shocked by him being able to fall asleep within 15 or 20 minutes of going to bed. I wondered, \"How do you, how does one do this?\" because it normally takes me an hour and a half. As we continued talking about it, he suggested I talk to my family doctor about this. I initially dismissed it, saying, \"Oh no, this is normal;\" but then I was thinking about it more and more, I thought, \"Yeah, I guess I’ve always had difficulty falling and staying asleep.\" I’ll just wake up in the middle of the night and then I'll be up for two hours. That’s just life. <br>I went to my family doctor and learned all about sleep hygiene and stuff like that. That was really eye-opening, to understand how I can practice, for example, not going on my phone, meditating before bed or having a great routine. But one of the things that insomnia has really helped me out with is, when I'm laying in bed not doing anything, I’d plan things in my head. I think it’s been really, really helpful for staying organized and on top of things. Learning how to avoid that and sleep is even better, obviously."
+        },
+        {
+            "id": "028",
+            "link": "28%20Jonah.mp4",
+            "bio": "Jonah is an accessibility focused game designer and developer. He has dysgraphia and ADHD.",
+            "name": "Being a Leftie in Catholic School",
+            "story": "I had kind of an old-guard teacher for JK, and she called a parent-teacher interview because I was a leftie. I went to a Catholic school and she told my parents, \"I have some terrible news. Your son’s a leftie.\" She came up with this program she told my parents about, which included how she was going to exercise the devil within me because I was a leftie. But both of my parents are also left-handed…"
+        },
+        {
+            "id": "029",
+            "link": "29%20Ted.mp4",
+            "bio": "Ted is a musician/composer who is currently studying personal finance. He has tinnitus.",
+            "name": "Having Tinnitus as a Musician",
+            "story": "I have the condition known as Tinnitus, which for me manifests in a high-pitched ringing in my ears that never turns off. And as a performing musician and producer, I know a lot of people who are like me, who also have this. I’ll hear stories about how my peers, who have the same condition, have tried to make a bad situation better; some have used this ringing in their ears to, for example, tune their instruments, play around and use it almost like a psychic ability, or pseudo-perfect pitch mechanism that they can access at any point. I think this silver lining is quite interesting, especially when you think about musicians who have to deal with something as pervasive and chronic like tinnitus. Anyway…"
+        },
+        {
+            "id": "030",
+            "link": "30%20Colleen.mp4",
+            "bio": "Colleen is a writer and editor. She has PTSD (in remission) and a chronic pain condition. She identifies as disabled.",
+            "name": "Anxiously Getting it Done",
+            "story": "I have an anxiety disorder, as many do. At first, it manifested a lot as Imposter Syndrome, which would keep me from completing school or work assignments. When it got really bad, I’d disappear from school or just stop going to work one day and never return. As I worked on this and found out I was actually very good at a number of things, the anxiety found a new way in. I would find myself unable to start even the simplest tasks; the crushing fear became not about quality but about not being able to complete things at all. Luckily, I’m in remission now.<br>Combined with a chronic pain condition (both of which were diagnosed/addressed pretty late in life), I spent a few years not doing much of anything and feeling very ashamed of myself. Meditation, exercise, CBT (cognitive behavioural therapy), and physical and talk therapy have helped a lot with both. And there are a lot of benefits—I am always comfortable bringing up anxiety and mental health generally in group settings or meetings. I can often tell when others are being squeezed by anxiety and can help them relax, and I share all the resources I’ve gathered for dealing with both anxiety and pain with others who are just starting to figure these things out."
+        },
+        {
+            "id": "031",
+            "link": "31%20Wesley.mp4",
+            "bio": "Wesley is a disabled, non-binary artist and storyteller. They are an electric wheelchair user with cerebral palsy.",
+            "name": "Stabbing Packaged Food",
+            "story": "This is a MacGyver/Tinkerer story. When I get food at university, it always comes in those plastic packages that are a little bit difficult to open. I had been using a knife to stab through the lid and lift it off; it was, honestly, very violent, but it worked. I talked to my Dad about it and he pulled something out of his garage, a weirdly shaped pick that I could wedge under the container lids, so it was much less dangerous for me than violently stabbing a knife through containers to open them. I’ve just had to figure out ways to open containers and open wrappers that are very unorthodox and that include violently stabbing them like you’re skewering your enemies, haha. "
+        },
+        {
+            "id": "032",
+            "link": "32%20Wesley.mp4",
+            "bio": "Wesley is a disabled, non-binary artist and storyteller. They are an electric wheelchair user with cerebral palsy.",
+            "name": "Quiet Sense of Yes",
+            "story": "For me, there’s a quiet sense of <em>YES</em>, every time I pick something up off the ground or I open a container that I otherwise wouldn’t be able to open. If I was home, I could just go to my Mom, and ask, \"Mom, can you open this?\" But when I’m living in my residence, my attendants only come at set times; so what am I going to do if I get food and it’s like three hours before my next attendant is supposed to get there? I need to eat. So, there is a small private sense of <em>YES</em>, I did this physically challenging thing that’s very easy for a lot of other people, but is challenging for me. "
+        },
+        {
+            "id": "033",
+            "link": "33%20Wesley.mp4",
+            "bio": "Wesley is a disabled, non-binary artist and storyteller. They are an electric wheelchair user with cerebral palsy.",
+            "name": "Service Dogs & Ableism",
+            "story": "One thing I will say about having a service dog is, it goes beyond the bond that you have with a pet. The bond you have with a pet is amazing, but the bond I have with this goofball, who knows when I'm talking about her and her ears perk up, is purely symbiotic. She takes care of me as much as I take care of her. Often, I'll encounter a lot of ableism with service dogs because people will see her gear and think that she’s my slave or she doesn’t get enough love or something, especially because I don’t let strangers pet her because she has to be focused. In my case, it’s not usually life-threatening if she gets distracted. But distracting a dog caring for someone with a life-threatening illness could cause a lot of problems."
+        },
+        {
+            "id": "034",
+            "link": "34%20Wesley.mp4",
+            "bio": "Wesley is a disabled, non-binary artist and storyteller. They are an electric wheelchair user with cerebral palsy.",
+            "name": "Being Saved by Cameo",
+            "story": "My dog's name is Cameo, as in a cameo in a movie, and I have had her since 2018, I think. I'd say we’re bonded even at the soul if you believe in that type of thing, which I do; it's a magnificent bond to have. Others are bonded very deeply with their pets, but this dog has quite literally saved my life a few times. Once, I was stuck out in the snow after dark on a campus that was mostly empty and had no way to contact someone. Cameo barked until somebody heard and came to check and this saved my life. She helps me feel safer when I’m living on my own alone in an apartment, even though I do have attendant bookings coming in every few hours. But what happens if something happens between those few hours, what happens if I drop my room key? What happens if I drop anything, like my homework or laptop? Right, well, my laptop’s too big for her to pick up, but you get the point."
+        },
+        {
+            "id": "035",
+            "link": "35%20Wesley.mp4",
+            "bio": "Wesley is a disabled, non-binary artist and storyteller. They are an electric wheelchair user with cerebral palsy.",
+            "name": "Bow & Arrow",
+            "story": "Ever since I was little, my Dad and my brother used to do archery at the cottage. When I was around nine or ten, I got my first bow, as a hand-me-down from one of my cousins. It was a fiberglass bow meant for kids with a very weak draw weight, so it didn’t have a lot of power behind it. It was just a kiddie bow, a kid’s first bow type of thing. And for years, I used that and I was a terrible shot because I have issues with depth perception. I’m stereo blind, which means my eyes work independently of one another. My brain puts the two pictures together to create sort of a partial 3D, so I don’t have very good depth perception and 3D movies don’t do it for me. <br>Summer after summer, I would try archery. In 2020, we were up at the cottage and I was shooting and I realized I was 20 at the time and still using a bow made for five-year-olds. That got to me a little bit, because the bows meant for larger and stronger people are bigger because they’re meant to be shot standing. You don’t typically shoot sitting down. It’s very hard to shoot a more powerful bow sitting down because the limbs are too big. If you don’t have enough space, where is all that going to go? I was kind of stuck using this bow. My dad knows how to make bows, is very talented at woodworking, and I was reading <em>Lord of the Rings</em> with him at the time. Of course, I wanted something cool like the people in the book had. <br>So in 2010, we made a quiver out of sown birch bark and wrote my name in dwarvish across the quiver. It used to be a 5-year-old kids’ bow, then my dad and I did that major overhaul using homemade and MacGyver techniques to make a stronger bow, that shoots further and with a lot more power, without actually making the bow larger and more adaptable. You couldn't find a bow of this make with that kind of power in a store because it was custom-made. And I still have it, it's hanging on my wall."
+        },
+        {
+            "id": "036",
+            "link": "36%20Wesley.mp4",
+            "bio": "Wesley is a disabled, non-binary artist and storyteller. They are an electric wheelchair user with cerebral palsy.",
+            "name": "4D Chess in Communication",
+            "story": "I love how neurotypical people say they can’t communicate with us, but y’all be playing 4D chess just to ask someone to wash the dishes. Can you just ask me to wash the dishes, instead of saying the dishes need to be done and looking at me funny? Just tell me you need me to do the dishes."
+        },
+        {
+            "id": "037",
+            "link": "37%20Wesley.mp4",
+            "bio": "Wesley is a disabled, non-binary artist and storyteller. They are an electric wheelchair user with cerebral palsy.",
+            "name": "Lead Time for Dates",
+            "story": "The wheelchair makes dating hard because I’m not very good at spontaneous stuff. I have to figure out attendance, I have to figure out transport. If someone says, \"Do you want to go to Starbucks?\" I'm like, \"Okay, I can go to Starbucks, like a week from now.\" For me, spontaneous dating doesn’t really work and that can put some people off because they think that they have to take care of me. Then there's also marriage inequity for both queer people and disabled people. So, there's double marriage inequity because we can't marry without losing our benefits."
+        },
+        {
+            "id": "038",
+            "link": "38%20Wesley.mp4",
+            "bio": "Wesley is a disabled, non-binary artist and storyteller. They are an electric wheelchair user with cerebral palsy.",
+            "name": "Dating Apps (Wesley)",
+            "story": "My old roommate said that I sound like a butler when I'm having dating conversations. I don't want to be misconstrued or miscommunicated with, so my default reaction is to embiggen my language, to elevate my vocabulary, to sound like I’m in Restoration comedy or something. I don’t want my intelligence to be misconstrued, and I don't want my intentions to be misconstrued either.<br>One thing I have to be very cautious of, is sounding like I'm the Queen of England when I'm trying to meet someone on a dating app, because it will throw people off if you start sounding like a know-it-all ass who uses big words all the time. But it’s a defence mechanism against assumptions of my disability and my queerness in a new situation. I will use very heightened Restoration, almost Shakespearean, language."
+        },
+        {
+            "id": "039",
+            "link": "39%20Nedward.mp4",
+            "bio": "Nedward is a student of game design, is transgender and uses the pronouns he/his. He also identifies as autistic.",
+            "name": "Dating Apps (Nedward)",
+            "story": "I can strongly relate to the dating apps scene conundrum. I identify as asexual, which means I don't experience sexual attraction at all. The entire thing grosses me out a little. I constantly worry I’m going to meet people on dating apps who look at me as a child."
+        },
+        {
+            "id": "040",
+            "link": "40%20Nedward.mp4",
+            "bio": "Nedward is a student of game design, is transgender and uses the pronouns he/his. He also identifies as autistic.",
+            "name": "Diagnosis Later in Life",
+            "story": "I did not get diagnosed until later on in my life, and that only happened because I would talk to my roommates all the time. I would turn to them and go, \"You know when your brain does this, and you try to do this, or try to do that and you can’t, or you can’t stop thinking about this one thing, or certain textures really throw you off?\" My roommates would say, \"Yes, Ned, but that’s not a neurotypical thing. Like, yes, my brain does that, but that’s because I have autism, so you have autism then.\" Eventually, after a few times having this conversation, I thought okay, it’s just all coming together, isn’t it…"
+        },
+        {
+            "id": "041",
+            "link": "41%20Nedward.mp4",
+            "bio": "Nedward is a student of game design, is transgender and uses the pronouns he/his. He also identifies as autistic.",
+            "name": "Off in Space",
+            "story": "I forget sometimes to emote, I sometimes forget to speak, and that comes across as me \"going into space,\" as I and my roommates refer to it. Sometimes we’ll be in public, I’ll be part of the conversation, and I’ll suddenly just stare off into the distance. I’m still taking everything in, but my brain has decided it’s too much, no more… I stop interacting and my roommates kind of look at me and say, \"Ned’s gone into space, don’t worry about it. He’s either listening so let him interact like this, or we’ve got to get going, because it’s just too much.\" I really like that terminology, \"I’m floating in space,\" because that’s what it feels like; I’m sitting here, but my brain’s going \"Wooo\" into the distance. "
+        },
+        {
+            "id": "042",
+            "link": "42%20Nedward.mp4",
+            "bio": "Nedward is a student of game design, is transgender and uses the pronouns he/his. He also identifies as autistic.",
+            "name": "Stimming at a Lacrosse Game",
+            "story": "When I was a kid, I used to go to my brother’s lacrosse games. I wasn’t into Lacrosse at the time. I am now, but I used to get really bored and as we were sitting in the bleachers, I used to slap at my thighs. I realize now, I was stimming and making sure I wasn’t annoying people, however my father found the stimming very annoying. So, my response to that was to wear headphones. Nobody knew this but I plugged them into my iPod but didn’t play any music. I’d move to a beat that I made up and no one bothered me because I was just grooving to music. No one knew I was just doing whatever I wanted. I got that free pass because I was just \"listening to music.\""
+        },
+        {
+            "id": "043",
+            "link": "43%20Nedward.mp4",
+            "bio": "Nedward is a student of game design, is transgender and uses the pronouns he/his. He also identifies as autistic.",
+            "name": "Scripting",
+            "story": "I script everything in my head twice before saying it out loud. It’s funny because even before working on Dobble Debate, I was writing a script about how I write a script for everything. It’s just the way my brain works. It’s like I need to know how I want to say something before I say it. That comes up most often in my classes, where I’ll write down what I want to say. But sometimes I’m too late for the class because they’ve moved on and I think, \"Oh no, I had a really good point!\" "
+        },
+        {
+            "id": "044",
+            "link": "44%20Nedward.mp4",
+            "bio": "Nedward is a student of game design, is transgender and uses the pronouns he/his. He also identifies as autistic.",
+            "name": "Being More than One Thing",
+            "story": "I knew from the start that I was more than one thing. As in, I’m part Indigenous, but that’s not all I am, especially since I’m not closely tied to my Indigenous identity and the terms of interacting with my culture. I later learned I was also queer; I was like, \"Okay. All right. I like girls. Okay.\" Then, on top of that, I learned I was Trans. So, it was like, \"Okay, that’s everything then.\" <br>But then my roommate in first year was telling me how some research seems to show neurodivergence and being Trans are linked. I thought, \"That's strange,\" and I kept it in the back of my mind. But then one day I decided, \"I guess I should get this checked out.\" That led me to two diagnoses. One of the main things was that things are connected in this way. Sometimes I do wonder if I only got diagnosed because the person who was assessing me was Trans and knew that a lot of AFAB (assigned female/male at birth) individuals aren’t diagnosed with autism."
+        },
+        {
+            "id": "045",
+            "link": "45%20Nedward.mp4",
+            "bio": "Nedward is a student of game design, is transgender and uses the pronouns he/his. He also identifies as autistic.",
+            "name": "Self-Doubt & Labeling",
+            "story": "I figured it out while I was in high school; one day I was like, \"Oh, I’m a boy, great.\" I also had a period of wondering, \"What if I'm just trying to put a label on myself so I become more marginalized?\" At the time, all I knew about myself was, I was part Indigenous. That’s it. Also I was the weird kid, I wonder why. It was this very weird thing. I’d wonder if I was faking it, but also every time I looked in the mirror and saw my chest, I had this intense feeling of, \"Gross.\"* I'm just trying to say, it happens to everyone, even if they have things that typically would validate being Trans. But I still was asking, \"What if I’m just faking it?\" <br><em>*This experience is called body dysphoria.</em>"
+        },
+        {
+            "id": "046",
+            "link": "46%20Alexa.mp4",
+            "bio": "Alexa is deaf and an emerging artist in theatre, film and photography. She grew up on Toronto Island.",
+            "name": "Talking with my Mom",
+            "story": "My mother does not sign—it’s true. But we do have our own home signs and she knows a few words in sign language. But typically she just talks to me and that is how we communicate. And that is our way, that works for us, without any issues. And my mother is very aware, very involved in the deaf community and she knows how passionate I am about Deaf culture and deafness and how important it is to me. And how I identify as a member of that community. We have a very strong relationship and there aren’t any barriers or issues in that respect. I think it is really important to have that bond. We are different but we get along wonderfully."
+        },
+        {
+            "id": "047",
+            "link": "47%20Alexa.mp4",
+            "bio": "Alexa is deaf and an emerging artist in theatre, film and photography. She grew up on Toronto Island.",
+            "name": "Teaching Sign Language",
+            "story": "People ask me about teaching sign language. They say \"Alexa, you’re deaf, why don’t you teach sign language?\" It is not my thing. I’m not a teacher in that respect. I wouldn’t really know how to go about teaching the language. It is not in my wheelhouse. And I don’t really think it would be a good fit for me. I don’t know why but teaching is just not my thing. How I communicate and get along with people depends on their comfort level as well. And so, you know, first impressions, you have to get used to each other and then you go from there. Everybody is different. And you have to figure out your way of doing it and solve the problems as they come."
+        },
+        {
+            "id": "048",
+            "link": "48%20Alexa.mp4",
+            "bio": "Alexa is deaf and an emerging artist in theatre, film and photography. She grew up on Toronto Island.",
+            "name": "Being Born Deaf",
+            "story": "As far as being born deaf and being the only deaf person in my family. I was born prematurely and I was born deaf. My mother noticed that I wasn’t responding to sounds the way hearing babies will turn and react to sounds. I wouldn’t have that reaction. So she took me to the doctor and they did a hearing test. When the doctor let my mom know that I was deaf she just accepted it. \"Okay, that was fine.\" And I think that was because of her background and her knowledge of other deaf organizations, deaf/blind organizations. It wasn’t a shock to her. \"So, you know, your daughter’s deaf.\" \"Okay.\" It wasn’t a big deal. However, my grandparents, oh my gosh, the tears and the anguish, it was a big deal for them. But for my mom, it was like, \"okay, so she is deaf. Whatever.\" And again, I am the only deaf person in my family. There is not generational deafness in my deaf history, so it just happened to me. I was born deaf and here we go. My mom was totally cool with it. So, after figuring/learning that I was deaf, we were living in Montreal at the time and my mom made the decision to move us back to Toronto Island just because there was more support in Toronto, more resources at my disposal. I really think it was the best decision for her and for me."
+        },
+        {
+            "id": "049",
+            "link": "49%20Courage.mp4",
+            "bio": "Courage is a Black Deaf Female Queer, actress, IBPOC art accessibility consultant and IBPOC Deaf activist. ",
+            "name": "Running with Hearing Aids",
+            "story": "Looking back I remember my very first race. Honestly, the hearing aid was a benefit to hear the start gun and the announcer. But I quickly realized it would not stay on my ear while I was running. So it didn’t work for me. As any athlete knows it is important to pay attention and be focused. I had to keep my eye on the other athletes and my eye on the referee who made the announcement . So I had to have my full attention in place. And there were so many moving parts that I had to set up before the race. Where I was going to stand, which lane I’m in, where my other competitors are standing. <br>But if I was wearing my hearing aid at top speed, it took me out of the race. And I lost focus. Just to have that thing hanging by my ear and just so bothersome. So I decided to try racing without my hearing aid. I had to have a laser focus, watching my lane and watching the referee, watching the gun, seeing where the other athletes were set up in my periphery. So I had to have the perfect setup in the blocks. And made sure that I paid full attention. So I loved standing or starting my race in lane two, three or four. That was the best positioning for me to have the best field of vision for the start gun, the other competitors and my lane. And as a result, I often came in first place. And again, I can hear the gun somewhat but it is more of an intuition, more of a feeling than more of a sound. And that is my signal to come flying off the blocks. <br>And yes, I did hear the gun clearer, better with the hearing aids. But it was all about accommodating my needs for having full access and levelling the playing field between me and the other athletes. And that was my whole journey as a track and field athlete to figure out what works for me and what didn’t to give me the best chance of having my best race. "
+        },
+        {
+            "id": "050",
+            "link": "50%20Courage.mp4",
+            "bio": "Courage is a Black Deaf Female Queer, actress, IBPOC art accessibility consultant and IBPOC Deaf activist. ",
+            "name": "My Family & Deaf Culture",
+            "story": "It was always a challenge to communicate with my family, most of all my mother. My mother and I use gestures and body language to communicate but it is still limited. When I compare my upbringing and Alexa’s upbringing, it was completely different. Mainly because my mother wasn’t born here [Canada]. My mother was Guyanese. And in Guyana, there were no resources for exposure to deafness or Deaf culture. And up here in Canada, there were resources to get me and to help her but it was still limited. And again we rely on gestures and body language between the two of us, but it is definitely not a full spectrum of communication. As I’ve gotten older my relationship with my mom has improved and we have become closer but it is not that perfect, quote/unquote, you know, mother-daughter bond that other people have. <br>And as far as my extended family, nobody else signs. So I don’t have a strong family bond with the rest of my family because we can’t communicate. If my whole family signed and we all signed together, I think that would have had an effect on me as a person, my personality. But we’ll never know, because they are all hearing and I’m the only deaf person in my entire family, which has not been easy, if I’m being honest. "
+        },
+        {
+            "id": "051",
+            "link": "51%20Courage.mp4",
+            "bio": "Courage is a Black Deaf Female Queer, actress, IBPOC art accessibility consultant and IBPOC Deaf activist. ",
+            "name": "Everything Happens for a Reason",
+            "story": "But I believe everything happens for a reason. I mean, I’m the only deaf person in my entire family and I think there is a reason for that. I feel like if my family understood me and all the layers of me as a deaf person, as a person of colour, if they could really get a grasp of what that meant, it would be overwhelming for them. And so, again, I think everything happens for a reason and there was a reason I was brought into this family as a deaf person. I was actually born hearing but my mother did not learn I was deaf until I was about a year old. I was a healthy, happy baby, but it was between eight months and a year that my mother learned I was deaf. I just wasn’t babbling and making noises like the other hearing babies did. There was no explanation for it."
+        },
+        {
+            "id": "052",
+            "link": "52%20Courage.mp4",
+            "bio": "Courage is a Black Deaf Female Queer, actress, IBPOC art accessibility consultant and IBPOC Deaf activist.",
+            "name": "Coming into my Own",
+            "story": "Once I got into high school, I fully embraced my deafness and I came into my own when I was older. But, again, there was no reason, nobody knows the cause of my deafness. I asked my mom if I fell or if there was an injury where, you know, I was bleeding out of my ear or was I seriously ill. And she says, no. It is a complete mystery for everybody. There is no generational deafness in my family. Nobody before me. No family history to suggest why I was born deaf. And again, as I’ve grown older, I realize that I’m here for a purpose. And it has had an impact on my family. I do believe that. And that is why I want to share my story. So that other people understand who I am and where I’m from. <br>I think it is important to share my personal story. I do wish my family was more involved in my Deaf culture. And knew, you know, what matters to me. I am a deaf woman. I am a queer woman. I am a woman of colour. And that encompasses all the layers of me. I’m black, I’m deaf, I’m queer, I’m a woman. That’s so many layers. When I was younger, I kind of waned on who I was and where I fit into this world. And now I’m very, very clear as to who I am and that is what I want to share with others. "
         }
     ]
 }
