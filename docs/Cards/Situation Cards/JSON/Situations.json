@@ -7,7 +7,7 @@
             "description2": "there are various roles on the ship sich as the captain, lookouts, mats, and swabbies",
             "description3": "the area of the ship that should be avoided most is the plank",
             "audio": "Assets/Audio/Situation/pirate_ship.wav",
-            "img": "Cards/Situation Cards/illustrations/pirate_ship_img.svg"
+            "img": "Cards/Situation Cards/illustrations/01_pirate_ship_img.svg"
         },
         {
             "id": "002",
@@ -16,7 +16,7 @@
             "description2": "public washrooms often have more than one stall",
             "description3": "people do their... business there, as well as wash their hands, refresh their appearance and take care of their children's needs",
             "audio": "Assets/Audio/Situation/public_washroom.wav",
-            "img": "Cards/Situation Cards/illustrations/public_washroom_img.svg"
+            "img": "Cards/Situation Cards/illustrations/02_public_washroom_img.svg"
         },
         {
             "id": "003",
@@ -25,7 +25,7 @@
             "description2": "the tasks of a baby sitter can include meal preparation, feeding, teaching, driving, and supervision",
             "description3": "there are no 'barriers to entry' to qualify for the job of babysitter",
             "audio": "Assets/Audio/Situation/babysitting.wav",
-            "img": "Cards/Situation Cards/illustrations/babysitting_img.svg"
+            "img": "Cards/Situation Cards/illustrations/03_babysitting_img.svg"
         },
         {
             "id": "004",
@@ -34,7 +34,7 @@
             "description2": "the warm and humid climate creates perfect growing conditions for fruits and vegetables",
             "description3": "jungles have lots of wildlife living within their eco-systems",
             "audio": "Assets/Audio/Situation/jungle_adventure.wav",
-            "img": "Cards/Situation Cards/illustrations/jungle_adventure_img.svg"
+            "img": "Cards/Situation Cards/illustrations/04_jungle_adventure_img.svg"
         },
         {
             "id": "005",
@@ -43,7 +43,7 @@
             "description2": "they are physically strong until their bodies rot away",
             "description3": "they stink",
             "audio": "Assets/Audio/Situation/zombie_apocalypse.wav",
-            "img": "Cards/Situation Cards/illustrations/zombie_apocalypse_img.svg"
+            "img": "Cards/Situation Cards/illustrations/05_zombie_apocalypse_img.svg"
         },
         {
             "id": "006",
@@ -52,7 +52,7 @@
             "description2": "you and a group of friends act out scenarios, as player characters, improvising your actions and speech as the plot moves along",
             "description3": "there may be a game-master present to guide the settings and events that occur",
             "audio": "Assets/Audio/Situation/fantasy.wav",
-            "img": "Cards/Situation Cards/illustrations/fantasy_roleplay_img.svg"
+            "img": "Cards/Situation Cards/illustrations/06_fantasy_roleplay_img.svg"
         },
         {
             "id": "007",
@@ -61,7 +61,7 @@
             "description2": "both adults and children can participate",
             "description3": "the main objective of this activity is to survive in one piece",
             "audio": "Assets/Audio/Situation/go-kart.wav",
-            "img": "Cards/Situation Cards/illustrations/go-kart_track_img.svg"
+            "img": "Cards/Situation Cards/illustrations/07_go-kart_track_img.svg"
         },
         {
             "id": "008",
@@ -70,7 +70,7 @@
             "description2": "labs can be found in schools and universities, industry, government, or military facilities, and even aboard ships and spacecraft",
             "description3": "lab hazards vary, and might include: poisons, infectious agents, flammable, explosive, or radioactive materials, moving machinery, extreme temperatures, lasers, strong magnetic fields, or high voltage",
             "audio": "Assets/Audio/Situation/laboratory.wav",
-            "img": "Cards/Situation Cards/illustrations/laboratory_img.svg"
+            "img": "Cards/Situation Cards/illustrations/08_laboratory_img.svg"
         },
         {
             "id": "009",
@@ -79,7 +79,7 @@
             "description2": "the performers dress up in costumes and use props and sets to deliver their characters",
             "description3": "the crew helps behind-the-scenes with lighting, sound, set changes, costumes and makeup",
             "audio": "Assets/Audio/Situation/theatre_production.wav",
-            "img": "Cards/Situation Cards/illustrations/theatre_production_img.svg"
+            "img": "Cards/Situation Cards/illustrations/09_theatre_production_img.svg"
         },
         {
             "id": "010",
@@ -88,7 +88,7 @@
             "description2": "there are treasures located within the castle, including golden eggs and a singing harp",
             "description3": "the owners of these castles reportedly grind your bones to make their bread—especially if you steal from them!",
             "audio": "Assets/Audio/Situation/giant_castle.wav",
-            "img": "Cards/Situation Cards/illustrations/giant_castle_img.svg"
+            "img": "Cards/Situation Cards/illustrations/10_giant_castle_img.svg"
         },
         {
             "id": "011",
@@ -97,7 +97,7 @@
             "description2": "a spacecraft can be used for communication, meteorology, space colonization, exploration and transportation of humans and cargo",
             "description3": "you need to be a fully-trained astronaut to fly in one of these!",
             "audio": "Assets/Audio/Situation/spacecraft.wav",
-            "img": "Cards/Situation Cards/illustrations/spacecraft_img.svg"
+            "img": "Cards/Situation Cards/illustrations/11_spacecraft_img.svg"
         },
         {
             "id": "012",
@@ -106,7 +106,7 @@
             "description2": "one generally arrives there by shipwreck",
             "description3": "there is often limited potable water on the island, but plenty of falling coconuts",
             "audio": "Assets/Audio/Situation/desert_island.wav",
-            "img": "Cards/Situation Cards/illustrations/desert_island_img.svg"
+            "img": "Cards/Situation Cards/illustrations/12_desert_island_img.svg"
         },
         {
             "id": "013",
@@ -115,7 +115,7 @@
             "description2": "this is a convenient way for customers to get food and drinks quickly if they are in a rush, or if they do not intend to dine inside",
             "description3": "the fast food drive-thru was invented by North Americans",
             "audio": "Assets/Audio/Situation/drive-thru.wav",
-            "img": "Cards/Situation Cards/illustrations/drive-thru_img.svg"
+            "img": "Cards/Situation Cards/illustrations/13_drive-thru_img.svg"
         },
         {
             "id": "014",
@@ -124,7 +124,7 @@
             "description2": "tanks are usually found in aquariums and are constructed of thick walls and glass panes",
             "description3": "people and sharks can view each other in close proximity while protected by walls",
             "audio": "Assets/Audio/Situation/shark_tank.wav",
-            "img": "Cards/Situation Cards/illustrations/shark_tank_img.svg"
+            "img": "Cards/Situation Cards/illustrations/14_shark_tank_img.svg"
         },
         {
             "id": "015",
@@ -133,7 +133,7 @@
             "description2": "some example of noisy neighbours include: blaring music, barking dogs, couples fighting and the use of loud machinery",
             "description3": "PLACEHOLDER",
             "audio": "Assets/Audio/Situation/noisy_neighbors.wav",
-            "img": "Cards/Situation Cards/illustrations/noisy_neighbours_img.svg"
+            "img": "Cards/Situation Cards/illustrations/15_noisy_neighbours_img.svg"
         },
         {
             "id": "016",
@@ -142,7 +142,7 @@
             "description2": "the house is decrepit with broken floorboards and fixtures one can find ominous messages left for trespassers",
             "description3": "PLACEHOLDER",
             "audio": "Assets/Audio/Situation/haunted_mansion.wav",
-            "img": "Cards/Situation Cards/illustrations/haunted_mansion_img.svg"
+            "img": "Cards/Situation Cards/illustrations/16_haunted_mansion_img.svg"
         },
         {
             "id": "017",
@@ -151,7 +151,7 @@
             "description2": "submarines were developed primarily for military purposes, but there are some that facilitate science exploration, tourism and art",
             "description3": "in 2011, the British Defence Secretary announced that the UK's ban on women in submarines was to be lifted in 2013",
             "audio": "Assets/Audio/Situation/submarine.wav",
-            "img": "Cards/Situation Cards/illustrations/submarine_img.svg"
+            "img": "Cards/Situation Cards/illustrations/17_submarine_img.svg"
         },
         {
             "id": "018",
@@ -160,7 +160,7 @@
             "description2": "tattoo artists use black, white and coloured inks to create their designs",
             "description3": "sometimes people wake up not remembering that they visited a tattoo studio the previous night",
             "audio": "Assets/Audio/Situation/tattoo.wav",
-            "img": "Cards/Situation Cards/illustrations/tatoo_studio_img.svg"
+            "img": "Cards/Situation Cards/illustrations/18_tatoo_studio_img.svg"
         },
         {
             "id": "019",
@@ -169,7 +169,7 @@
             "description2": "each week, one person will be evicted from the house, and the last remaining person will receive a cash prize",
             "description3": "PLACEHOLDER",
             "audio": "Assets/Audio/Situation/reality_tv.wav",
-            "img": "Cards/Situation Cards/illustrations/reality_tvshow_img.svg"
+            "img": "Cards/Situation Cards/illustrations/19_reality_tvshow_img.svg"
         },
         {
             "id": "020",
@@ -178,7 +178,7 @@
             "description2": "time travel has been in use for millenniums",
             "description3": "time travel machines have a habit of malfunctioning",
             "audio": "Assets/Audio/Situation/time_travel.wav",
-            "img": "Cards/Situation Cards/illustrations/time_traveling_img.svg"
+            "img": "Cards/Situation Cards/illustrations/20_time_traveling_img.svg"
         }
     ]
 }

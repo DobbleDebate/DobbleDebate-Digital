@@ -558,6 +558,7 @@ function DrawSparkCard(){
 function CloseSparkContainer(){
     BlurContainer(false)
     ShowSparkContainer(false)
+    decks[2].Discard()
     audioManager.StopAllAudio()
 }
 
