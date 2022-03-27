@@ -120,6 +120,15 @@ header{
 	animation: none !important;
 }
 
+nav {
+	font-size: 1.2rem;
+	float: right;
+}
+nav li {
+	display: inline;
+	padding-left: .5em;
+}
+
 @keyframes discard{
 	0%{
 		transform: rotateZ(-1deg) rotateY(180deg);

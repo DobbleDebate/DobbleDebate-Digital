@@ -19,20 +19,34 @@
 	<script src="/Scripts/characterSelection.js"></script>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
 	integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<link href="style.css" rel="stylesheet" type="text/css">
 	<link href="expanded-style.css" rel="stylesheet" type="text/css">
 	<!-- InstanceEndEditable -->
 </head>
+
+
 
 <body onload="ClearSaveData()">
 
 	<!-- Main Container -->
 	<div id="container" class="container-fluid">
 		<!-- Logo -->
-		<header>
-			<a href="https://dobbledebate.com" target="_blank"><img src="images/basics/top_logo.svg"
-					alt="Dobble Debate logo, two capital D's superimposed one on the other, the word Dobble written in orange, the word Debate written in blue"
-					width="200"></a>
-		</header>
+		<div class="container-fluid px-5">
+			<div class="row">
+				<div class="col-2 py-3">
+				<a href="https://dobbledebate.com" target="_blank"><img src="images/basics/top_logo.svg" alt="Dobble Debate logo, two capital D's, Dobble in orange, Debate in blue"></a>
+		</div>
+				<nav class="col-7 py-3">
+				
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><strong>Pre-baked Games</strong></li>
+						<li><a href="bake.html">Bake-your-Own</a></li> 
+						<li><a href="guide.html">Educator's Guide</a></li> 
+						<li><a href="rules.html">Ready-to-Go Game</a></li>
+					</ul>
+				</nav>
+			</div>
 
 		<!-- InstanceBeginEditable name="pagetitle" -->
 		<!-- Title Bar -->
@@ -105,58 +119,69 @@
 	<!-- Main Container Ends -->
 
 	<!-- Footer -->
-	<footer>
-		<div id="credits">
-			<div id="ocadlogo"><img src="images/basics/ocad_logo.svg"
-					alt="OCAD University logo, outlined boxes with university's name inside" /></div>
-			<h2>Contact Us</h2>
-			<p><a href="mailto:hello@dobbledebate.com">hello@dobbledebate.com</a></p>
-			<h2>Open Source</h2>
-			<p>Dobble Debate is publically available for modification and development through <a
-					href="https://github.com/DobbleDebate/DobbleDebate.github.io.git" target="_blank">GitHub</a></p>
-			<h2>Browser & Device Support</h2>
-			<p>Dobble Debate has been designed to work on desktop, tablets and mobile devices. You can play the game on
-				both Windows and Mac operating systems. Supported browsers are Google Chrome, Apple's Safari, Microsoft
-				Edge, and Firefox.</p>
-			<h2>Land Acknowledgement</h2>
-			<p>OCAD University acknowledges the ancestral and traditional territories of the Mississaugas of the Credit,
-				the Haudenosaunee, the Anishinaabe and the Huron-Wendat, who are the original owners and custodians of
-				the land on which we stand and create.</p>
-			<h2>Funding & Support</h2>
-			<p>Dobble Debate was developed at OCAD University in partnership with Sensorium Lab, York University and
-				Heart Lab, Ryerson University, Holland Bloorview Kids Rehabiilitation Hospital & the University of
-				Toronto</p>
-			<img src="images/basics/sensorium_logo.svg"
-				alt="Sensorium logo, name of lab written in write on black background" height="100px" /><img
-				src="images/basics/heart_logo.svg" alt="Heart Lab logo with child in a wheelchiar and name of the lab"
-				height="100px" />
-			<p>The digital version of this project is made possible with funding by the Government of Ontario and
-				through eCampusOntario’s support of the Virtual Learning Strategy. To learn more about the Virtual
-				Learning Strategy visit: <a href="https://vls.ecampusontario.ca/"
-					target="_blank">https://vls.ecampusontario.ca</a>.</p>
-			<img src="images/basics/eCO_logo.svg" alt="eCampusOntario logo, with the name of the organization"
-				height="60px" />
-			<img src="images/basics/ON_logo.svg" alt="Government of Ontario logo with trillium icon" height="60px" />
-			<h2>The Team</h2>
-			<p>The following people all contributed to the creation of the current digital version of Dobble Debate. We
-				would also like to acknowldege all those who has participated in previous phases of the project</p>
-			<p>Marcia Adolphe, Anonymous, Raphael Arar, Michael Awad, Courage Bacchus, David Bobier, Jack Butler, Ted
-				Carrick, Colin Clark, Nina Czegledy, Dan Czutrin, Shital Desai, Robert Durant, Deb Fels, Eamon Gaudio,
-				Howard Green, Lynne Heller, Alexa Hickox, Lynn Hughes, David Kolenda, Jananda Lima, Wesley Magee-Saxon,
-				Christine Malec, Jo-Ann Martin, Jonah Monaghan, Fiona Moola, Michele Niffeler, Justin Obara, Joel Ong,
-				Adrian Petterson, Nedward W. Rehanek, Myra Rodrigues, David Rokeby, Veronica Rutherford, Furyal Sadiq,
-				Alex Semmelhack, Colleen Shea, Martin Shook, Delilah Simoes-Shand, Rohan Smith, Matheus Trece, Shelley
-				Wall, Melanie Wilmink, Sol Younan </p>
-		</div>
-		<div id="license">
-			<h2>License</h2>
-			<img src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-sa.svg"
-				alt="Creative Commons logo, with icons indicating the terms of the license" /><br />This work is
-			licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons
-				Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
-		</div>
+	<footer class="py-4 text-dark">
+        <div id="credits" class="container-fluid px-5">
+            <div class="row">
+                <div class="col-sm-6 col-md-3">
+                    <div id="ocadlogo"><img class="text-center img-fluid" src="images/basics/ocad_logo.svg" alt="OCAD University logo, outlined boxes with university's name inside" />
+                  </div>
+               </div>
+       <div class="col-sm-6 col-md-3">
+			<h3>Land Acknowledgement</h3>
+				<p>OCAD University acknowledges the ancestral and traditional territories of the Mississaugas of the Credit, the Haudenosaunee, the Anishinaabe and the Huron-Wendat, who are the original owners and custodians of the land on which we stand and create.</p>
+			</div>
+                <div class="col-sm-6 col-md-2">
+                    <h3>Contact Us</h3>
+                    <a href="mailto:hello@dobbledebate.com">hello@dobbledebate.com</a>
+                </div>
+                <div class="col-sm-6 col-md-2">
+                    <h3>Browser & Device Support</h3>
+                    <p>Dobble Debate has been designed to work on desktop, tablets and mobile devices. You can play the game on both Windows and Mac operating systems. Supported browsers are Google Chrome, Apple's Safari, Microsoft Edge&nbsp; &nbsp;and Firefox.</p>
+                </div>
+                <div class="col-sm-6 col-md-2">
+                    <h3>Open Source</h3>
+                    <p>Dobble Debate is publicly available for modification and development through <a href="https://github.com/DobbleDebate/DobbleDebate.github.io.git" target="_blank">GitHub.</a>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <h3>Funding & Support</h3>
+                    <p>Dobble Debate was developed at OCAD University in partnership with Sensorium Lab, York University and Heart Lab, Ryerson University, Holland Bloorview Kids Rehabiilitation Hospital and the University of Toronto</p>
+                    <div class="d-flex gap-4 flex-wrap">
+                        <img src="images/basics/sensorium_logo.svg"
+                            alt="Sensorium logo, name of lab written in write on black background" height="100" />
+                        <img src="images/basics/heart_logo.svg"
+                            alt="Heart Lab logo with child in a wheelchair and name of the lab" height="100" />
+                    </div>
+                    <p class="py-3">The digital version of this project is made possible with funding by the Government of Ontario and
+                        through eCampusOntario's support of the Virtual Learning Strategy. To learn more about the Virtual Learning Strategy visit:<a href="https://vls.ecampusontario.ca/" target="_blank">https://vls.ecampusontario.ca</a>.
+                    </p>
 
-	</footer>
+                    <div class="d-flex gap-4 flex-wrap">
+                        <img src="images/basics/eCO_logo.svg"
+                            alt="eCampusOntario logo, with the name of the organization" height="60" />
+                        <img src="images/basics/ON_logo.svg" alt="Government of Ontario logo with trillium icon"
+                            height="60" />
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <h3>The Team</h3>
+					<p>The following people all contributed to the creation of the current digital version of Dobble Debate. We would also like to acknowledge all those who have participated in previous phases of the project.</p>
+		<p>Mahamud Abdi, Marcia Adolphe, Anonymous, Raphael Arar, Michael Awad, Courage Bacchus, David Bobier, Jack Butler, Ted Carrick, Colin Clark, Nina Czegledy, Dan Czutrin, Shital Desai, Robert Durant, Susan Ferguson, Eamon Gaudio, Howard Green, Lynne  Heller, Alexa Hickox, Lynn Hughes, Miriam Kramer, David Kolenda, Jananda Lima, Wesley Magee-Saxon, Christine Malec, Jo-Ann Martin, Tori Maas, Andrew McAllister, Jonah Monaghan, Fiona Moola, Michele Niffeler, Justin Obara, Joel Ong, Shiva Parsaniya, Adrian Petterson, Annie Qiu, Nedward W. Rehanek, Myra Rodrigues, David Rokeby, Veronica Rutherford, Furyal Sadiq, Alex Semmelhack, Colleen Shea, Martin Shook, Delilah Simoes-Shand, Rohan Smith, Matheus Trece, Shelley Wall, Melanie Wilmink, Sol Younan. </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="license" class="container-sm text-center">
+            <h3>License</h3>
+            <img src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-sa.svg"
+                alt="Creative Commons logo, with icons indicating the terms of the license" /><br />This work is
+            licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons
+                Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+        </div>
+
+</footer>
 	<!-- Footer Ends -->
 
 </body>
